@@ -365,13 +365,13 @@ def generate_cv_pdf(data, output_filename):
         print("\nSe generará el CV de todos modos, pero puede que no quepa en una página.\n")
     
     # Configuración del documento
-    width, height = 8.5*inch, 11.2*inch
+    width, height = 8.5*inch, 11*inch
     doc = SimpleDocTemplate(
         output_filename, 
         pagesize=(width, height),
         rightMargin=0.5*inch, 
         leftMargin=0.5*inch,
-        topMargin=0.2*inch, 
+        topMargin=0.5*inch, 
         bottomMargin=0.5*inch
     )
     

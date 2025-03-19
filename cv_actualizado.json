@@ -1,0 +1,87 @@
+{
+    "personal_info": {
+        "name": "Daniel Alejandro Barrientos",
+        "email": "danielbanariba@protonmail.com",
+        "phone": "(+504) 3324-5827",
+        "website": "www.danielbanariba.dev",
+        "github": "https://github.com/danielbanariba",
+        "linkedin": "https://www.linkedin.com/in/danielbanariba/"
+    },
+    "profile": "Ingeniero en Sistemas y Programador entusiasta con experiencia en desarrollo backend y testing que me ha enseñado la importancia de crear código no solo funcional, sino también mantenible y escalable, he desarrollado APIs escalables implementando arquitecturas serverless con NestJS y AWS, además hice procesos automatizados de QA que garantizan la confiabilidad y calidad en cada etapa del desarrollo.",
+    "experience": [
+        {
+            "company": "GuabaBIT",
+            "position": "QA & Backend Developer",
+            "date_range": "Octubre 2024 - Marzo 2025",
+            "responsibilities": [
+                "Diseñé y elaboré un documento técnico de la arquitectura completa de un sistema de pagos comunitarios con servicios RESTful y flujos de trabajo, para facilitar la comprensión y mantenimiento del sistema, implementando bases de datos NoSQL (DynamoDB) y servicios de AWS (S3, SNS)",
+                "Desarrollé la funcionalidad 'Announcement' para notificaciones en tiempo real y gestión de anuncios, incluyendo la creación de endpoints, modelos y servicios de backend. Lo que permitió a los usuarios recibir alertas instantáneas sobre actualizaciones relevantes en la comunidad",
+                "Realicé pruebas de API utilizando Postman y Apidog para asegurar la funcionalidad, creando colecciones y scripts de pruebas automatizadas",
+                "Documenté APIs utilizando Swagger y creé documentación detallada de las pruebas en Apidog para facilitar el mantenimiento y escalabilidad",
+                "Implementé pruebas automatizadas end-to-end con Playwright para flujos críticos (login, formularios, gestión de cotizaciones, handshake)"
+            ]
+        }
+    ],
+    "skills": {
+        "languages": "Python, Java, TypeScript",
+        "frameworks": "NestJS, Astro, FastAPI, Reflex, Spring Boot",
+        "databases": "Oracle, MySQL, PostgreSQL, MongoDB, DynamoDB",
+        "cloud": "AWS (S3, SNS), Azure, Terraform, Docker, Kubernetes",
+        "testing": "Selenium, Jira, Postman, Apidog, Playwright, Jest",
+        "other": "RESTful APIs, Git, Swagger, API Documentation"
+    },
+    "projects": [
+        {
+            "title": "Analyzepy",
+            "description": "Herramienta que traduce código de Python a JavaScript, utilizando técnicas avanzadas de parsing y generación de código."
+        },
+        {
+            "title": "Canal de YouTube Automatizado",
+            "description": "Programa que automatiza la edición de videos para mi canal de YouTube, aplicando efectos, transiciones y subiendo el video a la plataforma de forma automática."
+        }
+    ],
+    "education": [
+        {
+            "institution": "Universidad Nacional Autónoma de Honduras",
+            "degree": "Licenciatura en Matemáticas",
+            "location": "Tegucigalpa, Honduras",
+            "date_range": "2024 - Actualidad"
+        },
+        {
+            "institution": "Universidad Nacional Autónoma de Honduras",
+            "degree": "Ingeniería en Sistemas Computacionales",
+            "location": "Tegucigalpa, Honduras",
+            "date_range": "2019 - 2025"
+        }
+    ],
+    "certifications": [
+        "Oracle Next Education F2 T5 Back-end: Alura Latam, 2023",
+        "Database Foundations: Oracle Academy, 2023",
+        "Java Foundations: Oracle Academy, 2021-2022",
+        "Pensamiento Computacional con Python: Platzi, 2021"
+    ],
+    "languages": [
+        "Español: Nativo",
+        "Inglés: Intermedio"
+    ],
+    "section_titles": {
+        "experience": "EXPERIENCIA LABORAL",
+        "skills": "HABILIDADES TÉCNICAS",
+        "projects": "PROYECTOS DESTACADOS",
+        "education": "EDUCACIÓN",
+        "certifications": "CERTIFICACIONES Y CURSOS ADICIONALES",
+        "languages": "IDIOMAS"
+    },
+    "skill_labels": {
+        "languages": "Lenguajes",
+        "frameworks": "Frameworks",
+        "databases": "Bases de Datos",
+        "cloud": "Cloud & Infraestructura",
+        "testing": "Testing & QA",
+        "other": "Otros"
+    },
+    "metadata": {
+        "version": "Spanish",
+        "focus": "Full"
+    }
+}

@@ -1,0 +1,135 @@
+{
+    "personal_info": {
+        "name": "Daniel Alejandro Barrientos",
+        "location": "Honduras, Francisco Morazán, Comayagüela, Distrito Central, Residencial la Cañada, Bloque BH, Casa 6312",
+        "email": "danielbanariba@protonmail.com",
+        "phone": "(+504) 3324-5827",
+        "website": "www.danielbanariba.dev",
+        "github": "https://github.com/danielbanariba",
+        "linkedin": "https://www.linkedin.com/in/danielbanariba/"
+    },
+    "profile": "Ingeniero en Sistemas y Programador entusiasta con experiencia en desarrollo backend y testing que me ha enseñado la importancia de crear código no solo funcional, sino también mantenible y escalable. Mi principal fortaleza radica en traducir ideas creativas en productos tangibles y funcionales. He desarrollado APIs escalables implementando arquitecturas serverless con NestJS y AWS. Además, he diseñado esquemas eficientes en DynamoDB y establecido procesos automatizados de QA que garantizan la confiabilidad y calidad del software en cada etapa del desarrollo.",
+    "experience": [
+        {
+            "company": "GuabaBIT",
+            "position": "QA & Backend Developer | LUQA",
+            "location": "",
+            "date_range": "Octubre 2024 - Marzo 2025",
+            "responsibilities": [
+                "Diseñé y elaboré un documento técnico de la arquitectura completa de un sistema de pagos comunitarios con servicios RESTful y flujos de trabajo, para facilitar la comprensión y mantenimiento del sistema, implementando bases de datos NoSQL (DynamoDB) y servicios de AWS (S3, SNS)",
+                "Desarrollé la funcionalidad 'Announcement' para notificaciones en tiempo real y gestión de anuncios, incluyendo la creación de endpoints, modelos y servicios de backend. Lo que permitió a los usuarios recibir alertas instantáneas sobre actualizaciones relevantes en la comunidad",
+                "Realicé pruebas de API utilizando Postman y Apidog para asegurar la funcionalidad, creando colecciones y scripts de pruebas automatizadas",
+                "Reporté bugs detallados en los endpoints que consideraban críticos, creando reproducciones precisas en Postman y ApiDog",
+                "Documenté APIs utilizando Swagger y creé documentación detallada de las pruebas en Apidog para facilitar el mantenimiento y escalabilidad"
+            ],
+            "technologies": "Node.js, TypeScript, Nest.js, DynamoDB, AWS, Amazon S3, Amazon SNS, Postman, Apidog, Swagger, API Testing, API Documentation"
+        },
+        {
+            "company": "Choyc",
+            "position": "QA Tester",
+            "location": "",
+            "date_range": "Octubre 2024 - Marzo 2025",
+            "responsibilities": [
+                "Implementé pruebas automatizadas end-to-end con Playwright para flujos críticos (login, formularios, gestión de cotizaciones, handshake)",
+                "Creé y ejecuté test cases manuales en Jira para verificar la integridad del sistema, reportando y documentando bugs críticos",
+                "Gestioné historias de usuario (user stories) en Jira, poniendo criterios de aceptacion y una descripcion detalladas, lo que contribuyó a entregas incrementales exitosas en cada sprint"
+            ],
+            "technologies": "Node.js, TypeScript, Jest, Playwright, Jira"
+        }
+    ],
+    "skills": {
+        "languages": "Python (Avanzado), Java (Avanzado), TypeScript (Intermedio), C++ (Intermedio)",
+        "frameworks": "NestJS, Astro, FastAPI, Reflex",
+        "databases": "Oracle, MySQL, PostgreSQL, MongoDB, DynamoDB",
+        "cloud": "AWS (S3, SNS), Azure, Terraform, Docker",
+        "testing": "Selenium, Jira, Postman, Apidog, Playwright, Jest",
+        "other": "RESTful APIs, Arquitectura Serverless, Git, Swagger, API Documentation"
+    },
+    "projects": [
+        {
+            "title": "Sistema Contable",
+            "description": "Infraestructura en Azure para un sistema contable seguro y escalable. Incluye red virtual, base de datos SQL, almacenamiento y aplicación web, todo configurado con medidas de seguridad avanzadas.",
+            "technologies": "Azure, Terraform"
+        },
+        {
+            "title": "Analyzepy",
+            "description": "Herramienta que traduce código de Python a JavaScript, utilizando técnicas avanzadas de parsing y generación de código.",
+            "technologies": "Python, Reflex"
+        },
+        {
+            "title": "Resuelve Sistemas de Ecuaciones",
+            "description": "Aplicación web para resolver sistemas de ecuaciones lineales, aplicando métodos algebraicos y ofreciendo una interfaz amigable para los usuarios.",
+            "technologies": "Python, Reflex"
+        },
+        {
+            "title": "Canal de YouTube Automatizado",
+            "description": "Programa que automatiza la edición de videos para mi canal de YouTube, aplicando efectos, transiciones y subiendo el video a la plataforma de forma automática.",
+            "technologies": "Python, Pyautogui, Moviepy"
+        },
+        {
+            "title": "Web Scraping",
+            "description": "Para que mi canal de YouTube tenga contenido constantemente, he creado un programa que se encarga de buscar música libre de derechos de autor en internet.",
+            "technologies": "Python, BeautifulSoup, Requests, Selenium, Playwright"
+        },
+        {
+            "title": "Arsenal de Odio Website",
+            "description": "Arsenal De Odio es una banda de Thrash Metal de Honduras, quise plasmar su espíritu como banda en la pagina web. Aquí se puede encontrar todo relacionado con la banda, sus integrantes, discografía, mercadería, etc.",
+            "technologies": "Python, Reflex, Javascript"
+        },
+        {
+            "title": "SoundCloud Clone",
+            "description": "Analizar y clonar la funcionalidad de SoundCloud, creación de la base de datos, backend y frontend.",
+            "technologies": "OracleSQL, Python, FastAPI, HTML, CSS"
+        }
+    ],
+    "education": [
+        {
+            "institution": "Universidad Nacional Autónoma de Honduras",
+            "degree": "Licenciatura en Matemáticas",
+            "location": "Tegucigalpa, Honduras",
+            "date_range": "2024 - Actualidad"
+        },
+        {
+            "institution": "Universidad Nacional Autónoma de Honduras",
+            "degree": "Ingeniería en Sistemas Computacionales",
+            "location": "Tegucigalpa, Honduras",
+            "date_range": "2019 - 2025"
+        },
+        {
+            "institution": "Alura Latam",
+            "degree": "Oracle Next Education F2 T5 Back-end",
+            "location": "Online",
+            "date_range": "2023"
+        }
+    ],
+    "certifications": [
+        "Oracle Next Education F2 T5 Back-end: Alura Latam, 2023",
+        "Database Foundations: Oracle Academy, 2023",
+        "Java Foundations: Oracle Academy, 2021-2022",
+        "Pensamiento Computacional con Python: Platzi, 2021"
+    ],
+    "languages": [
+        "Español: Nativo",
+        "Inglés: Intermedio"
+    ],
+    "section_titles": {
+        "experience": "EXPERIENCIA LABORAL",
+        "skills": "HABILIDADES TÉCNICAS",
+        "projects": "PROYECTOS DESTACADOS",
+        "education": "EDUCACIÓN",
+        "certifications": "CERTIFICACIONES Y CURSOS ADICIONALES",
+        "languages": "IDIOMAS"
+    },
+    "skill_labels": {
+        "languages": "Lenguajes",
+        "frameworks": "Frameworks",
+        "databases": "Bases de Datos",
+        "cloud": "Cloud & Infraestructura",
+        "testing": "Testing & QA",
+        "other": "Otros"
+    },
+    "metadata": {
+        "version": "Spanish",
+        "focus": "Full"
+    }
+}
