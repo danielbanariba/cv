@@ -7,8 +7,15 @@
         "github": "https://github.com/danielbanariba",
         "linkedin": "https://www.linkedin.com/in/danielbanariba/"
     },
-    "profile": "Ingeniero en Sistemas y Programador entusiasta con experiencia en desarrollo backend y testing que me ha enseñado la importancia de crear código no solo funcional, sino también mantenible y escalable, he desarrollado APIs escalables implementando arquitecturas serverless con NestJS y AWS, además hice procesos automatizados de QA que garantizan la confiabilidad y calidad en cada etapa del desarrollo.",
     "experience": [
+        {
+            "company": "Analiza",
+            "position": "Backend Developer",
+            "date_range": "Marzo 2025 - Actualidad",
+            "responsibilities": [
+                "Desarrollé un endpoint para automatizar el reabastecimiento de inventario entre sucursales, implementando lógica de negocio para optimizar solicitudes basadas en puntos de reorden y disponibilidad real."
+            ]
+        },
         {
             "company": "GuabaBIT",
             "position": "QA & Backend Developer",
