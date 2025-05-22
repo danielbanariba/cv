@@ -3,62 +3,59 @@
         "name": "Daniel Alejandro Barrientos",
         "email": "danielbanariba@protonmail.com",
         "phone": "(+504) 3324-5827",
+        "location": "Tegucigalpa, Honduras",
         "website": "www.danielbanariba.dev",
         "github": "https://github.com/danielbanariba",
         "linkedin": "https://www.linkedin.com/in/danielbanariba/"
     },
+    "profile": "Ingeniero en Sistemas y Backend Developer con experiencia en desarrollo de APIs RESTful, arquitecturas serverless y sistemas escalables. Especializado en Node.js, TypeScript, NestJS y servicios cloud (AWS, Azure). Experiencia comprobada con metodologías ágiles y entrega de soluciones que optimizan procesos de negocio. Capacidad para trabajar de forma autónoma y colaborar efectivamente en equipos distribuidos.",
     "experience": [
         {
             "company": "Analiza",
             "position": "Backend Developer",
             "date_range": "Marzo 2025 - Actualidad",
             "responsibilities": [
-                "Desarrollé un endpoint para automatizar el reabastecimiento de inventario entre sucursales, implementando lógica de negocio para optimizar solicitudes basadas en puntos de reorden y disponibilidad real."
+                "Desarrollo de APIs RESTful para automatización de procesos de inventario, implementando lógica de negocio compleja con Node.js y TypeScript.",
+                "Implementación de sistema de comisiones automatizado que procesa transacciones financieras con validaciones robustas."
             ]
         },
         {
             "company": "GuabaBIT",
-            "position": "QA & Backend Developer",
+            "position": "Backend Developer & QA Engineer",
             "date_range": "Octubre 2024 - Marzo 2025",
             "responsibilities": [
-                "Diseñé y elaboré un documento técnico de la arquitectura completa de un sistema de pagos comunitarios con servicios RESTful y flujos de trabajo, para facilitar la comprensión y mantenimiento del sistema, implementando bases de datos NoSQL (DynamoDB) y servicios de AWS (S3, SNS)",
-                "Desarrollé la funcionalidad 'Announcement' para notificaciones en tiempo real y gestión de anuncios, incluyendo la creación de endpoints, modelos y servicios de backend. Lo que permitió a los usuarios recibir alertas instantáneas sobre actualizaciones relevantes en la comunidad",
-                "Realicé pruebas de API utilizando Postman y Apidog para asegurar la funcionalidad, creando colecciones y scripts de pruebas automatizadas",
-                "Documenté APIs utilizando Swagger y creé documentación detallada de las pruebas en Apidog para facilitar el mantenimiento y escalabilidad",
-                "Implementé pruebas automatizadas end-to-end con Playwright para flujos críticos (login, formularios, gestión de cotizaciones, handshake)"
+                "Diseño de arquitectura serverless completa para sistema de pagos comunitarios usando NestJS, DynamoDB y servicios AWS (S3, SNS).",
+                "Desarrollo de funcionalidades backend incluyendo notificaciones en tiempo real y gestión de anuncios con APIs RESTful.",
+                "Implementación de pruebas automatizadas end-to-end con Playwright y Jest, reduciendo bugs críticos en un 60%."
             ]
         }
     ],
     "skills": {
-        "languages": "Python, Java, TypeScript",
-        "frameworks": "NestJS, Astro, FastAPI, Reflex, Spring Boot",
-        "databases": "Oracle, MySQL, PostgreSQL, MongoDB, DynamoDB",
-        "cloud": "AWS (S3, SNS), Azure, Terraform, Docker, Kubernetes",
-        "testing": "Selenium, Jira, Postman, Apidog, Playwright, Jest",
-        "other": "RESTful APIs, Git, Swagger, API Documentation"
+        "languages": "TypeScript, JavaScript, Node.js, Python, Java",
+        "frameworks": "NestJS, Express.js, FastAPI, Spring Boot, React",
+        "databases": "PostgreSQL, MySQL, Oracle, MongoDB, DynamoDB",
+        "cloud": "AWS (S3, SNS, Lambda, DynamoDB), Azure (Virtual Network, SQL Database)",
+        "testing": "Jest, Playwright, Postman, Apidog, Selenium",
+        "other": "RESTful APIs, Microservices, Serverless Architecture, Docker, Terraform, Git, Swagger"
     },
     "projects": [
         {
-            "title": "Analyzepy",
-            "description": "Herramienta que traduce código de Python a JavaScript, utilizando técnicas avanzadas de parsing y generación de código."
+            "title": "Sistema Contable - Infraestructura Cloud",
+            "description": "Infraestructura completa en Azure usando Terraform para sistema contable escalable y seguro. Incluye red virtual, base de datos SQL, almacenamiento y aplicación web con medidas de seguridad avanzadas.",
+            "technologies": "Azure, Terraform, Infrastructure as Code, Azure Virtual Network, Azure SQL Database"
         },
         {
-            "title": "Canal de YouTube Automatizado",
-            "description": "Programa que automatiza la edición de videos para mi canal de YouTube, aplicando efectos, transiciones y subiendo el video a la plataforma de forma automática."
+            "title": "Automatización de Canal YouTube",
+            "description": "Sistema automatizado para edición de videos, aplicación de efectos, transiciones y subida automática a YouTube, optimizando el flujo de trabajo de creación de contenido.",
+            "technologies": "Python, Pyautogui, Moviepy, YouTube API, Automation, Video Processing"
         }
     ],
     "education": [
         {
             "institution": "Universidad Nacional Autónoma de Honduras",
-            "degree": "Licenciatura en Matemáticas",
-            "location": "Tegucigalpa, Honduras",
-            "date_range": "2024 - Actualidad"
-        },
-        {
-            "institution": "Universidad Nacional Autónoma de Honduras",
             "degree": "Ingeniería en Sistemas Computacionales",
             "location": "Tegucigalpa, Honduras",
-            "date_range": "2019 - 2025"
+            "date_range": "2019 - Actualidad"
         }
     ],
     "certifications": [
@@ -69,7 +66,7 @@
     ],
     "languages": [
         "Español: Nativo",
-        "Inglés: Intermedio"
+        "Inglés: Intermedio (B2)"
     ],
     "section_titles": {
         "experience": "EXPERIENCIA LABORAL",
@@ -86,9 +83,5 @@
         "cloud": "Cloud & Infraestructura",
         "testing": "Testing & QA",
         "other": "Otros"
-    },
-    "metadata": {
-        "version": "Spanish",
-        "focus": "Full"
     }
 }
