@@ -1,0 +1,854 @@
+{
+  "personal_info": {
+    "name": "Daniel Alejandro Barrientos",
+    "nickname": "Daniel Banariba",
+    "email": "danielbanariba@protonmail.com",
+    "phone": "(+504) 3324-5827",
+    "location": "Tegucigalpa, Honduras",
+    "website": "www.danielbanariba.dev",
+    "github": "https://github.com/danielbanariba",
+    "linkedin": "https://www.linkedin.com/in/danielbanariba/"
+  },
+  "profiles": {
+    "short": "Ingeniero en Sistemas y Programador entusiasta con experiencia en desarrollo backend y testing.",
+    "medium": "Ingeniero en Sistemas y Programador entusiasta con experiencia en desarrollo backend y testing que me ha enseñado la importancia de crear código no solo funcional, sino también mantenible y escalable.",
+    "long": "👨‍💻 Ingeniero en Sistemas / Programador entusiasta con experiencia en desarrollo backend y testing que me ha enseñado la importancia de crear código no solo funcional, sino también mantenible y escalable. Mi principal fortaleza radica en traducir ideas creativas en productos tangibles y funcionales. A lo largo de mi práctica profesional, me he enfrentado a diversos desafíos técnicos, desde el desarrollo de APIs RESTful y arquitecturas serverless, hasta la implementación de procesos de QA que garantizan la calidad del software de principio a fin.",
+    "detailed": "👨‍💻 Ingeniero en Sistemas / Programador entusiasta con experiencia en desarrollo backend y testing que me ha enseñado la importancia de crear código no solo funcional, sino también mantenible y escalable. Mi principal fortaleza radica en traducir ideas creativas en productos tangibles y funcionales.\n\n💡 A lo largo de mi práctica profesional, me he enfrentado a diversos desafíos técnicos, desde el desarrollo de APIs RESTful y arquitecturas serverless, hasta la implementación de procesos de QA que garantizan la calidad del software de principio a fin.\n\n🎯 He desarrollado APIs escalables implementando arquitecturas serverless con NestJS y AWS, optimizando el rendimiento y reduciendo costos operativos. Además, he diseñado esquemas eficientes en DynamoDB y establecido procesos automatizados de QA que garantizan la confiabilidad y calidad del software en cada etapa del desarrollo.\n\n🏆 Combinando mi experiencia como desarrollador backend y QA tester, he logrado entregar soluciones que no solo cumplen con los criterios técnicos, sino que también superan las expectativas de calidad y experiencia de usuario. Mi enfoque pragmático y capacidad de adaptación me permiten transformar desafíos técnicos en soluciones efectivas que aportan valor real a cada proyecto."
+  },
+  "experience": [
+    {
+      "company": "Analiza",
+      "position": "Desarrollador de software / Backend Developer",
+      "date_range": "Marzo 2025 - Actualidad",
+      "location": "Honduras",
+      "responsibilities": [
+        "Implementé un sistema de comisiones para médicos referentes que automatiza el cálculo y registro del 10% sobre servicios de laboratorio referidos, mejorando la fidelización de profesionales externos.",
+        "Desarrollé validaciones robustas para prevenir comisiones duplicadas y garantizar la integridad de datos en transacciones financieras.",
+        "Optimicé la estructura de datos mediante SQL directo para actualizar correctamente totales de facturación, mejorando la precisión de reportes financieros.",
+        "Refactoricé controladores existentes aplicando principios de código limpio y abstracción para mejorar la mantenibilidad.",
+        "Hice un diagrama de flujo de las estiquetas del código de barras para entender el proceso y la lógica de negocio del sistema.",
+        "Desarrollé un endpoint para automatizar el reabastecimiento de inventario entre sucursales, implementando lógica de negocio para optimizar solicitudes basadas en puntos de reorden y disponibilidad real."
+      ],
+      "technologies": "Node.js, TypeScript, Express, PostgreSQL, Postman, JavaScript, REST API, API, Backend, Diagramas de flujo, Análisis de procesos, Código de barras, Reabastecimiento automático, Gestión de inventario"
+    },
+    {
+      "company": "GuabaBIT",
+      "position": "QA & Backend Developer | LUQA",
+      "date_range": "Octubre 2024 - Marzo 2025",
+      "location": "Honduras",
+      "responsibilities": [
+        "Diseñé y elaboré un documento técnico de la arquitectura completa de un sistema de pagos comunitarios con servicios RESTful y flujos de trabajo, para facilitar la comprensión y mantenimiento del sistema, implementando bases de datos NoSQL (DynamoDB) y servicios de AWS (S3, SNS).",
+        "Desarrollé la funcionalidad 'Announcement' para notificaciones en tiempo real y gestión de anuncios, incluyendo la creación de endpoints, modelos y servicios de backend. Lo que permitió a los usuarios recibir alertas instantáneas sobre actualizaciones relevantes en la comunidad.",
+        "Realicé pruebas de API utilizando Postman y Apidog para asegurar la funcionalidad, creando colecciones y scripts de pruebas automatizadas.",
+        "Reporté bugs detallados en los endpoints que consideraban críticos, creando reproducciones precisas en Postman y ApiDog.",
+        "Documenté APIs utilizando Swagger y creé documentación detallada de las pruebas en Apidog para facilitar el mantenimiento y escalabilidad."
+      ],
+      "technologies": "Node.js, TypeScript, NestJS, DynamoDB, AWS, Amazon S3, Amazon SNS, Postman, Apidog, Swagger, API Testing, API Documentation, Backend, REST API, NoSQL, API RESTful, Microservicios, Serverless, Modelo-Vista-Controlador (MVC), Inyección de dependencias, Documentación técnica, Pagos comunitarios, Arquitectura de software"
+    },
+    {
+      "company": "GuabaBIT",
+      "position": "QA Tester | Choyc",
+      "date_range": "Octubre 2024 - Marzo 2025",
+      "location": "Honduras",
+      "responsibilities": [
+        "Implementé pruebas automatizadas end-to-end con Playwright para flujos críticos (login, formularios, gestión de cotizaciones, handshake).",
+        "Creé y ejecuté test cases manuales en Jira para verificar la integridad del sistema, reportando y documentando bugs críticos.",
+        "Gestioné historias de usuario (user stories) en Jira, poniendo criterios de aceptación y una descripción detalladas, lo que contribuyó a entregas incrementales exitosas en cada sprint."
+      ],
+      "technologies": "Node.js, TypeScript, Jest, Playwright, Jira, Testing, QA, Pruebas end-to-end, E2E, Automatización de pruebas, Test cases, Gestión de bugs, User stories, Agile, Scrum, Sprint, Criterios de aceptación, Metodologías ágiles"
+    }
+  ],
+  "skills": {
+    "languages": {
+      "programming": [
+        {
+          "name": "Python",
+          "variations": [
+            "Python",
+            "Python3",
+            "Python 3"
+          ],
+          "frameworks": [
+            "FastAPI",
+            "Reflex",
+            "Flask",
+            "Django",
+            "PyQT",
+            "Kivy"
+          ],
+          "libraries": [
+            "Pandas",
+            "NumPy",
+            "BeautifulSoup",
+            "Requests",
+            "Selenium",
+            "Matplotlib",
+            "Pygame",
+            "Moviepy",
+            "Pyautogui"
+          ],
+          "level": "Avanzado"
+        },
+        {
+          "name": "Java",
+          "variations": [
+            "Java",
+            "Java SE",
+            "Java EE",
+            "JDK",
+            "JDK-17",
+            "JDK 17"
+          ],
+          "frameworks": [
+            "Spring",
+            "Spring Boot",
+            "Spring Cloud",
+            "Spring Framework",
+            "Hibernate",
+            "JavaFX"
+          ],
+          "level": "Intermedio"
+        },
+        {
+          "name": "C++",
+          "variations": [
+            "C++",
+            "CPP",
+            "C plus plus"
+          ],
+          "level": "Intermedio"
+        },
+        {
+          "name": "TypeScript",
+          "variations": [
+            "TypeScript",
+            "TS"
+          ],
+          "frameworks": [
+            "NestJS",
+            "Express.js",
+            "React",
+            "Next.js"
+          ],
+          "level": "Avanzado"
+        },
+        {
+          "name": "JavaScript",
+          "variations": [
+            "JavaScript",
+            "JS",
+            "ES6",
+            "ECMAScript"
+          ],
+          "frameworks": [
+            "Express.js",
+            "React",
+            "Node.js"
+          ],
+          "level": "Avanzado"
+        },
+        {
+          "name": "HTML",
+          "variations": [
+            "HTML",
+            "HTML5",
+            "XHTML"
+          ],
+          "level": "Avanzado"
+        },
+        {
+          "name": "CSS",
+          "variations": [
+            "CSS",
+            "CSS3",
+            "Sass",
+            "SCSS",
+            "Tailwind CSS",
+            "Bootstrap"
+          ],
+          "level": "Avanzado"
+        },
+        {
+          "name": "SQL",
+          "variations": [
+            "SQL",
+            "T-SQL",
+            "PL/SQL"
+          ],
+          "level": "Avanzado"
+        }
+      ],
+      "human": [
+        {
+          "name": "Español",
+          "level": "Nativo"
+        },
+        {
+          "name": "Inglés",
+          "level": "Intermedio",
+          "variations": [
+            "English",
+            "Inglés B2"
+          ]
+        }
+      ]
+    },
+    "frameworks": [
+      {
+        "name": "Astro",
+        "category": "Frontend",
+        "variations": [
+          "Astro",
+          "Astro.js",
+          "Astro Framework"
+        ]
+      },
+      {
+        "name": "Reflex",
+        "category": "Fullstack",
+        "variations": [
+          "Reflex",
+          "Reflex Python"
+        ]
+      },
+      {
+        "name": "FastAPI",
+        "category": "Backend",
+        "variations": [
+          "FastAPI",
+          "Fast API"
+        ]
+      },
+      {
+        "name": "NestJS",
+        "category": "Backend",
+        "variations": [
+          "NestJS",
+          "Nest.js",
+          "Nest JS"
+        ]
+      },
+      {
+        "name": "Spring Boot",
+        "category": "Backend",
+        "variations": [
+          "Spring Boot",
+          "SpringBoot"
+        ]
+      },
+      {
+        "name": "Express.js",
+        "category": "Backend",
+        "variations": [
+          "Express.js",
+          "Express",
+          "ExpressJS"
+        ]
+      },
+      {
+        "name": "React",
+        "category": "Frontend",
+        "variations": [
+          "React",
+          "React.js",
+          "ReactJS"
+        ]
+      },
+      {
+        "name": "Node.js",
+        "category": "Backend",
+        "variations": [
+          "Node.js",
+          "Node",
+          "NodeJS"
+        ]
+      },
+      {
+        "name": "Spring Cloud",
+        "category": "Backend",
+        "variations": [
+          "Spring Cloud",
+          "SpringCloud"
+        ]
+      },
+      {
+        "name": "Spring Framework",
+        "category": "Backend",
+        "variations": [
+          "Spring Framework",
+          "Spring"
+        ]
+      }
+    ],
+    "databases": [
+      {
+        "name": "Oracle",
+        "variations": [
+          "Oracle",
+          "Oracle Database",
+          "OracleDB",
+          "PL/SQL"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "MySQL",
+        "variations": [
+          "MySQL",
+          "MySQL Database"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "PostgreSQL",
+        "variations": [
+          "PostgreSQL",
+          "Postgres",
+          "PSQL"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "MongoDB",
+        "variations": [
+          "MongoDB",
+          "Mongo",
+          "NoSQL"
+        ],
+        "level": "Intermedio"
+      },
+      {
+        "name": "DynamoDB",
+        "variations": [
+          "DynamoDB",
+          "AWS DynamoDB",
+          "Amazon DynamoDB",
+          "NoSQL"
+        ],
+        "level": "Intermedio"
+      }
+    ],
+    "infrastructure": [
+      {
+        "name": "Azure",
+        "variations": [
+          "Azure",
+          "Microsoft Azure",
+          "Azure Cloud"
+        ],
+        "services": [
+          "Azure Virtual Network",
+          "Azure SQL Database",
+          "Azure App Service",
+          "Azure Storage"
+        ]
+      },
+      {
+        "name": "AWS",
+        "variations": [
+          "AWS",
+          "Amazon Web Services",
+          "Amazon AWS"
+        ],
+        "services": [
+          "S3",
+          "SNS",
+          "Lambda",
+          "EC2",
+          "DynamoDB",
+          "CloudFormation",
+          "CloudWatch",
+          "IAM",
+          "API Gateway"
+        ]
+      },
+      {
+        "name": "Terraform",
+        "variations": [
+          "Terraform",
+          "Terraform IaC",
+          "HashiCorp Terraform"
+        ],
+        "level": "Intermedio"
+      },
+      {
+        "name": "Docker",
+        "variations": [
+          "Docker",
+          "Docker Container",
+          "Containerization"
+        ],
+        "level": "Intermedio"
+      },
+      {
+        "name": "Kubernetes",
+        "variations": [
+          "Kubernetes",
+          "K8s",
+          "Container Orchestration"
+        ],
+        "level": "Básico"
+      }
+    ],
+    "testing": [
+      {
+        "name": "Selenium",
+        "variations": [
+          "Selenium",
+          "Selenium WebDriver"
+        ],
+        "level": "Intermedio"
+      },
+      {
+        "name": "Jira",
+        "variations": [
+          "Jira",
+          "Atlassian Jira",
+          "JIRA"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "Apidog",
+        "variations": [
+          "Apidog",
+          "ApiDog",
+          "API Dog"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "Playwright",
+        "variations": [
+          "Playwright",
+          "Microsoft Playwright"
+        ],
+        "level": "Intermedio"
+      },
+      {
+        "name": "Postman",
+        "variations": [
+          "Postman",
+          "Postman API"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "Jest",
+        "variations": [
+          "Jest",
+          "Jest Testing",
+          "Jest Framework"
+        ],
+        "level": "Intermedio"
+      }
+    ],
+    "methodologies": [
+      {
+        "name": "Agile",
+        "variations": [
+          "Agile",
+          "Metodologías Ágiles",
+          "Agile Development"
+        ]
+      },
+      {
+        "name": "Scrum",
+        "variations": [
+          "Scrum",
+          "Scrum Framework",
+          "Metodología Scrum"
+        ]
+      },
+      {
+        "name": "Kanban",
+        "variations": [
+          "Kanban",
+          "Metodología Kanban",
+          "Kanban Board"
+        ]
+      },
+      {
+        "name": "TDD",
+        "variations": [
+          "TDD",
+          "Test-Driven Development",
+          "Desarrollo Guiado por Pruebas"
+        ]
+      }
+    ],
+    "other": [
+      {
+        "name": "RESTful APIs",
+        "variations": [
+          "RESTful APIs",
+          "REST API",
+          "API REST",
+          "RESTful",
+          "API RESTful"
+        ]
+      },
+      {
+        "name": "Git",
+        "variations": [
+          "Git",
+          "Control de Versiones",
+          "GitHub",
+          "GitLab",
+          "BitBucket"
+        ]
+      },
+      {
+        "name": "Swagger",
+        "variations": [
+          "Swagger",
+          "OpenAPI",
+          "API Documentation",
+          "Swagger UI"
+        ]
+      },
+      {
+        "name": "Microservicios",
+        "variations": [
+          "Microservicios",
+          "Microservices",
+          "Arquitectura de Microservicios"
+        ]
+      },
+      {
+        "name": "Serverless",
+        "variations": [
+          "Serverless",
+          "Arquitectura Serverless",
+          "FaaS",
+          "Function as a Service"
+        ]
+      },
+      {
+        "name": "MVC",
+        "variations": [
+          "MVC",
+          "Modelo-Vista-Controlador",
+          "Model-View-Controller"
+        ]
+      },
+      {
+        "name": "Web Scraping",
+        "variations": [
+          "Web Scraping",
+          "Screen Scraping",
+          "Data Extraction",
+          "Extracción de datos"
+        ]
+      },
+      {
+        "name": "Automatización",
+        "variations": [
+          "Automatización",
+          "Automation",
+          "Process Automation"
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Sistema Contable",
+      "description": "Infraestructura en Azure para un sistema contable seguro y escalable. Incluye red virtual, base de datos SQL, almacenamiento y aplicación web, todo configurado con medidas de seguridad avanzadas.",
+      "technologies": "Azure, Terraform, Azure Virtual Network, Azure SQL Database, Azure App Service, Azure Storage, Infrastructure as Code",
+      "github": "",
+      "live": "",
+      "type": "Infraestructura Cloud"
+    },
+    {
+      "title": "Analyzepy",
+      "description": "Es una herramienta que traduce código de Python a JavaScript, utilizando técnicas avanzadas de parsing y generación de código.",
+      "technologies": "Python, Reflex, Parsing, Generación de código, Traducción de código, AST (Abstract Syntax Tree), JavaScript",
+      "github": "",
+      "live": "",
+      "type": "Herramienta de Desarrollo"
+    },
+    {
+      "title": "Resuelve Sistemas de Ecuaciones",
+      "description": "Aplicación web para resolver sistemas de ecuaciones lineales, aplicando métodos algebraicos y ofreciendo una interfaz amigable para los usuarios.",
+      "technologies": "Python, Reflex, Matemáticas, Álgebra Lineal, Web App, NumPy",
+      "github": "",
+      "live": "",
+      "type": "Aplicación Educativa"
+    },
+    {
+      "title": "Canal de YouTube Automatizado",
+      "description": "Es un programa que automatiza la edición de videos para mi canal de YouTube, aplicando efectos, transiciones y subiendo el video a la plataforma de forma automática.",
+      "technologies": "Python, Pyautogui, Moviepy, Automatización, Edición de video, YouTube API",
+      "github": "",
+      "live": "",
+      "type": "Automatización de Contenido"
+    },
+    {
+      "title": "Web Scraping",
+      "description": "Para que mi canal de YouTube tenga contenido constantemente, he creado un programa que se encarga de buscar música libre de derechos de autor en internet.",
+      "technologies": "Python, BeautifulSoup, Requests, Selenium, Playwright, Web Scraping, Extracción de datos",
+      "github": "",
+      "live": "",
+      "type": "Herramienta de Extracción de Datos"
+    },
+    {
+      "title": "Arsenal de Odio Website",
+      "description": "Arsenal De Odio es una banda de Thrash Metal de Honduras, quise plasmar su espíritu como banda en la página web. Aquí se puede encontrar todo relacionado con la banda, sus integrantes, discografía, mercadería, etc.",
+      "technologies": "Python, Reflex, Javascript, HTML, CSS, Diseño Web, Responsive Design",
+      "github": "",
+      "live": "",
+      "type": "Sitio Web"
+    },
+    {
+      "title": "SoundCloud Clone",
+      "description": "Analizar y clonar la funcionalidad de SoundCloud, creación de la base de datos, backend y frontend.",
+      "technologies": "OracleSQL, Python, FastAPI, HTML, CSS, API RESTful, Streaming de audio, Arquitectura web",
+      "github": "",
+      "live": "",
+      "type": "Clon de Aplicación"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Nacional Autónoma de Honduras",
+      "degree": "Licenciatura en Matemáticas",
+      "date_range": "2024 - Actualidad",
+      "location": "Tegucigalpa, Honduras",
+      "certificate_link": ""
+    },
+    {
+      "institution": "Universidad Nacional Autónoma de Honduras",
+      "degree": "Ingeniería en Sistemas Computacionales",
+      "date_range": "2019 - Actualidad",
+      "location": "Tegucigalpa, Honduras",
+      "certificate_link": ""
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Oracle Next Education F2 T5 Back-end",
+      "issuer": "Alura Latam",
+      "date": "2023",
+      "certificate_link": "",
+      "skills": [
+        "Back-end",
+        "Java",
+        "Spring Boot",
+        "SQL",
+        "API REST"
+      ]
+    },
+    {
+      "name": "Database Foundations",
+      "issuer": "Oracle Academy",
+      "date": "2023",
+      "certificate_link": "",
+      "skills": [
+        "Bases de datos",
+        "SQL",
+        "Oracle",
+        "Diseño de bases de datos",
+        "Normalización"
+      ]
+    },
+    {
+      "name": "Java Foundations",
+      "issuer": "Oracle Academy",
+      "date": "2021-2022",
+      "certificate_link": "",
+      "skills": [
+        "Java",
+        "Programación orientada a objetos",
+        "Algoritmos",
+        "Estructuras de datos"
+      ]
+    },
+    {
+      "name": "Pensamiento Computacional con Python",
+      "issuer": "Platzi",
+      "date": "2021",
+      "certificate_link": "",
+      "skills": [
+        "Python",
+        "Algoritmos",
+        "Resolución de problemas",
+        "Lógica de programación"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "level": "Nativo"
+    },
+    {
+      "language": "Inglés",
+      "level": "Intermedio"
+    }
+  ],
+  "section_titles": {
+    "experience": "EXPERIENCIA LABORAL",
+    "skills": "HABILIDADES TÉCNICAS",
+    "projects": "PROYECTOS DESTACADOS",
+    "education": "EDUCACIÓN",
+    "certifications": "CERTIFICACIONES Y CURSOS ADICIONALES",
+    "languages": "IDIOMAS"
+  },
+  "skill_labels": {
+    "languages": "Lenguajes",
+    "frameworks": "Frameworks",
+    "databases": "Bases de Datos",
+    "cloud": "Cloud & Infraestructura",
+    "testing": "Testing & QA",
+    "other": "Otros"
+  },
+  "keywords": {
+    "backend": [
+      "Backend",
+      "Back-end",
+      "Backend Development",
+      "Desarrollo Backend",
+      "Server-side",
+      "Lado del servidor",
+      "API",
+      "RESTful API",
+      "REST API",
+      "API Development",
+      "Desarrollo de APIs",
+      "Microservicios",
+      "Microservices",
+      "Arquitectura de Microservicios",
+      "Microservice Architecture",
+      "Serverless",
+      "Arquitectura Serverless",
+      "Serverless Architecture",
+      "FaaS",
+      "Function as a Service"
+    ],
+    "frontend": [
+      "Frontend",
+      "Front-end",
+      "Frontend Development",
+      "Desarrollo Frontend",
+      "Client-side",
+      "Lado del cliente",
+      "UI",
+      "User Interface",
+      "Interfaz de Usuario",
+      "UX",
+      "User Experience",
+      "Experiencia de Usuario",
+      "Responsive Design",
+      "Diseño Responsivo",
+      "Mobile First",
+      "Adaptable",
+      "Web Design",
+      "Diseño Web"
+    ],
+    "fullstack": [
+      "Fullstack",
+      "Full-stack",
+      "Full Stack",
+      "Fullstack Development",
+      "Desarrollo Fullstack",
+      "MEAN Stack",
+      "MERN Stack",
+      "LAMP Stack",
+      "Full-cycle Development"
+    ],
+    "cloud": [
+      "Cloud",
+      "Cloud Computing",
+      "Computación en la Nube",
+      "Cloud Services",
+      "Servicios en la Nube",
+      "IaaS",
+      "Infrastructure as a Service",
+      "PaaS",
+      "Platform as a Service",
+      "SaaS",
+      "Software as a Service",
+      "Cloud Architecture",
+      "Arquitectura Cloud",
+      "Cloud Migration",
+      "Migración a la Nube"
+    ],
+    "devops": [
+      "DevOps",
+      "CI/CD",
+      "Continuous Integration",
+      "Integración Continua",
+      "Continuous Deployment",
+      "Despliegue Continuo",
+      "Pipeline",
+      "Build Automation",
+      "Automatización de Build",
+      "Infrastructure as Code",
+      "Infraestructura como Código"
+    ],
+    "qa": [
+      "QA",
+      "Quality Assurance",
+      "Aseguramiento de Calidad",
+      "Testing",
+      "Pruebas",
+      "Software Testing",
+      "Pruebas de Software",
+      "Manual Testing",
+      "Pruebas Manuales",
+      "Automated Testing",
+      "Pruebas Automatizadas",
+      "Test Cases",
+      "Casos de Prueba",
+      "Bug Tracking",
+      "Seguimiento de Bugs",
+      "Quality Control",
+      "Control de Calidad",
+      "Regression Testing",
+      "Pruebas de Regresión",
+      "Functional Testing",
+      "Pruebas Funcionales",
+      "End-to-End Testing",
+      "Pruebas End-to-End",
+      "E2E Testing",
+      "Unit Testing",
+      "Pruebas Unitarias",
+      "Integration Testing",
+      "Pruebas de Integración",
+      "Performance Testing",
+      "Pruebas de Rendimiento"
+    ],
+    "roles": [
+      "Software Engineer",
+      "Ingeniero de Software",
+      "Software Developer",
+      "Desarrollador de Software",
+      "Backend Developer",
+      "Desarrollador Backend",
+      "Frontend Developer",
+      "Desarrollador Frontend",
+      "Full Stack Developer",
+      "Desarrollador Full Stack",
+      "Web Developer",
+      "Desarrollador Web",
+      "Mobile Developer",
+      "Desarrollador Móvil",
+      "Cloud Engineer",
+      "Ingeniero Cloud",
+      "DevOps Engineer",
+      "Ingeniero DevOps",
+      "QA Engineer",
+      "Ingeniero QA",
+      "QA Tester",
+      "Tester QA",
+      "Software Architect",
+      "Arquitecto de Software",
+      "Data Engineer",
+      "Ingeniero de Datos",
+      "SRE",
+      "Site Reliability Engineer",
+      "Ingeniero de Confiabilidad del Sitio"
+    ]
+  }
+}

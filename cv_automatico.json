@@ -1,0 +1,83 @@
+{
+  "personal_info": {
+    "name": "Daniel Alejandro Barrientos",
+    "email": "danielbanariba@protonmail.com",
+    "phone": "(+504) 3324-5827",
+    "website": "www.danielbanariba.dev",
+    "github": "https://github.com/danielbanariba",
+    "linkedin": "https://www.linkedin.com/in/danielbanariba/"
+  },
+  "profile": "Ingeniero en Sistemas y Desarrollador de Software con experiencia en plataformas CRM y desarrollo. Especializado en automatización de procesos de negocio y parametrización de sistemas para optimizar operaciones. Capacidad para trabajar con autonomía y adaptarse rápidamente a nuevos entornos tecnológicos. Experiencia en desarrollo y mantenimiento de aplicaciones empresariales utilizando diversos lenguajes de programación.",
+  "experience": [
+    {
+      "company": "Analiza",
+      "position": "Desarrollador de Software",
+      "date_range": "Marzo 2025 - Actualidad",
+      "responsibilities": [
+        "Desarrollo de soluciones de software para automatización de procesos de reabastecimiento de inventario entre sucursales.",
+        "Parametrización de reglas de negocio y flujos de aprobación, mejorando la eficiencia operativa y reduciendo errores en procesos críticos."
+      ]
+    },
+    {
+      "company": "GuabaBIT",
+      "position": "Desarrollador Backend & Analista de Sistemas",
+      "date_range": "Octubre 2024 - Marzo 2025",
+      "responsibilities": [
+        "Diseño e implementación de arquitectura completa para sistema de pagos comunitarios, incluyendo parametrización de flujos de trabajo y procesos de aprobación.",
+        "Desarrollo de APIs y servicios web para integración con sistemas externos, utilizando lenguajes orientados a objetos.",
+        "Participación en metodologías ágiles con autonomía en la implementación de tareas asignadas y propuestas de mejora continua."
+      ]
+    }
+  ],
+  "skills": {
+    "languages": "Java, JavaScript, TypeScript, Python, SQL",
+    "frameworks": "Spring Boot, NestJS, Express.js",
+    "databases": "PostgreSQL, MySQL, Oracle, MongoDB",
+    "cloud": "AWS, Azure",
+    "testing": "Pruebas unitarias, Integración continua, Postman",
+    "other": "Parametrización de sistemas, Procesos de aprobación, Automatización, Reglas de negocio, Análisis de proyectos"
+  },
+  "projects": [
+    {
+      "title": "Sistema de Automatización de Procesos",
+      "description": "Desarrollo de sistema para automatizar flujos de trabajo y procesos de aprobación empresariales, implementando reglas de negocio personalizadas y parametrización avanzada."
+    },
+    {
+      "title": "Integración de Sistemas Empresariales",
+      "description": "Implementación de soluciones para conectar diferentes sistemas organizacionales, facilitando el intercambio de información y la sincronización de datos críticos."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Nacional Autónoma de Honduras",
+      "degree": "Ingeniería en Sistemas Computacionales",
+      "location": "Tegucigalpa, Honduras",
+      "date_range": "2019 - Actualidad"
+    }
+  ],
+  "certifications": [
+    "Oracle Next Education F2 T5 Back-end: Alura Latam, 2023",
+    "Database Foundations: Oracle Academy, 2023",
+    "Java Foundations: Oracle Academy, 2021-2022"
+  ],
+  "languages": [
+    "Español: Nativo",
+    "Inglés: Nivel B2"
+  ],
+  "section_titles": {
+    "experience": "EXPERIENCIA LABORAL",
+    "skills": "HABILIDADES TÉCNICAS",
+    "projects": "PROYECTOS DESTACADOS",
+    "education": "EDUCACIÓN",
+    "certifications": "CERTIFICACIONES Y CURSOS ADICIONALES",
+    "languages": "IDIOMAS"
+  },
+  "skill_labels": {
+    "languages": "Lenguajes",
+    "frameworks": "Frameworks",
+    "databases": "Bases de Datos",
+    "cloud": "Cloud & Infraestructura",
+    "testing": "Testing & QA",
+    "other": "Otros"
+  }
+}
