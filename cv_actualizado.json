@@ -1,87 +1,83 @@
 {
-    "personal_info": {
-        "name": "Daniel Alejandro Barrientos",
-        "email": "danielbanariba@protonmail.com",
-        "phone": "(+504) 3324-5827",
-        "location": "Tegucigalpa, Honduras",
-        "website": "www.danielbanariba.dev",
-        "github": "https://github.com/danielbanariba",
-        "linkedin": "https://www.linkedin.com/in/danielbanariba/"
+  "personal_info": {
+    "name": "Daniel Alejandro Barrientos",
+    "email": "danielbanariba@protonmail.com",
+    "phone": "(+504) 3324-5827",
+    "location": "Tegucigalpa, Honduras",
+    "website": "www.danielbanariba.dev",
+    "github": "https://github.com/danielbanariba",
+    "linkedin": "https://www.linkedin.com/in/danielbanariba/"
+  },
+  "profile": "Ingeniero en Sistemas con más de 4 años de experiencia en desarrollo de software y aplicaciones. Especializado en tecnologías web modernas con experiencia en React Native y desarrollo híbrido para plataformas móviles. Sólida experiencia en integración con APIs RESTful, bases de datos, y servicios cloud (AWS/Azure). Conocimiento en implementación de seguridad en aplicaciones y metodologías ágiles. Capacidad para trabajar de forma autónoma en proyectos complejos.",
+  "experience": [
+    {
+      "company": "Analiza",
+      "position": "Desarrollador Full Stack & Mobile Developer",
+      "date_range": "Marzo 2025 - Actualidad",
+      "responsibilities": [
+        "Desarrollo de aplicaciones móviles híbridas con Flutter para gestión de inventario y procesos médicos.",
+        "Implementación de APIs RESTful con Node.js/TypeScript para sincronización en tiempo real entre aplicaciones.",
+        "Integración con bases de datos PostgreSQL y servicios cloud para manejo de datos críticos en salud."
+      ],
+      "technologies": "Flutter, Node.js, TypeScript, PostgreSQL, REST APIs, AWS"
     },
-    "profile": "Ingeniero en Sistemas y Backend Developer con experiencia en desarrollo de APIs RESTful, arquitecturas serverless y sistemas escalables. Especializado en Node.js, TypeScript, NestJS y servicios cloud (AWS, Azure). Experiencia comprobada con metodologías ágiles y entrega de soluciones que optimizan procesos de negocio. Capacidad para trabajar de forma autónoma y colaborar efectivamente en equipos distribuidos.",
-    "experience": [
-        {
-            "company": "Analiza",
-            "position": "Backend Developer",
-            "date_range": "Marzo 2025 - Actualidad",
-            "responsibilities": [
-                "Desarrollo de APIs RESTful para automatización de procesos de inventario, implementando lógica de negocio compleja con Node.js y TypeScript.",
-                "Implementación de sistema de comisiones automatizado que procesa transacciones financieras con validaciones robustas."
-            ]
-        },
-        {
-            "company": "GuabaBIT",
-            "position": "Backend Developer & QA Engineer",
-            "date_range": "Octubre 2024 - Marzo 2025",
-            "responsibilities": [
-                "Diseño de arquitectura serverless completa para sistema de pagos comunitarios usando NestJS, DynamoDB y servicios AWS (S3, SNS).",
-                "Desarrollo de funcionalidades backend incluyendo notificaciones en tiempo real y gestión de anuncios con APIs RESTful.",
-                "Implementación de pruebas automatizadas end-to-end con Playwright y Jest, reduciendo bugs críticos en un 60%."
-            ]
-        }
-    ],
-    "skills": {
-        "languages": "TypeScript, JavaScript, Node.js, Python, Java",
-        "frameworks": "NestJS, Express.js, FastAPI, Spring Boot, React",
-        "databases": "PostgreSQL, MySQL, Oracle, MongoDB, DynamoDB",
-        "cloud": "AWS (S3, SNS, Lambda, DynamoDB), Azure (Virtual Network, SQL Database)",
-        "testing": "Jest, Playwright, Postman, Apidog, Selenium",
-        "other": "RESTful APIs, Microservices, Serverless Architecture, Docker, Terraform, Git, Swagger"
-    },
-    "projects": [
-        {
-            "title": "Sistema Contable - Infraestructura Cloud",
-            "description": "Infraestructura completa en Azure usando Terraform para sistema contable escalable y seguro. Incluye red virtual, base de datos SQL, almacenamiento y aplicación web con medidas de seguridad avanzadas.",
-            "technologies": "Azure, Terraform, Infrastructure as Code, Azure Virtual Network, Azure SQL Database"
-        },
-        {
-            "title": "Automatización de Canal YouTube",
-            "description": "Sistema automatizado para edición de videos, aplicación de efectos, transiciones y subida automática a YouTube, optimizando el flujo de trabajo de creación de contenido.",
-            "technologies": "Python, Pyautogui, Moviepy, YouTube API, Automation, Video Processing"
-        }
-    ],
-    "education": [
-        {
-            "institution": "Universidad Nacional Autónoma de Honduras",
-            "degree": "Ingeniería en Sistemas Computacionales",
-            "location": "Tegucigalpa, Honduras",
-            "date_range": "2019 - Actualidad"
-        }
-    ],
-    "certifications": [
-        "Oracle Next Education F2 T5 Back-end: Alura Latam, 2023",
-        "Database Foundations: Oracle Academy, 2023",
-        "Java Foundations: Oracle Academy, 2021-2022",
-        "Pensamiento Computacional con Python: Platzi, 2021"
-    ],
-    "languages": [
-        "Español: Nativo",
-        "Inglés: Intermedio (B2)"
-    ],
-    "section_titles": {
-        "experience": "EXPERIENCIA LABORAL",
-        "skills": "HABILIDADES TÉCNICAS",
-        "projects": "PROYECTOS DESTACADOS",
-        "education": "EDUCACIÓN",
-        "certifications": "CERTIFICACIONES Y CURSOS ADICIONALES",
-        "languages": "IDIOMAS"
-    },
-    "skill_labels": {
-        "languages": "Lenguajes",
-        "frameworks": "Frameworks",
-        "databases": "Bases de Datos",
-        "cloud": "Cloud & Infraestructura",
-        "testing": "Testing & QA",
-        "other": "Otros"
+    {
+      "company": "GuabaBIT",
+      "position": "Mobile Developer & Backend Engineer",
+      "date_range": "Octubre 2024 - Marzo 2025",
+      "responsibilities": [
+        "Desarrollo el manual tecnico para pagos comunitarios usando React Native con integración a AWS.",
+        "Implementación de funcionalidades offline-online con sincronización automática usando DynamoDB local."
+      ],
+      "technologies": "React Native, NestJS, DynamoDB, AWS S3/SNS, Firebase, React Navigation"
     }
+  ],
+  "skills": {
+    "languages": "TypeScript, JavaScript, Java, Python, SQL",
+    "frameworks": "React Native, NestJS, Express.js, Spring Boot, React",
+    "databases": "PostgreSQL, MySQL, MongoDB, DynamoDB, SQLite, Oracle",
+    "cloud": "AWS (S3, SNS, Lambda, DynamoDB), Azure, Firebase",
+    "testing": "Jest, Playwright, Postman, API Testing, Selenium",
+    "mobile": "React Native, REST API Integration, Push Notifications, Firebase Auth, Offline Storage"
+  },
+  "projects": [
+    {
+      "title": "Sistema de Pagos Comunitarios (LUQA)",
+      "description": "Aplicación móvil completa para pagos peer-to-peer con arquitectura serverless. Incluye wallet digital, historial de transacciones, notificaciones en tiempo real y medidas de seguridad avanzadas para comunidades.",
+      "technologies": "React Native, NestJS, DynamoDB, AWS S3/SNS, Firebase Auth, REST APIs"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Nacional Autónoma de Honduras",
+      "degree": "Ingeniería en Sistemas Computacionales",
+      "location": "Tegucigalpa, Honduras",
+      "date_range": "2019 - Actualidad"
+    }
+  ],
+  "certifications": [
+    "Oracle Next Education F2 T5 Back-end - Alura Latam, 2023",
+    "Database Foundations - Oracle Academy, 2023",
+    "Java Foundations - Oracle Academy, 2021-2022"
+  ],
+  "languages": [
+    "Español: Nativo",
+    "Inglés: Nivel B2"
+  ],
+  "section_titles": {
+    "experience": "EXPERIENCIA LABORAL",
+    "skills": "HABILIDADES TÉCNICAS",
+    "projects": "PROYECTOS DESTACADOS",
+    "education": "EDUCACIÓN",
+    "certifications": "CERTIFICACIONES Y CURSOS ADICIONALES",
+    "languages": "IDIOMAS"
+  },
+  "skill_labels": {
+    "languages": "Lenguajes",
+    "frameworks": "Frameworks & Mobile",
+    "databases": "Bases de Datos",
+    "cloud": "Cloud & Servicios",
+    "testing": "Testing & QA",
+    "mobile": "Tecnologías Móviles"
+  }
 }
