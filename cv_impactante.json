@@ -1,0 +1,99 @@
+{
+  "personal_info": {
+    "name": "Daniel Alejandro Barrientos",
+    "email": "danielbanariba@protonmail.com",
+    "phone": "(+504) 3324-5827",
+    "location": "Tegucigalpa, Honduras",
+    "website": "www.danielbanariba.dev",
+    "github": "https://github.com/danielbanariba",
+    "linkedin": "https://www.linkedin.com/in/danielbanariba/"
+  },
+  "profile": "Ingeniero en Sistemas con experiencia demostrada automatizando procesos complejos y desarrollando soluciones backend escalables. Especializado en reducir tiempos operativos mediante automatización, con logros medibles como reducción de 30 minutos a 2-3 minutos en configuraciones críticas y centralización de gestión de 30+ equipos a 1 servidor. Experiencia en protocolos médicos (ASTM/HL7), arquitecturas cloud (AWS), y sistemas de alta disponibilidad con Docker y RabbitMQ.",
+  "experience": [
+    {
+      "company": "Analiza Laboratorios Clínicos",
+      "position": "Backend Developer & DevOps Engineer",
+      "date_range": "Marzo 2025 - Octubre 2025",
+      "responsibilities": [
+        "Automaticé integración VITEK-CRM eliminando ingreso manual de resultados bacteriológicos en producción. Desarrollé API RESTful gestionando 7,429 microorganismos y 278 antibióticos con protocolos médicos ASTM/HL7, RabbitMQ y Docker.",
+        "Implementé encriptación Fernet para datos bancarios sensibles en CRM de doctores. Desarrollé 8 endpoints REST con validaciones y sistema de epockets (billeteras electrónicas), actualizando 150+ dependencias legacy para Python 3.10+.",
+        "Reduje gestión de infraestructura de 30+ equipos a 1 servidor proxy centralizado con Docker/Squid/OpenVPN, automatizando setup de 30 minutos a 3 minutos con scripts bash y validación automática.",
+        "Automaticé instalación de sistema de impresión con PowerShell, reduciendo configuración de 30 minutos a 2 minutos. Implementé servidor WebSocket dual-port resolviendo incompatibilidad crítica Windows 11 con detección automática de protocolos ESC/POS y TSPL.",
+        "Desarrollé sistema comercial completo con 10 módulos (Proveedores, Inventario, Lotes) implementando arquitectura RESTful y sistema FIFO con control de vencimientos en NestJS/PostgreSQL."
+      ],
+      "technologies": "Python, FastAPI, Flask, TypeScript, NestJS, PostgreSQL, Docker, RabbitMQ, AWS, Protocolos ASTM/HL7, Squid Proxy, OpenVPN, PowerShell, WebSocket, SQLAlchemy, TypeORM, Angular 11"
+    },
+    {
+      "company": "GuabaBIT",
+      "position": "QA & Backend Developer",
+      "date_range": "Octubre 2024 - Marzo 2025",
+      "responsibilities": [
+        "Diseñé arquitectura completa de sistema de pagos comunitarios con NestJS, DynamoDB y servicios AWS (S3, SNS). Desarrollé funcionalidad de notificaciones en tiempo real integrando endpoints, modelos y servicios backend.",
+        "Implementé pruebas automatizadas end-to-end con Playwright para flujos críticos (login, formularios, cotizaciones). Gestioné user stories en Jira con criterios de aceptación detallados para entregas incrementales exitosas."
+      ],
+      "technologies": "TypeScript, NestJS, DynamoDB, AWS S3, AWS SNS, Playwright, Jest, Postman, Apidog, Swagger, Jira"
+    }
+  ],
+  "skills": {
+    "languages": "Python, TypeScript, JavaScript, Java, SQL",
+    "frameworks": "FastAPI, NestJS, Flask, Express.js, Spring Boot",
+    "databases": "PostgreSQL, MySQL, DynamoDB, MongoDB, Oracle",
+    "cloud": "AWS (S3, SNS, Lambda, DynamoDB), Docker, RabbitMQ",
+    "devops": "Docker, Squid Proxy, OpenVPN, PowerShell, Bash Scripting, Linux Networking",
+    "testing": "Playwright, Jest, Postman, Apidog, Jira"
+  },
+  "projects": [
+    {
+      "title": "Infraestructura Cloud con Terraform",
+      "description": "Infraestructura en Azure para sistema contable con red virtual, base de datos SQL, almacenamiento y app web con medidas de seguridad avanzadas.",
+      "technologies": "Azure, Terraform, IaC, Azure Virtual Network, Azure SQL Database"
+    },
+    {
+      "title": "Sistema de Pagos Comunitarios",
+      "description": "Arquitectura serverless completa para pagos peer-to-peer con wallet digital, transacciones en tiempo real y notificaciones push.",
+      "technologies": "NestJS, DynamoDB, AWS S3/SNS, Firebase Auth, REST APIs"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Nacional Autónoma de Honduras",
+      "degree": "Ingeniería en Sistemas Computacionales",
+      "location": "Tegucigalpa, Honduras",
+      "date_range": "2019 - 2025"
+    }
+  ],
+  "languages": [
+    "Español: Nativo",
+    "Inglés: Intermedio"
+  ],
+  "references": [
+    {
+      "name": "Lennin",
+      "position": "Jefe Inmediato",
+      "company": "Analiza Laboratorios Clínicos",
+      "phone": "+504 8732-5557"
+    },
+    {
+      "name": "Maria Jose",
+      "position": "Product Manager",
+      "company": "Analiza Laboratorios Clínicos",
+      "phone": "+43 677 61601741"
+    }
+  ],
+  "section_titles": {
+    "experience": "EXPERIENCIA LABORAL",
+    "skills": "HABILIDADES TÉCNICAS",
+    "projects": "PROYECTOS DESTACADOS",
+    "education": "EDUCACIÓN",
+    "languages": "IDIOMAS",
+    "references": "REFERENCIAS"
+  },
+  "skill_labels": {
+    "languages": "Lenguajes",
+    "frameworks": "Frameworks",
+    "databases": "Bases de Datos",
+    "cloud": "Cloud & Message Brokers",
+    "devops": "DevOps & Infrastructure",
+    "testing": "Testing & QA"
+  }
+}

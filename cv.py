@@ -196,7 +196,7 @@ def build_cv_content(data, styles):
                     [Paragraph(f"<b>{company}</b>", styles['CompanyName']) if company else "",
                      Paragraph(date_range, styles['Location']) if date_range else ""]
                 ]
-                exp_table = Table(exp_table_data, colWidths=[4.5*inch, 2.5*inch])
+                exp_table = Table(exp_table_data, colWidths=[4*inch, 3*inch])
                 exp_table.setStyle(TableStyle([
                     ('ALIGN', (0,0), (0,-1), 'LEFT'),
                     ('ALIGN', (-1,0), (-1,-1), 'RIGHT'),
@@ -335,10 +335,49 @@ def build_cv_content(data, styles):
         story.append(Paragraph(languages_title, styles['SectionTitle']))
         story.append(HRFlowable(width="100%", thickness=1, color=colors.black))
         story.append(Spacer(1, 0.05*inch))
-        
+
         for lang in languages:
-            story.append(Paragraph(f"• {lang}", styles['BulletPoint']))
-    
+            if isinstance(lang, dict):
+                language = get_value(lang, 'language', '')
+                level = get_value(lang, 'level', '')
+                if language and level:
+                    story.append(Paragraph(f"• {language}: {level}", styles['BulletPoint']))
+                elif language:
+                    story.append(Paragraph(f"• {language}", styles['BulletPoint']))
+            else:
+                story.append(Paragraph(f"• {lang}", styles['BulletPoint']))
+
+        story.append(Spacer(1, 0.05*inch))
+
+    # 3.7 REFERENCIAS
+    references = get_value(data, 'references', [])
+    if references:
+        references_title = get_value(section_titles, 'references', "REFERENCIAS")
+        story.append(Paragraph(references_title, styles['SectionTitle']))
+        story.append(HRFlowable(width="100%", thickness=1, color=colors.black))
+        story.append(Spacer(1, 0.05*inch))
+
+        for ref in references:
+            name = get_value(ref, 'name', "")
+            position = get_value(ref, 'position', "")
+            company = get_value(ref, 'company', "")
+            phone = get_value(ref, 'phone', "")
+
+            if name:
+                story.append(Paragraph(f"<b>{name}</b>", styles['ProjectTitle']))
+
+            if position and company:
+                story.append(Paragraph(f"{position} - {company}", styles['Normal']))
+            elif position:
+                story.append(Paragraph(position, styles['Normal']))
+            elif company:
+                story.append(Paragraph(company, styles['Normal']))
+
+            if phone:
+                story.append(Paragraph(f"Teléfono: {phone}", styles['Normal']))
+
+            story.append(Spacer(1, 0.1*inch))
+
     return story
 
 def generate_cv_pdf(data, output_filename):

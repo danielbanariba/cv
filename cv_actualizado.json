@@ -13,7 +13,7 @@
     {
       "company": "Analiza",
       "position": "Desarrollador Full Stack & Mobile Developer",
-      "date_range": "Marzo 2025 - Actualidad",
+      "date_range": "Marzo 2025 - Octubre 2025",
       "responsibilities": [
         "Desarrollo de aplicaciones móviles híbridas con Flutter para gestión de inventario y procesos médicos.",
         "Implementación de APIs RESTful con Node.js/TypeScript para sincronización en tiempo real entre aplicaciones.",
@@ -52,7 +52,7 @@
       "institution": "Universidad Nacional Autónoma de Honduras",
       "degree": "Ingeniería en Sistemas Computacionales",
       "location": "Tegucigalpa, Honduras",
-      "date_range": "2019 - Actualidad"
+      "date_range": "2019 - 2025"
     }
   ],
   "certifications": [
@@ -64,13 +64,28 @@
     "Español: Nativo",
     "Inglés: Nivel B2"
   ],
+  "references": [
+    {
+      "name": "Lennin",
+      "position": "Jefe Inmediato",
+      "company": "Analiza Laboratorios Clínicos",
+      "phone": "+504 8732-5557"
+    },
+    {
+      "name": "Maria Jose",
+      "position": "Product Manager",
+      "company": "Analiza Laboratorios Clínicos",
+      "phone": "+43 677 61601741"
+    }
+  ],
   "section_titles": {
     "experience": "EXPERIENCIA LABORAL",
     "skills": "HABILIDADES TÉCNICAS",
     "projects": "PROYECTOS DESTACADOS",
     "education": "EDUCACIÓN",
     "certifications": "CERTIFICACIONES Y CURSOS ADICIONALES",
-    "languages": "IDIOMAS"
+    "languages": "IDIOMAS",
+    "references": "REFERENCIAS"
   },
   "skill_labels": {
     "languages": "Lenguajes",

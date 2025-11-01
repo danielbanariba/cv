@@ -655,7 +655,7 @@
     {
       "institution": "Universidad Nacional Autónoma de Honduras",
       "degree": "Ingeniería en Sistemas Computacionales",
-      "date_range": "2019 - Actualidad",
+      "date_range": "2019 - 2025",
       "location": "Tegucigalpa, Honduras",
       "certificate_link": ""
     }
@@ -722,13 +722,28 @@
       "level": "Intermedio"
     }
   ],
+  "references": [
+    {
+      "name": "Lennin",
+      "position": "Jefe Inmediato",
+      "company": "Analiza Laboratorios Clínicos",
+      "phone": "+504 8732-5557"
+    },
+    {
+      "name": "Maria Jose",
+      "position": "Product Manager",
+      "company": "Analiza Laboratorios Clínicos",
+      "phone": "+43 677 61601741"
+    }
+  ],
   "section_titles": {
     "experience": "EXPERIENCIA LABORAL",
     "skills": "HABILIDADES TÉCNICAS",
     "projects": "PROYECTOS DESTACADOS",
     "education": "EDUCACIÓN",
     "certifications": "CERTIFICACIONES Y CURSOS ADICIONALES",
-    "languages": "IDIOMAS"
+    "languages": "IDIOMAS",
+    "references": "REFERENCIAS"
   },
   "skill_labels": {
     "languages": "Lenguajes",
