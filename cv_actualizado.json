@@ -8,45 +8,54 @@
     "github": "https://github.com/danielbanariba",
     "linkedin": "https://www.linkedin.com/in/danielbanariba/"
   },
-  "profile": "Ingeniero en Sistemas con más de 4 años de experiencia en desarrollo de software y aplicaciones. Especializado en tecnologías web modernas con experiencia en React Native y desarrollo híbrido para plataformas móviles. Sólida experiencia en integración con APIs RESTful, bases de datos, y servicios cloud (AWS/Azure). Conocimiento en implementación de seguridad en aplicaciones y metodologías ágiles. Capacidad para trabajar de forma autónoma en proyectos complejos.",
+  "profile": "Ingeniero en Sistemas con experiencia en data engineering y desarrollo backend. Actualmente construyo pipelines ETL con Dagster y Python para un DWH corporativo en SQL Server, automatizando extracción de precios, conciliación bancaria y cierre contable. Previamente desarrollé APIs REST con FastAPI y NestJS, integré equipos médicos VITEK, y modernizé infraestructuras críticas.",
   "experience": [
     {
-      "company": "Analiza",
-      "position": "Desarrollador Full Stack & Mobile Developer",
+      "company": "Grupo Farinter",
+      "position": "Desarrollador RPA & Data Engineer",
+      "date_range": "Noviembre 2025 - Actualidad",
+      "responsibilities": [
+        "Construí scrapers de precios de 4 competidores con extracción diaria en Dagster y desencriptación de APIs.",
+        "Desarrollé pipelines de conciliación bancaria (Credomatic/BAC, Ficohsa) vía SMB y SQL Server.",
+        "Automaticé cierre de cajas y migré procesos legacy de Windows a Dagster.",
+        "Estandaricé tablas DWH con metadatos (país, origen, versiones) para consumo en Power BI.",
+        "Documenté hallazgos de seguridad en APIs internas con reportes técnicos detallados."
+      ],
+      "technologies": "Python, Dagster, SQL Server, DWH, Docker, SMB, Power BI, dbt, Git"
+    },
+    {
+      "company": "Analiza Laboratorios Clínicos",
+      "position": "Desarrollador de Software",
       "date_range": "Marzo 2025 - Octubre 2025",
       "responsibilities": [
-        "Desarrollo de aplicaciones móviles híbridas con Flutter para gestión de inventario y procesos médicos.",
-        "Implementación de APIs RESTful con Node.js/TypeScript para sincronización en tiempo real entre aplicaciones.",
-        "Integración con bases de datos PostgreSQL y servicios cloud para manejo de datos críticos en salud."
+        "Automaticé integración VITEK-CRM con FastAPI y protocolos ASTM/HL7 en producción.",
+        "Desarrollé sistema comercial con 10 módulos REST (NestJS, PostgreSQL, TypeORM).",
+        "Modernizé sistema de impresión con WebSocket dual-port y scripts PowerShell automatizados.",
+        "Creé proxy corporativo con Docker, Squid y OpenVPN reduciendo gestión de 30+ equipos a 1."
       ],
-      "technologies": "Flutter, Node.js, TypeScript, PostgreSQL, REST APIs, AWS"
+      "technologies": "Python, FastAPI, TypeScript, NestJS, PostgreSQL, Docker, WebSocket, PowerShell"
     },
     {
       "company": "GuabaBIT",
-      "position": "Mobile Developer & Backend Engineer",
+      "position": "QA & Backend Developer",
       "date_range": "Octubre 2024 - Marzo 2025",
       "responsibilities": [
-        "Desarrollo el manual tecnico para pagos comunitarios usando React Native con integración a AWS.",
-        "Implementación de funcionalidades offline-online con sincronización automática usando DynamoDB local."
+        "Diseñé documentación técnica de arquitectura para sistema de pagos con NestJS y AWS.",
+        "Implementé pruebas E2E con Playwright y automaticé testing de API con Postman/Apidog.",
+        "Gestioné historias de usuario en Jira con criterios de aceptación detallados."
       ],
-      "technologies": "React Native, NestJS, DynamoDB, AWS S3/SNS, Firebase, React Navigation"
+      "technologies": "TypeScript, NestJS, DynamoDB, AWS, Playwright, Jest, Jira, Swagger"
     }
   ],
   "skills": {
-    "languages": "TypeScript, JavaScript, Java, Python, SQL",
-    "frameworks": "React Native, NestJS, Express.js, Spring Boot, React",
-    "databases": "PostgreSQL, MySQL, MongoDB, DynamoDB, SQLite, Oracle",
-    "cloud": "AWS (S3, SNS, Lambda, DynamoDB), Azure, Firebase",
-    "testing": "Jest, Playwright, Postman, API Testing, Selenium",
-    "mobile": "React Native, REST API Integration, Push Notifications, Firebase Auth, Offline Storage"
+    "languages": "Python, TypeScript, JavaScript, Java, C++, SQL, T-SQL",
+    "frameworks": "Dagster, FastAPI, NestJS, Express, Flask, Reflex, Astro",
+    "databases": "SQL Server, PostgreSQL, MongoDB, DynamoDB, SQLite",
+    "cloud": "AWS (S3, SNS, DynamoDB), Azure, Docker, Terraform",
+    "testing": "Playwright, Jest, Selenium, Postman, Apidog, Jira",
+    "data": "dbt, Power BI, ETL, Web Scraping, DWH"
   },
-  "projects": [
-    {
-      "title": "Sistema de Pagos Comunitarios (LUQA)",
-      "description": "Aplicación móvil completa para pagos peer-to-peer con arquitectura serverless. Incluye wallet digital, historial de transacciones, notificaciones en tiempo real y medidas de seguridad avanzadas para comunidades.",
-      "technologies": "React Native, NestJS, DynamoDB, AWS S3/SNS, Firebase Auth, REST APIs"
-    }
-  ],
+  "projects": [],
   "education": [
     {
       "institution": "Universidad Nacional Autónoma de Honduras",
@@ -60,24 +69,7 @@
     "Database Foundations - Oracle Academy, 2023",
     "Java Foundations - Oracle Academy, 2021-2022"
   ],
-  "languages": [
-    "Español: Nativo",
-    "Inglés: Nivel B2"
-  ],
-  "references": [
-    {
-      "name": "Lennin",
-      "position": "Jefe Inmediato",
-      "company": "Analiza Laboratorios Clínicos",
-      "phone": "+504 8732-5557"
-    },
-    {
-      "name": "Maria Jose",
-      "position": "Product Manager",
-      "company": "Analiza Laboratorios Clínicos",
-      "phone": "+43 677 61601741"
-    }
-  ],
+  "languages": ["Español: Nativo", "Inglés: Nivel B2"],
   "section_titles": {
     "experience": "EXPERIENCIA LABORAL",
     "skills": "HABILIDADES TÉCNICAS",
@@ -89,10 +81,10 @@
   },
   "skill_labels": {
     "languages": "Lenguajes",
-    "frameworks": "Frameworks & Mobile",
+    "frameworks": "Frameworks & Orquestación",
     "databases": "Bases de Datos",
-    "cloud": "Cloud & Servicios",
+    "cloud": "Cloud & Infraestructura",
     "testing": "Testing & QA",
-    "mobile": "Tecnologías Móviles"
+    "data": "Data Engineering"
   }
 }

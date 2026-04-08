@@ -10,16 +10,33 @@
     "linkedin": "https://www.linkedin.com/in/danielbanariba/"
   },
   "profiles": {
-    "short": "Ingeniero en Sistemas y Programador entusiasta con experiencia en desarrollo backend y testing.",
-    "medium": "Ingeniero en Sistemas y Programador entusiasta con experiencia en desarrollo backend y testing que me ha enseñado la importancia de crear código no solo funcional, sino también mantenible y escalable.",
-    "long": "👨‍💻 Ingeniero en Sistemas / Programador entusiasta con experiencia en desarrollo backend y testing que me ha enseñado la importancia de crear código no solo funcional, sino también mantenible y escalable. Mi principal fortaleza radica en traducir ideas creativas en productos tangibles y funcionales. A lo largo de mi práctica profesional, me he enfrentado a diversos desafíos técnicos, desde el desarrollo de APIs RESTful y arquitecturas serverless, hasta la implementación de procesos de QA que garantizan la calidad del software de principio a fin.",
-    "detailed": "👨‍💻 Ingeniero en Sistemas / Programador entusiasta con experiencia en desarrollo backend y testing que me ha enseñado la importancia de crear código no solo funcional, sino también mantenible y escalable. Mi principal fortaleza radica en traducir ideas creativas en productos tangibles y funcionales.\n\n💡 A lo largo de mi práctica profesional, me he enfrentado a diversos desafíos técnicos, desde el desarrollo de APIs RESTful y arquitecturas serverless, hasta la implementación de procesos de QA que garantizan la calidad del software de principio a fin.\n\n🎯 He desarrollado APIs escalables implementando arquitecturas serverless con NestJS y AWS, optimizando el rendimiento y reduciendo costos operativos. Además, he diseñado esquemas eficientes en DynamoDB y establecido procesos automatizados de QA que garantizan la confiabilidad y calidad del software en cada etapa del desarrollo.\n\n🏆 Combinando mi experiencia como desarrollador backend y QA tester, he logrado entregar soluciones que no solo cumplen con los criterios técnicos, sino que también superan las expectativas de calidad y experiencia de usuario. Mi enfoque pragmático y capacidad de adaptación me permiten transformar desafíos técnicos en soluciones efectivas que aportan valor real a cada proyecto."
+    "short": "Ingeniero en Sistemas con experiencia en data engineering, desarrollo backend y automatización de procesos.",
+    "medium": "Ingeniero en Sistemas con experiencia en data engineering (Dagster, SQL Server, DWH), desarrollo backend (FastAPI, NestJS) y automatización de procesos. Especializado en construir pipelines ETL confiables y APIs escalables.",
+    "long": "Ingeniero en Sistemas con experiencia en data engineering y desarrollo backend. Actualmente construyo pipelines ETL con Dagster y Python para un DWH corporativo en SQL Server, automatizando extracción de precios de competencia, conciliación de tarjetas de crédito y procesos de cierre contable. Previamente desarrollé APIs REST con FastAPI y NestJS, integré equipos médicos VITEK, y modernizé infraestructuras de impresión críticas.",
+    "detailed": "Ingeniero en Sistemas con experiencia en data engineering y desarrollo backend. Actualmente construyo pipelines ETL con Dagster y Python para un DWH corporativo en SQL Server, automatizando extracción de precios de competencia, conciliación de tarjetas de crédito y procesos de cierre contable.\n\nPreviamente desarrollé APIs REST con FastAPI y NestJS, integré equipos médicos VITEK con protocolos ASTM/HL7, y modernizé infraestructuras de impresión con WebSocket y PowerShell. Mi experiencia abarca data engineering con Dagster y dbt, desarrollo backend con FastAPI, NestJS y PostgreSQL, automatización de testing con Playwright, e integración con protocolos especializados."
   },
   "experience": [
     {
+      "company": "Grupo Farinter",
+      "position": "Desarrollador RPA & Data Engineer",
+      "date_range": "Noviembre 2025 - Actualidad",
+      "location": "Honduras",
+      "responsibilities": [
+        "Construí scrapers de precios de competencia (Farmacias del Ahorro, Siman, FarmaValue, FarmaCity) con extracción diaria automatizada en Dagster, incluyendo desencriptación de APIs expuestas y rotación de proxies/TOR para evadir rate limiting.",
+        "Desarrollé pipelines de conciliación de tarjetas de crédito (Credomatic/BAC y Ficohsa) automatizando la lectura de estados de cuenta Excel vía SMB desde carpetas compartidas y cruzando contra tablas LDCOM en SQL Server.",
+        "Automaticé el proceso de cierre de cajas consolidando archivos Excel diarios en tablas staging del DWH con detección automática de cambios mediante sensores de Dagster.",
+        "Migré procesos legacy de Windows (Planning/Nivelaciones) a Dagster, eliminando dependencia de VMs con Task Scheduler y credenciales de dominio.",
+        "Estandaricé estructuras de tablas DWH con metadatos (país, origen, versiones) para consumo en Power BI, corrigiendo bugs de datos históricos y ventanas de carga.",
+        "Implementé alertas por email para fallas de extracción y cambios en APIs, con monitoreo de ejecución en Dagster.",
+        "Documenté hallazgos de seguridad en APIs internas (Kielsa) con reportes técnicos detallados, incluyendo endpoints expuestos y recomendaciones de mitigación.",
+        "Evalué e integré herramientas de IA (GitHub Copilot, Claude Code, Codex) para el equipo de desarrollo, incluyendo comparativa de licenciamiento y propuesta de Claude Cowork."
+      ],
+      "technologies": "Python, Dagster, SQL Server, DWH, Docker, SMB/CIFS, Power BI, dbt, Git, Web Scraping, ETL, Data Engineering, Data Pipeline, Orquestación de datos, Automatización, RPA"
+    },
+    {
       "company": "Analiza",
       "position": "Desarrollador de software / Backend Developer",
-      "date_range": "Marzo 2025 - Actualidad",
+      "date_range": "Marzo 2025 - Octubre 2025",
       "location": "Honduras",
       "responsibilities": [
         "Automaticé el procesamiento de resultados de cultivos que anteriormente se ingresaban manualmente.",
@@ -299,6 +316,24 @@
         ]
       },
       {
+        "name": "Dagster",
+        "category": "Data Engineering",
+        "variations": [
+          "Dagster",
+          "Dagster Orchestrator",
+          "Data Orchestration"
+        ]
+      },
+      {
+        "name": "dbt",
+        "category": "Data Engineering",
+        "variations": [
+          "dbt",
+          "dbt Core",
+          "Data Build Tool"
+        ]
+      },
+      {
         "name": "SQLModel",
         "category": "Backend",
         "variations": [
@@ -361,6 +396,16 @@
           "NoSQL"
         ],
         "level": "Intermedio"
+      },
+      {
+        "name": "SQL Server",
+        "variations": [
+          "SQL Server",
+          "Microsoft SQL Server",
+          "MSSQL",
+          "T-SQL"
+        ],
+        "level": "Avanzado"
       }
     ],
     "infrastructure": [
