@@ -190,25 +190,18 @@ def build_cv_content(data, styles):
         for job in experience:
             company = get_value(job, 'company', "")
             date_range = get_value(job, 'date_range', "")
-            
-            if company or date_range:
-                exp_table_data = [
-                    [Paragraph(f"<b>{company}</b>", styles['CompanyName']) if company else "",
-                     Paragraph(date_range, styles['Location']) if date_range else ""]
-                ]
-                exp_table = Table(exp_table_data, colWidths=[4*inch, 3*inch])
-                exp_table.setStyle(TableStyle([
-                    ('ALIGN', (0,0), (0,-1), 'LEFT'),
-                    ('ALIGN', (-1,0), (-1,-1), 'RIGHT'),
-                    ('VALIGN', (0,0), (-1,-1), 'TOP'),
-                    ('BOTTOMPADDING', (0,0), (-1,-1), 0),
-                    ('TOPPADDING', (0,0), (-1,-1), 3),
-                ]))
-                story.append(exp_table)
-            
             position = get_value(job, 'position', "")
+
+            if company:
+                story.append(Paragraph(f"<b>{company}</b>", styles['CompanyName']))
+
+            position_line_parts = []
             if position:
-                story.append(Paragraph(position, styles['JobPosition']))
+                position_line_parts.append(position)
+            if date_range:
+                position_line_parts.append(date_range)
+            if position_line_parts:
+                story.append(Paragraph(" | ".join(position_line_parts), styles['JobPosition']))
             
             responsibilities = get_value(job, 'responsibilities', [])
             for point in responsibilities:
@@ -280,39 +273,27 @@ def build_cv_content(data, styles):
         story.append(HRFlowable(width="100%", thickness=1, color=colors.black))
         story.append(Spacer(1, 0.05*inch))
         
-        education_data = []
         for edu in education:
             institution = get_value(edu, 'institution', "")
             location = get_value(edu, 'location', "")
             degree = get_value(edu, 'degree', "")
             date_range = get_value(edu, 'date_range', "")
-            
-            if institution or location:
-                education_data.append([
-                    Paragraph(institution, styles['ProjectTitle']) if institution else "",
-                    Paragraph(location, styles['SmallText']) if location else ""
-                ])
-            
-            if degree or date_range:
-                education_data.append([
-                    Paragraph(degree, styles['ProjectDescription']) if degree else "",
-                    Paragraph(date_range, styles['SmallText']) if date_range else ""
-                ])
-            
-            education_data.append([Spacer(1, 0.05*inch), Spacer(1, 0.05*inch)])
-        
-        if education_data:
-            if len(education_data) > 0:
-                education_data = education_data[:-1]  # Eliminar último espaciador
-                
-                t = Table(education_data, colWidths=[5*inch, 2*inch])
-                t.setStyle(TableStyle([
-                    ('VALIGN', (0,0), (-1,-1), 'TOP'),
-                    ('ALIGN', (0,0), (0,-1), 'LEFT'),
-                    ('ALIGN', (1,0), (1,-1), 'RIGHT'),
-                ]))
-                story.append(t)
-        
+
+            if institution:
+                story.append(Paragraph(f"<b>{institution}</b>", styles['CompanyName']))
+
+            edu_line_parts = []
+            if degree:
+                edu_line_parts.append(degree)
+            if location:
+                edu_line_parts.append(location)
+            if date_range:
+                edu_line_parts.append(date_range)
+            if edu_line_parts:
+                story.append(Paragraph(" | ".join(edu_line_parts), styles['JobPosition']))
+
+            story.append(Spacer(1, 0.05*inch))
+
         story.append(Spacer(1, 0.05*inch))
     
     # 3.5 CERTIFICACIONES
@@ -403,14 +384,13 @@ def generate_cv_pdf(data, output_filename):
         print("└─────────────────────────────────────────────────────────────────────")
         print("\nSe generará el CV de todos modos, pero puede que no quepa en una página.\n")
     
-    # Configuración del documento
-    width, height = 8.5*inch, 11.2*inch
+    # Configuración del documento — letter size estándar (ATS-friendly)
     doc = SimpleDocTemplate(
-        output_filename, 
-        pagesize=(width, height),
-        rightMargin=0.5*inch, 
+        output_filename,
+        pagesize=letter,
+        rightMargin=0.5*inch,
         leftMargin=0.5*inch,
-        topMargin=0.2*inch, 
+        topMargin=0.4*inch,
         bottomMargin=0.5*inch
     )
     

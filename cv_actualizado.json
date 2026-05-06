@@ -8,7 +8,7 @@
     "github": "https://github.com/danielbanariba",
     "linkedin": "https://www.linkedin.com/in/danielbanariba/"
   },
-  "profile": "Ingeniero en Sistemas con experiencia en data engineering y desarrollo backend. Actualmente construyo pipelines ETL con Dagster y Python para un DWH corporativo en SQL Server, automatizando extracción de precios, conciliación bancaria y cierre contable. Previamente desarrollé APIs REST con FastAPI y NestJS, integré equipos médicos VITEK, y modernizé infraestructuras críticas.",
+  "profile": "Ingeniero en Sistemas con experiencia en data engineering, backend y desarrollo asistido por IA (Claude Code, Cursor, MCP, AI Agents, SDD). Construí 4 servidores MCP en producción para operar Dagster, SQL Server y Microsoft Graph desde Claude Code. Construyo pipelines ETL con Dagster y Python para un DWH en SQL Server, con alertas a Discord/Telegram. Previamente desarrollé APIs REST con FastAPI y NestJS, e integré equipos VITEK (ASTM/HL7).",
   "experience": [
     {
       "company": "Grupo Farinter",
@@ -16,47 +16,79 @@
       "date_range": "Noviembre 2025 - Actualidad",
       "responsibilities": [
         "Construí scrapers de precios de 4 competidores con extracción diaria en Dagster y desencriptación de APIs.",
-        "Desarrollé pipelines de conciliación bancaria (Credomatic/BAC, Ficohsa) vía SMB y SQL Server.",
-        "Automaticé cierre de cajas y migré procesos legacy de Windows a Dagster.",
-        "Estandaricé tablas DWH con metadatos (país, origen, versiones) para consumo en Power BI.",
-        "Documenté hallazgos de seguridad en APIs internas con reportes técnicos detallados."
+        "Desarrollé pipelines de conciliación bancaria (Credomatic/BAC, Ficohsa) y transaccional (Netflix, Tengo, Rapibac) vía SMB y SQL Server.",
+        "Integré alertas a Discord webhook como segundo canal de notificación de fallos, con TDD estricto (13 tests) y degradación graceful independiente del email.",
+        "Construí sistema autónomo (watchdog) que detecta pipelines pegados, los re-lanza automáticamente y notifica vía Telegram, complementado con timeouts nativos (dagster/max_runtime) en 27+ jobs.",
+        "Automaticé cierre de cajas, migré procesos legacy de Windows a Dagster y estandaricé tablas DWH con metadatos (país, origen, versiones) para consumo en Power BI.",
+        "Desarrollé 4 servidores MCP (Model Context Protocol) en producción que habilitan Tool Use / Function Calling sobre Dagster, SQL Server, Microsoft Graph/Outlook y health checks de APIs desde Claude Code.",
+        "Apliqué Agentic AI con orquestación de sub-agents, Anthropic Agent Skills (SKILL.md), slash commands y hooks sobre Claude Code, Codex CLI y OpenCode, bajo metodología SDD y TDD estricto, aplicando Prompt Engineering para acelerar entregas."
       ],
-      "technologies": "Python, Dagster, SQL Server, DWH, Docker, SMB, Power BI, dbt, Git"
+      "technologies": "Python, Dagster, SQL Server, DWH, Docker, SMB, Discord Webhooks, dbt, MCP, Model Context Protocol, Claude Code, Codex CLI, OpenCode, Cursor, Aider, Cline, Continue.dev, Windsurf, Gemini CLI, GitHub Copilot, Agent Skills, SKILL.md, Slash Commands, Hooks, AI Agents, Agentic AI, Sub-agents, Agent Orchestration, Tool Use, Function Calling, AI Integration, LLMs, GenAI, Anthropic API, OpenAI API, SDD, Spec-Driven Development, TDD, Prompt Engineering, Git"
     },
     {
       "company": "Analiza Laboratorios Clínicos",
       "position": "Desarrollador de Software",
       "date_range": "Marzo 2025 - Octubre 2025",
       "responsibilities": [
-        "Automaticé integración VITEK-CRM con FastAPI y protocolos ASTM/HL7 en producción.",
-        "Desarrollé sistema comercial con 10 módulos REST (NestJS, PostgreSQL, TypeORM).",
-        "Modernizé sistema de impresión con WebSocket dual-port y scripts PowerShell automatizados.",
+        "Automaticé integración VITEK-CRM con FastAPI y protocolos ASTM/HL7 en producción para procesamiento bidireccional de resultados de cultivos.",
+        "Modelé catálogos con SQLModel ORM (7,429 microorganismos, 278 antibióticos) con relaciones complejas entre encabezados y detalles de antibiogramas.",
+        "Desarrollé sistema comercial con 10 módulos REST (NestJS, PostgreSQL, TypeORM) e implementé sistema de comisiones automático para médicos referentes (10% sobre servicios referidos).",
+        "Implementé trazabilidad de mensajes ASTM/HL7 con reintentos automáticos y logging para debugging de comunicación con equipos VITEK.",
         "Creé proxy corporativo con Docker, Squid y OpenVPN reduciendo gestión de 30+ equipos a 1."
       ],
-      "technologies": "Python, FastAPI, TypeScript, NestJS, PostgreSQL, Docker, WebSocket, PowerShell"
+      "technologies": "Python, FastAPI, TypeScript, NestJS, PostgreSQL, SQLModel, TypeORM, Docker, WebSocket, PowerShell, ASTM, HL7, VITEK"
     },
     {
       "company": "GuabaBIT",
       "position": "QA & Backend Developer",
       "date_range": "Octubre 2024 - Marzo 2025",
       "responsibilities": [
-        "Diseñé documentación técnica de arquitectura para sistema de pagos con NestJS y AWS.",
-        "Implementé pruebas E2E con Playwright y automaticé testing de API con Postman/Apidog.",
-        "Gestioné historias de usuario en Jira con criterios de aceptación detallados."
+        "Diseñé documentación técnica de arquitectura completa para sistema de pagos comunitarios con servicios RESTful, NestJS, DynamoDB y servicios AWS (S3, SNS).",
+        "Desarrollé funcionalidad 'Announcement' para notificaciones en tiempo real (endpoints, modelos y servicios backend) que permitió alertas instantáneas a la comunidad.",
+        "Implementé pruebas E2E con Playwright para flujos críticos (login, formularios, cotizaciones, handshake) y automaticé testing de API con Postman/Apidog.",
+        "Gestioné historias de usuario en Jira con criterios de aceptación detallados, contribuyendo a entregas incrementales exitosas en cada sprint."
       ],
-      "technologies": "TypeScript, NestJS, DynamoDB, AWS, Playwright, Jest, Jira, Swagger"
+      "technologies": "TypeScript, NestJS, DynamoDB, AWS (S3, SNS), Playwright, Jest, Postman, Apidog, Jira, Swagger, Microservicios, Serverless"
     }
   ],
   "skills": {
     "languages": "Python, TypeScript, JavaScript, Java, C++, SQL, T-SQL",
+    "ai": "Claude Code, Codex CLI, OpenCode, Cursor, Aider, Cline, Continue.dev, Windsurf, Gemini CLI, GitHub Copilot, MCP (Model Context Protocol), Anthropic Agent Skills (SKILL.md), Slash Commands & Hooks, Agentic AI, AI Agents, Sub-agents, Agent Orchestration, Tool Use / Function Calling, AI Integration, Prompt Engineering, SDD (Spec-Driven Development), Vibe Coding (Lovable, Replit, v0, Bolt), Anthropic API, OpenAI API, LLMs / GenAI",
     "frameworks": "Dagster, FastAPI, NestJS, Express, Flask, Reflex, Astro",
     "databases": "SQL Server, PostgreSQL, MongoDB, DynamoDB, SQLite",
     "cloud": "AWS (S3, SNS, DynamoDB), Azure, Docker, Terraform",
     "testing": "Playwright, Jest, Selenium, Postman, Apidog, Jira",
-    "data": "dbt, Power BI, ETL, Web Scraping, DWH"
+    "data": "dbt, Power BI, ETL, Web Scraping, DWH, Polars"
   },
-  "projects": [],
+  "projects": [
+    {
+      "title": "Navidrome — Open Source",
+      "description": "Contribuciones mergeadas al proyecto Navidrome (servidor de streaming musical self-hosted, 20.7K ⭐ en GitHub): filtro \"Not Starred\" en vistas de álbum/canción/artista usando NullableBooleanInput de react-admin (PR #5362) y fix de accesibilidad por teclado en grilla de álbumes con :focus-within + pointerEvents (PR #5434, cierra issue #4836). Reporté bug de SSE multi-tab con workaround HTTP/2 documentado.",
+      "technologies": "React, react-admin, JavaScript, accesibilidad web, Go, GitHub PR workflow"
+    },
+    {
+      "title": "MCP Servers Suite — Dagster, SQL Server & Outlook/Todoist",
+      "description": "Suite de 4 servidores MCP (Model Context Protocol) en producción que habilitan operar todo el stack desde Claude Code con Tool Use / Function Calling: mcp-dagster (assets/runs vía GraphQL), mcp-db (queries con Jinja sobre SQL Server/PostgreSQL), mcp-api-check (health checks) y outlook-todoist-mcp (Outlook → Todoist vía Microsoft Graph).",
+      "technologies": "Python, MCP, Dagster GraphQL, SQL Server, PostgreSQL, Microsoft Graph, Claude Code, Anthropic API"
+    },
+    {
+      "title": "Dagster Watchdog — Monitoreo Autónomo de Pipelines",
+      "description": "Sistema autónomo que consulta Dagster vía GraphQL cada 5 min, detecta runs pegados comparando contra baselines aprendidos, los cancela, re-lanza con retry tags y notifica vía Telegram. Incluye safety guards y corre como servicio systemd 24/7.",
+      "technologies": "Python, Dagster GraphQL, Telegram Bot, systemd, asyncio, Observability"
+    },
+    {
+      "title": "Canal de YouTube Automatizado — Pipeline Multimedia",
+      "description": "Pipeline end-to-end: scraping de música libre, edición con efectos VHS, renderizado 4K acelerado con GPU (CUDA), gestión de playlists y subida programada vía YouTube API con manejo de copyright.",
+      "technologies": "Python, C++, CUDA, FFmpeg, Moviepy, Playwright, YouTube API, Web Scraping"
+    }
+  ],
   "education": [
+    {
+      "institution": "Universidad Nacional Autónoma de Honduras",
+      "degree": "Licenciatura en Matemáticas (en curso)",
+      "location": "Tegucigalpa, Honduras",
+      "date_range": "2024 - Actualidad"
+    },
     {
       "institution": "Universidad Nacional Autónoma de Honduras",
       "degree": "Ingeniería en Sistemas Computacionales",
@@ -67,20 +99,22 @@
   "certifications": [
     "Oracle Next Education F2 T5 Back-end - Alura Latam, 2023",
     "Database Foundations - Oracle Academy, 2023",
-    "Java Foundations - Oracle Academy, 2021-2022"
+    "Java Foundations - Oracle Academy, 2021-2022",
+    "Pensamiento Computacional con Python - Platzi, 2021"
   ],
   "languages": ["Español: Nativo", "Inglés: Nivel B2"],
   "section_titles": {
     "experience": "EXPERIENCIA LABORAL",
-    "skills": "HABILIDADES TÉCNICAS",
-    "projects": "PROYECTOS DESTACADOS",
+    "skills": "HABILIDADES",
+    "projects": "PROYECTOS",
     "education": "EDUCACIÓN",
-    "certifications": "CERTIFICACIONES Y CURSOS ADICIONALES",
+    "certifications": "CERTIFICACIONES",
     "languages": "IDIOMAS",
     "references": "REFERENCIAS"
   },
   "skill_labels": {
     "languages": "Lenguajes",
+    "ai": "IA & Desarrollo Asistido por IA",
     "frameworks": "Frameworks & Orquestación",
     "databases": "Bases de Datos",
     "cloud": "Cloud & Infraestructura",

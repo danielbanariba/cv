@@ -1,0 +1,124 @@
+{
+  "personal_info": {
+    "name": "Daniel Alejandro Barrientos",
+    "email": "danielbanariba@protonmail.com",
+    "phone": "(+504) 3324-5827",
+    "location": "Tegucigalpa, Honduras",
+    "website": "www.danielbanariba.dev",
+    "github": "https://github.com/danielbanariba",
+    "linkedin": "https://www.linkedin.com/in/danielbanariba/"
+  },
+  "profile": "Systems Engineer with experience in data engineering, backend and AI-assisted development (Claude Code, Cursor, MCP, AI Agents, SDD). Built 4 production MCP servers to operate Dagster, SQL Server and Microsoft Graph from Claude Code. I build ETL pipelines with Dagster and Python for a SQL Server DWH, with Discord/Telegram alerting. Previously developed REST APIs with FastAPI and NestJS, and integrated VITEK lab equipment via ASTM/HL7.",
+  "experience": [
+    {
+      "company": "Grupo Farinter",
+      "position": "RPA Developer & Data Engineer",
+      "date_range": "November 2025 - Present",
+      "responsibilities": [
+        "Built competitor price scrapers for 4 retailers with daily extraction in Dagster and reverse engineering of obfuscated APIs.",
+        "Developed bank reconciliation pipelines (Credomatic/BAC, Ficohsa) and transactional pipelines (Netflix, Tengo, Rapibac) over SMB and SQL Server.",
+        "Integrated Discord webhook alerts as a second failure-notification channel, with strict TDD (13 tests) and graceful degradation independent from email.",
+        "Built an autonomous watchdog system that detects stuck pipelines, automatically re-launches them and notifies via Telegram, complemented with native timeouts (dagster/max_runtime) on 27+ jobs.",
+        "Automated cash-closing flows, migrated legacy Windows processes to Dagster and standardized DWH tables with metadata (country, source, versions) for Power BI consumption.",
+        "Developed 4 production MCP (Model Context Protocol) servers enabling Tool Use / Function Calling over Dagster, SQL Server, Microsoft Graph/Outlook and API health checks from Claude Code.",
+        "Applied Agentic AI with sub-agent orchestration, Anthropic Agent Skills (SKILL.md), slash commands and hooks across Claude Code, Codex CLI and OpenCode, under SDD methodology and strict TDD, applying Prompt Engineering to accelerate delivery."
+      ],
+      "technologies": "Python, Dagster, SQL Server, DWH, Docker, SMB, Discord Webhooks, dbt, MCP, Model Context Protocol, Claude Code, Codex CLI, OpenCode, Cursor, Aider, Cline, Continue.dev, Windsurf, Gemini CLI, GitHub Copilot, Agent Skills, SKILL.md, Slash Commands, Hooks, AI Agents, Agentic AI, Sub-agents, Agent Orchestration, Tool Use, Function Calling, AI Integration, LLMs, GenAI, Anthropic API, OpenAI API, SDD, Spec-Driven Development, TDD, Prompt Engineering, Git"
+    },
+    {
+      "company": "Analiza Clinical Laboratories",
+      "position": "Software Developer",
+      "date_range": "March 2025 - October 2025",
+      "responsibilities": [
+        "Automated VITEK-CRM integration with FastAPI and ASTM/HL7 protocols in production for bidirectional processing of culture results.",
+        "Modeled catalogs with SQLModel ORM (7,429 microorganisms, 278 antibiotics) with complex relationships between antibiogram headers and detail records.",
+        "Developed a commercial system with 10 REST modules (NestJS, PostgreSQL, TypeORM) and implemented an automatic commission system for referring physicians (10% over referred services).",
+        "Implemented ASTM/HL7 message traceability with automatic retries and logging for VITEK communication debugging.",
+        "Built a corporate proxy with Docker, Squid and OpenVPN, reducing management of 30+ machines to a single point."
+      ],
+      "technologies": "Python, FastAPI, TypeScript, NestJS, PostgreSQL, SQLModel, TypeORM, Docker, WebSocket, PowerShell, ASTM, HL7, VITEK"
+    },
+    {
+      "company": "GuabaBIT",
+      "position": "QA & Backend Developer",
+      "date_range": "October 2024 - March 2025",
+      "responsibilities": [
+        "Designed full architectural technical documentation for a community payments system with RESTful services, NestJS, DynamoDB and AWS services (S3, SNS).",
+        "Developed the 'Announcement' feature for real-time notifications (endpoints, models and backend services), enabling instant alerts to the community.",
+        "Implemented E2E tests with Playwright for critical flows (login, forms, quotes, handshake) and automated API testing with Postman/Apidog.",
+        "Managed user stories in Jira with detailed acceptance criteria, contributing to successful incremental deliveries each sprint."
+      ],
+      "technologies": "TypeScript, NestJS, DynamoDB, AWS (S3, SNS), Playwright, Jest, Postman, Apidog, Jira, Swagger, Microservices, Serverless"
+    }
+  ],
+  "skills": {
+    "languages": "Python, TypeScript, JavaScript, Java, C++, SQL, T-SQL",
+    "ai": "Claude Code, Codex CLI, OpenCode, Cursor, Aider, Cline, Continue.dev, Windsurf, Gemini CLI, GitHub Copilot, MCP (Model Context Protocol), Anthropic Agent Skills (SKILL.md), Slash Commands & Hooks, Agentic AI, AI Agents, Sub-agents, Agent Orchestration, Tool Use / Function Calling, AI Integration, Prompt Engineering, SDD (Spec-Driven Development), Vibe Coding (Lovable, Replit, v0, Bolt), Anthropic API, OpenAI API, LLMs / GenAI",
+    "frameworks": "Dagster, FastAPI, NestJS, Express, Flask, Reflex, Astro",
+    "databases": "SQL Server, PostgreSQL, MongoDB, DynamoDB, SQLite",
+    "cloud": "AWS (S3, SNS, DynamoDB), Azure, Docker, Terraform",
+    "testing": "Playwright, Jest, Selenium, Postman, Apidog, Jira",
+    "data": "dbt, Power BI, ETL, Web Scraping, DWH, Polars"
+  },
+  "projects": [
+    {
+      "title": "MCP Servers Suite — Dagster, SQL Server & Outlook/Todoist",
+      "description": "Suite of 4 production MCP (Model Context Protocol) servers that enable operating the full stack from Claude Code with Tool Use / Function Calling: mcp-dagster (assets/runs via GraphQL), mcp-db (Jinja-templated queries over SQL Server/PostgreSQL), mcp-api-check (health checks) and outlook-todoist-mcp (Outlook → Todoist via Microsoft Graph).",
+      "technologies": "Python, MCP, Dagster GraphQL, SQL Server, PostgreSQL, Microsoft Graph, Claude Code, Anthropic API"
+    },
+    {
+      "title": "Dagster Watchdog — Autonomous Pipeline Monitoring",
+      "description": "Autonomous system that polls Dagster via GraphQL every 5 minutes, detects stuck runs by comparing against learned baselines, cancels them, re-launches with retry tags and notifies via Telegram. Includes safety guards and runs as a 24/7 systemd service.",
+      "technologies": "Python, Dagster GraphQL, Telegram Bot, systemd, asyncio, Observability"
+    },
+    {
+      "title": "Accounting System — Azure Infrastructure with Terraform",
+      "description": "Cloud infrastructure on Azure as Infrastructure as Code: Virtual Network, SQL Database, Storage and App Service with advanced security measures (private endpoints, NSGs, managed identities).",
+      "technologies": "Azure, Terraform, IaC, Azure SQL, Azure App Service, Cloud Architecture"
+    },
+    {
+      "title": "Automated YouTube Channel — Multimedia Pipeline",
+      "description": "End-to-end pipeline: royalty-free music scraping, editing with VHS effects, GPU-accelerated 4K rendering (CUDA), playlist management and scheduled uploads via the YouTube API with copyright handling.",
+      "technologies": "Python, C++, CUDA, FFmpeg, Moviepy, Playwright, YouTube API, Web Scraping"
+    }
+  ],
+  "education": [
+    {
+      "institution": "National Autonomous University of Honduras",
+      "degree": "B.S. in Mathematics (in progress)",
+      "location": "Tegucigalpa, Honduras",
+      "date_range": "2024 - Present"
+    },
+    {
+      "institution": "National Autonomous University of Honduras",
+      "degree": "B.S. in Computer Systems Engineering",
+      "location": "Tegucigalpa, Honduras",
+      "date_range": "2019 - 2025"
+    }
+  ],
+  "certifications": [
+    "Oracle Next Education F2 T5 Back-end - Alura Latam, 2023",
+    "Database Foundations - Oracle Academy, 2023",
+    "Java Foundations - Oracle Academy, 2021-2022",
+    "Computational Thinking with Python - Platzi, 2021"
+  ],
+  "languages": ["Spanish: Native", "English: B2 Level"],
+  "section_titles": {
+    "experience": "WORK EXPERIENCE",
+    "skills": "SKILLS",
+    "projects": "PROJECTS",
+    "education": "EDUCATION",
+    "certifications": "CERTIFICATIONS",
+    "languages": "LANGUAGES",
+    "references": "REFERENCES"
+  },
+  "skill_labels": {
+    "languages": "Languages",
+    "ai": "AI & AI-Assisted Development",
+    "frameworks": "Frameworks & Orchestration",
+    "databases": "Databases",
+    "cloud": "Cloud & Infrastructure",
+    "testing": "Testing & QA",
+    "data": "Data Engineering"
+  }
+}

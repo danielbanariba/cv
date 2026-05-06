@@ -1,7 +1,7 @@
 {
   "personal_info": {
-    "name": "Daniel Alejandro Barrientos",
-    "nickname": "Daniel Banariba",
+    "name": "Daniel Banariba",
+    "legal_name": "Daniel Alejandro Barrientos",
     "email": "danielbanariba@protonmail.com",
     "phone": "(+504) 3324-5827",
     "location": "Tegucigalpa, Honduras",
@@ -10,10 +10,10 @@
     "linkedin": "https://www.linkedin.com/in/danielbanariba/"
   },
   "profiles": {
-    "short": "Ingeniero en Sistemas con experiencia en data engineering, desarrollo backend y automatización de procesos.",
-    "medium": "Ingeniero en Sistemas con experiencia en data engineering (Dagster, SQL Server, DWH), desarrollo backend (FastAPI, NestJS) y automatización de procesos. Especializado en construir pipelines ETL confiables y APIs escalables.",
-    "long": "Ingeniero en Sistemas con experiencia en data engineering y desarrollo backend. Actualmente construyo pipelines ETL con Dagster y Python para un DWH corporativo en SQL Server, automatizando extracción de precios de competencia, conciliación de tarjetas de crédito y procesos de cierre contable. Previamente desarrollé APIs REST con FastAPI y NestJS, integré equipos médicos VITEK, y modernizé infraestructuras de impresión críticas.",
-    "detailed": "Ingeniero en Sistemas con experiencia en data engineering y desarrollo backend. Actualmente construyo pipelines ETL con Dagster y Python para un DWH corporativo en SQL Server, automatizando extracción de precios de competencia, conciliación de tarjetas de crédito y procesos de cierre contable.\n\nPreviamente desarrollé APIs REST con FastAPI y NestJS, integré equipos médicos VITEK con protocolos ASTM/HL7, y modernizé infraestructuras de impresión con WebSocket y PowerShell. Mi experiencia abarca data engineering con Dagster y dbt, desarrollo backend con FastAPI, NestJS y PostgreSQL, automatización de testing con Playwright, e integración con protocolos especializados."
+    "short": "Construyo servidores MCP en producción y pipelines ETL Dagster con monitoreo autónomo. Stack: Python, SQL Server, FastAPI, NestJS, MCP, AI Agents, SDD, TDD.",
+    "medium": "Construyo herramientas para que la IA opere infra de producción. 4 servidores MCP en producción (Dagster, SQL Server, Microsoft Graph) operados desde Claude Code. Pipelines ETL con Dagster + SQL Server, monitoreo autónomo con baselines aprendidos de 100+ ejecuciones históricas, alertas freshness-aware. Stack: Python, FastAPI, NestJS, MCP, AI Agents, SDD, TDD.",
+    "long": "Construyo herramientas para que la IA opere infra de producción. 4 servidores MCP (Model Context Protocol) en producción habilitan a Claude Code operar Dagster, SQL Server, Microsoft Graph/Outlook y health checks de APIs — automatizando flujos completos de CI/observabilidad y reduciendo tiempos de diagnóstico. En paralelo construyo pipelines ETL con Dagster y Python para un DWH corporativo en SQL Server: conciliaciones bancarias y transaccionales, watchdog autónomo que aprende baselines de ejecución y cancela runs pegados, alertas freshness-aware que eliminan ruido de fallos transitorios. Trabajo a diario aplicando SDD (Spec-Driven Development) y TDD estricto. Stack: Python, Dagster, SQL Server, FastAPI, NestJS, MCP, AI Agents, Anthropic Skills, Claude Code.",
+    "detailed": "Construyo herramientas para que la IA opere infra de producción. Mi diferenciador real son los 4 servidores MCP (Model Context Protocol) que tengo en producción — habilitan a Claude Code operar Dagster, SQL Server, Microsoft Graph/Outlook y health checks de APIs directamente desde herramientas de IA, automatizando flujos completos de CI/observabilidad y reduciendo dramáticamente tiempos de diagnóstico.\n\nActualmente construyo pipelines ETL con Dagster y Python para un DWH corporativo en SQL Server. Automaticé conciliaciones bancarias (Credomatic/BAC, Ficohsa) y transaccionales (Netflix, Tengo, Rapibac), implementé monitoreo de pipelines con alertas multicanal (Discord webhooks + Telegram bot), y construí un watchdog autónomo que aprende baselines de ejecución de 100+ ejecuciones históricas y cancela runs pegados con reintentos inteligentes.\n\nRediseñé el sistema de alertas de fallos del bot Discord de arquitectura send-immediate a freshness-aware late alerts, eliminando el ruido de fallos transitorios auto-recuperados por retries. Detecté y corregí 3 bugs silenciosos en producción (Dockerfile mal apuntado al python del sistema, SecretEnvVar tragado por except silencioso, tablas no creadas en prod). Implementé self-service de canales via comandos admin (!enable-here/!disable-here) con persistencia en nexus, y agregué fuzzy search al comando !asset para consultar assets del workspace de 1073 assets.\n\nPreviamente desarrollé APIs REST con FastAPI y NestJS, integré equipos médicos VITEK con protocolos ASTM/HL7, y modernicé infraestructuras de impresión multi-país con WebSocket y Windows 11. Trabajo a diario aplicando SDD (Spec-Driven Development) y TDD estricto. Stack: Python, Dagster, SQL Server, FastAPI, NestJS, MCP, AI Agents, Anthropic Skills, Claude Code, Cursor."
   },
   "experience": [
     {
@@ -22,76 +22,69 @@
       "date_range": "Noviembre 2025 - Actualidad",
       "location": "Honduras",
       "responsibilities": [
+        "Rediseñé el sistema de alertas de fallos de Dagster de arquitectura send-immediate a freshness-aware late alerts con cola de pendientes en PostgreSQL: failure sensor encola en pending_failure_alerts al detectar el fallo, un nuevo late_failure_alert_sensor evalúa cada 5 minutos contra un deadline configurable (LATE_ALERT_DEFAULT_MINUTES, default 120 min) y dispara email + Discord rojo solo si el asset no se recuperó — eliminando el ruido de fallos transitorios auto-recuperados por retries automáticos de Dagster.",
+        "Detecté y corregí 3 bugs silenciosos en el bot Discord productivo que habían quedado sin detectar por 2 días post-merge: (1) Dockerfile con CMD apuntando al python del sistema en vez del venv creado por uv sync (crash loop), (2) pasaje de SecretEnvVar de DagsterSettings directo a psycopg2.connect que lanzaba RuntimeError tragado por except Exception: pass, (3) tablas de nexus (discord_user_mapping, asset_failure_state) nunca creadas en el entorno productivo por falta de migration en el PR original. Agregué auto-bootstrap idempotente (CREATE TABLE IF NOT EXISTS) y reemplacé los except silenciosos por logger.warning para visibilidad.",
+        "Implementé en el bot Discord el comando !asset <nombre> con fuzzy search y el comando !dagster-status con nombres reales de assets (en vez del job genérico __ASSET_JOB) consultando el assetSelection de runs vía Dagster GraphQL. La búsqueda fuzzy normaliza separadores (_, -, /, espacios) soportando match snake_case ↔ CamelCase, multi-palabra con lógica AND, y fallback a difflib.get_close_matches — probado contra 1073 assets del workspace productivo.",
+        "Implementé self-service de canales Discord con comandos admin !enable-here / !disable-here respaldados por tabla bot_allowed_channels en nexus (leída en cada mensaje), eliminando la fricción operacional de SSH + edición de env vars + recreate de container cada vez que se habilita el bot en un canal nuevo. Desplegé además un segundo bot independiente en el entorno dev/qa (server separado) apuntando al Dagster de qa, con timezone display configurable (zoneinfo, default America/Tegucigalpa).",
         "Construí scrapers de precios de competencia (Farmacias del Ahorro, Siman, FarmaValue, FarmaCity) con extracción diaria automatizada en Dagster, incluyendo desencriptación de APIs expuestas y rotación de proxies/TOR para evadir rate limiting.",
         "Desarrollé pipelines de conciliación de tarjetas de crédito (Credomatic/BAC y Ficohsa) automatizando la lectura de estados de cuenta Excel vía SMB desde carpetas compartidas y cruzando contra tablas LDCOM en SQL Server.",
+        "Implementé pipelines ETL para conciliación transaccional de Netflix (préstamos vs contabilidad vía Epick), Tengo (conciliación Astra) y Rapibac (transacciones bancarias) con detección automática de archivos nuevos mediante file sensors de Dagster y carga incremental a SQL Server.",
+        "Integré notificaciones de fallos a Discord webhook como segundo canal de notificación al lado del email existente, con especificación formal completa (SDD: proposal, spec, design, tasks), implementación TDD estricta (13 tests unitarios e integración), y degradación graceful donde Discord funciona independientemente del estado del SMTP.",
+        "Construí sistema autónomo de monitoreo (dagster_watchdog.py) que consulta la API GraphQL de Dagster en producción cada 5 minutos, detecta pipelines pegados comparando tiempos de ejecución contra baselines aprendidos de 100+ ejecuciones históricas por tipo de sensor, cancela automáticamente runs excedidos, los re-lanza con tags de retry, y notifica vía Telegram bot en tiempo real. Desplegado como servicio systemd 24/7.",
+        "Configuré timeouts nativos (dagster/max_runtime) en 27+ jobs de 3 code locations (global, kielsa, sap) para detección automática de procesos pegados por el daemon de Dagster, complementando el sistema de alertas Discord con auto-fail cuando un run excede su tiempo máximo esperado.",
+        "Desarrollé e integré 4 servidores MCP (Model Context Protocol): operaciones Dagster (materialización de assets, consulta de runs/logs/errores en dev/local/prd), consultas SQL Server con sistema de allowlist parametrizada con Jinja, monitoreo Discord (lectura/envío de mensajes en canales de alertas), y API health checks — habilitando un flujo completo de CI/observabilidad operado directamente desde Claude Code.",
+        "Resolví incidente crítico de OOM (Out of Memory) en producción para el asset BI_SAP_Hecho_SocAlmArtGpoCli_Demanda_Limpia, diagnosticando que el container Docker tenía límite de 4GB en un servidor con 47GB disponibles, optimizando la consulta con Polars lazy evaluation y ajustando límites de memoria en vivo con docker update.",
         "Automaticé el proceso de cierre de cajas consolidando archivos Excel diarios en tablas staging del DWH con detección automática de cambios mediante sensores de Dagster.",
         "Migré procesos legacy de Windows (Planning/Nivelaciones) a Dagster, eliminando dependencia de VMs con Task Scheduler y credenciales de dominio.",
         "Estandaricé estructuras de tablas DWH con metadatos (país, origen, versiones) para consumo en Power BI, corrigiendo bugs de datos históricos y ventanas de carga.",
-        "Implementé alertas por email para fallas de extracción y cambios en APIs, con monitoreo de ejecución en Dagster.",
         "Documenté hallazgos de seguridad en APIs internas (Kielsa) con reportes técnicos detallados, incluyendo endpoints expuestos y recomendaciones de mitigación.",
-        "Evalué e integré herramientas de IA (GitHub Copilot, Claude Code, Codex) para el equipo de desarrollo, incluyendo comparativa de licenciamiento y propuesta de Claude Cowork."
+        "Evalué e integré herramientas de IA (GitHub Copilot, Claude Code, Codex) para el equipo de desarrollo, incluyendo comparativa de licenciamiento y propuesta de Claude Cowork.",
+        "Participé en la arquitectura del monorepo Dagster multi-location (3 code locations gRPC + shared library) con Docker Compose, CI/CD en GitHub Actions, pre-commit hooks (ruff, ty, yamllint), y estrategia de testing por paquete con pytest."
       ],
-      "technologies": "Python, Dagster, SQL Server, DWH, Docker, SMB/CIFS, Power BI, dbt, Git, Web Scraping, ETL, Data Engineering, Data Pipeline, Orquestación de datos, Automatización, RPA"
+      "technologies": "Python, Dagster, SQL Server, DWH, Docker, Docker Compose, SMB/CIFS, Power BI, dbt, Polars, Discord Webhooks, Telegram Bot, MCP Servers, GraphQL, Git, GitHub Actions, CI/CD, Web Scraping, ETL, Data Engineering, Data Pipeline, Orquestación de datos, Automatización, RPA, pytest, TDD, SDD, systemd, OpenClaw, Ruff, pre-commit, zoneinfo, freshness-aware alerts, psycopg2, difflib, fuzzy search, auto-bootstrap, self-service"
     },
     {
-      "company": "Analiza",
-      "position": "Desarrollador de software / Backend Developer",
+      "company": "Analiza Laboratorios Clínicos",
+      "position": "Software Developer | Multi-país (HN/GT/SV)",
       "date_range": "Marzo 2025 - Octubre 2025",
-      "location": "Honduras",
+      "location": "Honduras (proyectos para operaciones en Guatemala y El Salvador)",
       "responsibilities": [
-        "Automaticé el procesamiento de resultados de cultivos que anteriormente se ingresaban manualmente.",
-        "Implementé modelos de datos con SQLModel ORM para gestionar catálogos de bacterias (7,429 microorganismos), antibióticos (278 registros) y tipos de muestra, estableciendo relaciones complejas entre encabezados y detalles de antibiogramas.",
-        "Diseñé endpoints RESTful para CRUD de resultados bacteriológicos, validación de cultivos y gestión de catálogos, con documentación automática en Swagger y manejo robusto de errores.",
-        "Desarrollé servicios de negocio para mapeo entre códigos REAL y Analiza, conversión de protocolos ASTM/HL7, y validación de estados de tubos y pruebas en el flujo de trabajo completo.",
-        "Implementé sistema de trazabilidad de mensajes bidireccionales ASTM/HL7 con manejo de errores, reintentos automáticos y logging para debugging de comunicación con equipos VITEK.",
-        "Implementé un sistema de comisiones para médicos referentes que automatiza el cálculo y registro del 10% sobre servicios de laboratorio referidos, mejorando la fidelización de profesionales externos.",
-        "Desarrollé validaciones robustas para prevenir comisiones duplicadas y garantizar la integridad de datos en transacciones financieras.",
-        "Optimicé la estructura de datos mediante SQL directo para actualizar correctamente totales de facturación, mejorando la precisión de reportes financieros.",
-        "Refactoricé controladores existentes aplicando principios de código limpio y abstracción para mejorar la mantenibilidad.",
-        "Hice un diagrama de flujo de las etiquetas del código de barras para entender el proceso y la lógica de negocio del sistema.",
-        "Desarrollé un endpoint para automatizar el reabastecimiento de inventario entre sucursales, implementando lógica de negocio para optimizar solicitudes basadas en puntos de reorden y disponibilidad real."
+        "[CRM Doctores - SV] Desarrollé módulo de gestión de doctores con 8 endpoints REST e integración con epockets para procesamiento de transacciones del laboratorio en El Salvador.",
+        "[Proxy DevOps - Multi-país] Diseñé e implementé infraestructura de proxy con Docker y OpenVPN para conectar las operaciones de Honduras, Guatemala y El Salvador, habilitando acceso seguro a servicios internos cross-país.",
+        "[Agroservicio - SV] Desarrollé sistema comercial con 10 módulos core (proveedores, inventario, sucursales) para operaciones agroindustriales en El Salvador.",
+        "[Sistema de Impresión - Multi-país] Modernicé el sistema de impresión legacy a Windows 11 con servidores WebSocket, eliminando dependencias deprecadas y unificando el stack de impresión en las operaciones de Honduras, Guatemala y El Salvador.",
+        "[CRM Bacteriología - SV] Automaticé el procesamiento de resultados de cultivos que anteriormente se ingresaban manualmente.",
+        "[CRM Bacteriología - SV] Implementé modelos de datos con SQLModel ORM para gestionar catálogos de bacterias (7,429 microorganismos), antibióticos (278 registros) y tipos de muestra, estableciendo relaciones complejas entre encabezados y detalles de antibiogramas.",
+        "[CRM Bacteriología - SV] Diseñé endpoints RESTful para CRUD de resultados bacteriológicos, validación de cultivos y gestión de catálogos, con documentación automática en Swagger y manejo robusto de errores.",
+        "[CRM Bacteriología - SV] Desarrollé servicios de negocio para mapeo entre códigos REAL y Analiza, conversión de protocolos ASTM/HL7, y validación de estados de tubos y pruebas en el flujo de trabajo completo.",
+        "[CRM Bacteriología - SV] Implementé sistema de trazabilidad de mensajes bidireccionales ASTM/HL7 con manejo de errores, reintentos automáticos y logging para debugging de comunicación con equipos VITEK.",
+        "[Facturación - GT] Implementé un sistema de comisiones para médicos referentes que automatiza el cálculo y registro del 10% sobre servicios de laboratorio referidos, mejorando la fidelización de profesionales externos.",
+        "[Facturación - GT] Desarrollé validaciones robustas para prevenir comisiones duplicadas y garantizar la integridad de datos en transacciones financieras.",
+        "[Facturación - GT] Optimicé la estructura de datos mediante SQL directo para actualizar correctamente totales de facturación, mejorando la precisión de reportes financieros.",
+        "[Facturación - GT] Refactoricé controladores existentes aplicando principios de código limpio y abstracción para mejorar la mantenibilidad.",
+        "[Facturación - GT] Hice un diagrama de flujo de las etiquetas del código de barras para entender el proceso y la lógica de negocio del sistema.",
+        "[Facturación - GT] Desarrollé un endpoint para automatizar el reabastecimiento de inventario entre sucursales, implementando lógica de negocio para optimizar solicitudes basadas en puntos de reorden y disponibilidad real.",
+        "[Facturación - GT] Automaticé las pruebas de API en Postman mediante scripts de extracción automática de tokens de autenticación, eliminando el proceso manual de copiar y pegar tokens entre requests.",
+        "[Facturación - GT] Implementé variables de entorno en Postman utilizando configuraciones dinámicas en lugar de URLs fijas, facilitando el cambio de endpoints entre entornos de desarrollo, testing y producción sin modificar cada request individualmente."
       ],
-      "technologies": "Node.js, TypeScript, Express, PostgreSQL, Postman, JavaScript, REST API, API, Backend, SQLModel, ORM, Swagger, ASTM, HL7, VITEK, Protocolos médicos, Antibiogramas, Bacteriología, Laboratorio clínico, Diagramas de flujo, Análisis de procesos, Código de barras, Reabastecimiento automático, Gestión de inventario, Trazabilidad, Logging"
-    },
-    {
-      "company": "Sistema de Facturación de Guatemala",
-      "position": "Backend Developer",
-      "date_range": "24 de Marzo - 2 de Junio 2025",
-      "location": "Guatemala",
-      "responsibilities": [
-        "Implementé un sistema de comisiones para médicos referentes que automatiza el cálculo y registro del 10% sobre servicios de laboratorio referidos, mejorando la fidelización de profesionales externos.",
-        "Automaticé las pruebas de API en Postman mediante scripts de extracción automática de tokens de autenticación, eliminando el proceso manual de copiar y pegar tokens entre requests.",
-        "Implementé variables de entorno en Postman utilizando configuraciones dinámicas en lugar de URLs fijas, facilitando el cambio de endpoints entre entornos de desarrollo, testing y producción sin modificar cada request individualmente.",
-        "Desarrollé un endpoint para automatizar el reabastecimiento de inventario entre sucursales, implementando lógica de negocio para optimizar solicitudes basadas en puntos de reorden y disponibilidad real.",
-        "Hice un diagrama de flujo de las etiquetas del código de barras para entender el proceso y la lógica de negocio del sistema."
-      ],
-      "technologies": "Node.js, TypeScript, Express, Sequelize ORM, PostgreSQL, Postman, REST API, API Testing, Variables de entorno, Scripts de automatización, Sistemas de facturación, Diagramas de flujo, Gestión de inventario"
+      "technologies": "Node.js, TypeScript, Express, PostgreSQL, SQLModel ORM, Sequelize ORM, REST API, API RESTful, Backend, Full Stack, DevOps, Software Engineering, Docker, OpenVPN, WebSocket, Windows 11, ASTM, HL7, VITEK, Protocolos médicos, Antibiogramas, Bacteriología, Laboratorio clínico, CRM, Sistema de facturación, Sistema comercial, epockets, Postman, Apidog, Swagger, API Testing, API Documentation, Variables de entorno, Scripts de automatización, Diagramas de flujo, Análisis de procesos, Código de barras, Reabastecimiento automático, Gestión de inventario, Trazabilidad, Logging, Infraestructura cross-país, Modernización legacy, Multi-país, Centroamérica"
     },
     {
       "company": "GuabaBIT",
-      "position": "QA & Backend Developer | LUQA",
+      "position": "QA & Backend Developer",
       "date_range": "Octubre 2024 - Marzo 2025",
       "location": "Honduras",
       "responsibilities": [
-        "Diseñé y elaboré un documento técnico de la arquitectura completa de un sistema de pagos comunitarios con servicios RESTful y flujos de trabajo, para facilitar la comprensión y mantenimiento del sistema, implementando bases de datos NoSQL (DynamoDB) y servicios de AWS (S3, SNS).",
-        "Desarrollé la funcionalidad 'Announcement' para notificaciones en tiempo real y gestión de anuncios, incluyendo la creación de endpoints, modelos y servicios de backend. Lo que permitió a los usuarios recibir alertas instantáneas sobre actualizaciones relevantes en la comunidad.",
-        "Realicé pruebas de API utilizando Postman y Apidog para asegurar la funcionalidad, creando colecciones y scripts de pruebas automatizadas.",
-        "Reporté bugs detallados en los endpoints que consideraban críticos, creando reproducciones precisas en Postman y ApiDog.",
-        "Documenté APIs utilizando Swagger y creé documentación detallada de las pruebas en Apidog para facilitar el mantenimiento y escalabilidad."
+        "[LUQA] Diseñé y elaboré un documento técnico de la arquitectura completa de un sistema de pagos comunitarios con servicios RESTful y flujos de trabajo, para facilitar la comprensión y mantenimiento del sistema, implementando bases de datos NoSQL (DynamoDB) y servicios de AWS (S3, SNS).",
+        "[LUQA] Desarrollé la funcionalidad 'Announcement' para notificaciones en tiempo real y gestión de anuncios, incluyendo la creación de endpoints, modelos y servicios de backend. Lo que permitió a los usuarios recibir alertas instantáneas sobre actualizaciones relevantes en la comunidad.",
+        "[LUQA] Realicé pruebas de API utilizando Postman y Apidog para asegurar la funcionalidad, creando colecciones y scripts de pruebas automatizadas.",
+        "[LUQA] Reporté bugs detallados en los endpoints que consideraban críticos, creando reproducciones precisas en Postman y ApiDog.",
+        "[LUQA] Documenté APIs utilizando Swagger y creé documentación detallada de las pruebas en Apidog para facilitar el mantenimiento y escalabilidad.",
+        "[Choyc] Implementé pruebas automatizadas end-to-end con Playwright para flujos críticos (login, formularios, gestión de cotizaciones, handshake).",
+        "[Choyc] Creé y ejecuté test cases manuales en Jira para verificar la integridad del sistema, reportando y documentando bugs críticos.",
+        "[Choyc] Gestioné historias de usuario (user stories) en Jira, poniendo criterios de aceptación y una descripción detalladas, lo que contribuyó a entregas incrementales exitosas en cada sprint."
       ],
-      "technologies": "Node.js, TypeScript, NestJS, DynamoDB, AWS, Amazon S3, Amazon SNS, Postman, Apidog, Swagger, API Testing, API Documentation, Backend, REST API, NoSQL, API RESTful, Microservicios, Serverless, Modelo-Vista-Controlador (MVC), Inyección de dependencias, Documentación técnica, Pagos comunitarios, Arquitectura de software"
-    },
-    {
-      "company": "GuabaBIT",
-      "position": "QA Tester | Choyc",
-      "date_range": "Octubre 2024 - Marzo 2025",
-      "location": "Honduras",
-      "responsibilities": [
-        "Implementé pruebas automatizadas end-to-end con Playwright para flujos críticos (login, formularios, gestión de cotizaciones, handshake).",
-        "Creé y ejecuté test cases manuales en Jira para verificar la integridad del sistema, reportando y documentando bugs críticos.",
-        "Gestioné historias de usuario (user stories) en Jira, poniendo criterios de aceptación y una descripción detalladas, lo que contribuyó a entregas incrementales exitosas en cada sprint."
-      ],
-      "technologies": "Node.js, TypeScript, Jest, Playwright, Jira, Testing, QA, Pruebas end-to-end, E2E, Automatización de pruebas, Test cases, Gestión de bugs, User stories, Agile, Scrum, Sprint, Criterios de aceptación, Metodologías ágiles"
+      "technologies": "Node.js, TypeScript, NestJS, DynamoDB, AWS, Amazon S3, Amazon SNS, Jest, Playwright, Postman, Apidog, Jira, Swagger, API Testing, API Documentation, Testing, QA, E2E, Pruebas end-to-end, Automatización de pruebas, Test cases, Gestión de bugs, User stories, Agile, Scrum, Sprint, Backend, REST API, NoSQL, API RESTful, Microservicios, Serverless, MVC, Inyección de dependencias, Pagos comunitarios"
     }
   ],
   "skills": {
@@ -113,6 +106,7 @@
             "Kivy"
           ],
           "libraries": [
+            "Polars",
             "Pandas",
             "NumPy",
             "BeautifulSoup",
@@ -121,7 +115,9 @@
             "Matplotlib",
             "Pygame",
             "Moviepy",
-            "Pyautogui"
+            "Pyautogui",
+            "pyodbc",
+            "openpyxl"
           ],
           "level": "Avanzado"
         },
@@ -221,7 +217,7 @@
         },
         {
           "name": "Inglés",
-          "level": "Intermedio",
+          "level": "B2",
           "variations": [
             "English",
             "Inglés B2"
@@ -348,6 +344,279 @@
           "Sequelize",
           "Sequelize ORM"
         ]
+      },
+      {
+        "name": "Polars",
+        "category": "Data Engineering",
+        "variations": [
+          "Polars",
+          "Polars DataFrame",
+          "Polars Python"
+        ]
+      },
+      {
+        "name": "MCP",
+        "category": "AI Integration",
+        "variations": [
+          "MCP",
+          "Model Context Protocol",
+          "MCP Server",
+          "MCP Tools"
+        ]
+      }
+    ],
+    "ai_tools": [
+      {
+        "name": "Claude Code",
+        "category": "AI Coding Assistant",
+        "variations": [
+          "Claude Code",
+          "Claude AI Code",
+          "Claude AI",
+          "Anthropic Claude",
+          "Claude"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "Cursor",
+        "category": "AI Coding Assistant",
+        "variations": [
+          "Cursor",
+          "Cursor IDE",
+          "Cursor AI"
+        ],
+        "level": "Intermedio"
+      },
+      {
+        "name": "Codex CLI",
+        "category": "AI Coding Assistant",
+        "variations": [
+          "Codex",
+          "Codex CLI",
+          "OpenAI Codex",
+          "Codex Agent"
+        ],
+        "level": "Intermedio"
+      },
+      {
+        "name": "OpenCode",
+        "category": "AI Coding Assistant",
+        "variations": [
+          "OpenCode",
+          "sst/opencode",
+          "opencode terminal agent"
+        ],
+        "level": "Intermedio"
+      },
+      {
+        "name": "Aider",
+        "category": "AI Coding Assistant",
+        "variations": [
+          "Aider",
+          "Aider Chat",
+          "aider.chat"
+        ],
+        "level": "Intermedio"
+      },
+      {
+        "name": "Cline",
+        "category": "AI Coding Assistant",
+        "variations": [
+          "Cline",
+          "Cline VS Code",
+          "Claude Dev"
+        ],
+        "level": "Intermedio"
+      },
+      {
+        "name": "Continue.dev",
+        "category": "AI Coding Assistant",
+        "variations": [
+          "Continue",
+          "Continue.dev",
+          "Continue VS Code",
+          "Continue JetBrains"
+        ],
+        "level": "Intermedio"
+      },
+      {
+        "name": "Windsurf",
+        "category": "AI Coding Assistant",
+        "variations": [
+          "Windsurf",
+          "Windsurf IDE",
+          "Codeium Windsurf",
+          "Codeium"
+        ],
+        "level": "Intermedio"
+      },
+      {
+        "name": "GitHub Copilot",
+        "category": "AI Coding Assistant",
+        "variations": [
+          "GitHub Copilot",
+          "Copilot",
+          "Copilot Chat",
+          "Copilot Workspace"
+        ],
+        "level": "Intermedio"
+      },
+      {
+        "name": "Anthropic Agent Skills",
+        "category": "AI Engineering",
+        "variations": [
+          "Agent Skills",
+          "Claude Skills",
+          "Anthropic Skills",
+          "SKILL.md",
+          "agentskills.io",
+          "Custom Skills",
+          "Skills standard"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "Slash Commands & Hooks",
+        "category": "AI Engineering",
+        "variations": [
+          "Slash Commands",
+          "Custom Slash Commands",
+          "Claude Code Hooks",
+          "Agent Hooks",
+          "Pre/Post Hooks",
+          "Custom Commands"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "MCP (Model Context Protocol)",
+        "category": "AI Integration",
+        "variations": [
+          "MCP",
+          "Model Context Protocol",
+          "MCP Server",
+          "MCP Servers",
+          "MCP Tools",
+          "Servidores MCP"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "AI Agents",
+        "category": "AI Engineering",
+        "variations": [
+          "AI Agents",
+          "Agentes IA",
+          "Agentes de IA",
+          "Sub-agents",
+          "Sub-agentes",
+          "Multi-agent",
+          "Multiagent",
+          "Agent Orchestration",
+          "Orquestación de Agentes",
+          "Agent Teams",
+          "Agentic AI",
+          "Agentic Workflows",
+          "Autonomous Agents",
+          "Agent-based systems"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "Tool Use & Function Calling",
+        "category": "AI Integration",
+        "variations": [
+          "Tool Use",
+          "Function Calling",
+          "AI Tool Use",
+          "LLM Tool Use",
+          "Tool Calling",
+          "Function Tools",
+          "MCP Tools",
+          "AI Function Calling"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "Prompt Engineering",
+        "category": "AI Engineering",
+        "variations": [
+          "Prompt Engineering",
+          "Ingeniería de Prompts",
+          "Prompting",
+          "Prompt Design",
+          "LLM Prompting"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "SDD",
+        "category": "AI Methodology",
+        "variations": [
+          "SDD",
+          "Spec-Driven Development",
+          "Desarrollo Guiado por Especificaciones",
+          "Spec Driven"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "Vibe Coding",
+        "category": "AI Coding Workflow",
+        "variations": [
+          "Vibe Coding",
+          "AI-Assisted Development",
+          "Desarrollo Asistido por IA",
+          "AI Pair Programming"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "LLMs",
+        "category": "AI Engineering",
+        "variations": [
+          "LLM",
+          "LLMs",
+          "Large Language Models",
+          "Modelos de Lenguaje Grandes",
+          "Generative AI",
+          "IA Generativa",
+          "GenAI",
+          "Foundation Models",
+          "Modelos Fundacionales"
+        ],
+        "level": "Intermedio"
+      },
+      {
+        "name": "Anthropic API",
+        "category": "AI Integration",
+        "variations": [
+          "Anthropic API",
+          "Claude API",
+          "Anthropic SDK",
+          "Claude SDK",
+          "OpenAI API",
+          "LLM API"
+        ],
+        "level": "Intermedio"
+      },
+      {
+        "name": "AI Integration",
+        "category": "AI Engineering",
+        "variations": [
+          "AI Integration",
+          "Integración de IA",
+          "LLM Integration",
+          "Integración de LLMs",
+          "AI-Augmented Development",
+          "Desarrollo Aumentado por IA",
+          "AI Orchestration",
+          "Orquestación de IA",
+          "AI Workflow",
+          "Flujo de Trabajo con IA"
+        ],
+        "level": "Avanzado"
       }
     ],
     "databases": [
@@ -468,6 +737,25 @@
           "Container Orchestration"
         ],
         "level": "Básico"
+      },
+      {
+        "name": "GitHub Actions",
+        "variations": [
+          "GitHub Actions",
+          "GHA",
+          "CI/CD con GitHub",
+          "GitHub Actions workflows"
+        ],
+        "level": "Avanzado"
+      },
+      {
+        "name": "Docker Compose",
+        "variations": [
+          "Docker Compose",
+          "Compose",
+          "compose-first"
+        ],
+        "level": "Avanzado"
       }
     ],
     "testing": [
@@ -521,6 +809,16 @@
           "Jest Framework"
         ],
         "level": "Intermedio"
+      },
+      {
+        "name": "pytest",
+        "variations": [
+          "pytest",
+          "py.test",
+          "Python Testing",
+          "pytest-mock"
+        ],
+        "level": "Avanzado"
       }
     ],
     "methodologies": [
@@ -628,15 +926,118 @@
           "Automation",
           "Process Automation"
         ]
+      },
+      {
+        "name": "Discord Webhooks",
+        "variations": [
+          "Discord Webhooks",
+          "Discord API",
+          "Discord Notifications",
+          "Webhook Notifications"
+        ]
+      },
+      {
+        "name": "Telegram Bot",
+        "variations": [
+          "Telegram Bot",
+          "Telegram API",
+          "Telegram Notifications",
+          "Bot API"
+        ]
+      },
+      {
+        "name": "ETL",
+        "variations": [
+          "ETL",
+          "Extract Transform Load",
+          "Data Pipeline",
+          "Data Integration"
+        ]
+      },
+      {
+        "name": "Observabilidad",
+        "variations": [
+          "Observabilidad",
+          "Observability",
+          "Monitoring",
+          "Alerting",
+          "Run Monitoring"
+        ]
+      },
+      {
+        "name": "GraphQL",
+        "variations": [
+          "GraphQL",
+          "GraphQL API",
+          "GQL"
+        ]
+      },
+      {
+        "name": "Discord.py",
+        "variations": [
+          "Discord.py",
+          "discord.py",
+          "Python Discord library",
+          "Discord Bot Python"
+        ]
+      },
+      {
+        "name": "CI/CD",
+        "variations": [
+          "CI/CD",
+          "Continuous Integration",
+          "Continuous Deployment",
+          "Pipeline CI"
+        ]
       }
     ]
   },
   "projects": [
     {
+      "title": "Navidrome — Open Source",
+      "description": "Contribuciones mergeadas al proyecto Navidrome (servidor de streaming musical self-hosted, 20.7K ⭐ en GitHub, escrito en Go + React): (1) implementación del filtro \"Not Starred\" para vistas de álbum/canción/artista usando el patrón NullableBooleanInput de react-admin v3 — pivoteado desde un approach con dataProvider hacks tras feedback del maintainer (PR #5362, mergeado por @deluan). (2) fix de accesibilidad por teclado en la grilla de álbumes: agregado de \":focus-within\" CSS pseudo-class más manejo de pointerEvents para evitar clicks accidentales en botones invisibles (PR #5434, cierra issue #4836). (3) Reporté y reproducí con Playwright el bug de límite de conexiones HTTP/1.1 con SSE en uso multi-tab (issue #5366) y documenté el workaround vía Caddy con HTTP/2 + TLS automático.",
+      "technologies": "React, react-admin v3, JavaScript, CSS, accesibilidad web (WCAG), Go, GitHub PR workflow, DCO sign-off, Playwright, Caddy, HTTP/2",
+      "github": "https://github.com/navidrome/navidrome/pulls?q=is%3Apr+author%3Adanielbanariba+is%3Amerged",
+      "live": "https://github.com/navidrome/navidrome",
+      "type": "Open Source / Frontend & Accessibility"
+    },
+    {
+      "title": "Dagster Watchdog — Monitoreo Autónomo de Pipelines",
+      "description": "Sistema autónomo de monitoreo para pipelines Dagster en producción. Consulta la API GraphQL cada 5 minutos, detecta runs pegados comparando tiempos de ejecución contra baselines aprendidos de 100+ ejecuciones históricas agrupadas por tipo de sensor (acs_hourly, acs_daily, manual, etc.). Cuando detecta un run excedido: lo cancela, espera propagación, re-lanza con los mismos assets y tags de retry, y notifica vía Telegram bot. Incluye safety guards (no mata runs < 5 min, límite de 2 reintentos diarios por sensor, no re-lanza sus propios runs). Desplegado como servicio systemd 24/7 con logging persistente.",
+      "technologies": "Python, Dagster GraphQL API, Telegram Bot API, OpenClaw, systemd, JSON baselines, asyncio",
+      "github": "Privado (NDA - proyecto corporativo)",
+      "live": "",
+      "type": "Monitoreo & Observabilidad"
+    },
+    {
+      "title": "MCP Servers Suite — Dagster, SQL Server, API Health & Outlook/Todoist",
+      "description": "Suite de 4 servidores MCP (Model Context Protocol) en producción que habilitan operar todo el stack desde Claude Code: (1) mcp-dagster — materialización de assets y consulta de runs/logs/errores en 3 entornos (dev/local/prd) vía GraphQL, (2) mcp-db — allowlist de queries parametrizadas con Jinja sobre SQL Server y PostgreSQL, validación de comandos peligrosos vía ODBC, (3) mcp-api-check — verificación automática de health endpoints, (4) outlook-todoist-mcp — lectura de correos no leídos de Outlook vía Microsoft Graph (Device Code auth) y creación automática de tareas en Todoist con estado local para evitar duplicados. Habilita un flujo completo de CI/observabilidad: materializar → verificar run → leer error → consultar DB → crear tarea de seguimiento.",
+      "technologies": "Python, MCP Protocol, Dagster GraphQL, SQL Server, PostgreSQL, ODBC, Jinja2, pyodbc, Microsoft Graph, Todoist API, Claude Code, Anthropic",
+      "github": "Privado (NDA - proyecto corporativo)",
+      "live": "",
+      "type": "Integración IA & DevTools"
+    },
+    {
+      "title": "Outlook → Todoist MCP",
+      "description": "Servidor MCP (Python, stdio) que sincroniza correos no leídos de Outlook a tareas en Todoist usando Microsoft Graph con autenticación Device Code y persistencia local de estado para evitar duplicados. Incluye CLI con comandos auth, list, status y sync, y opción de marcar como leído tras sincronización exitosa. Pensado para correr 24/7 en la computadora corporativa.",
+      "technologies": "Python, MCP Protocol, FastMCP, Microsoft Graph, Todoist API, Device Code OAuth, stdio transport",
+      "github": "Privado (NDA - proyecto corporativo)",
+      "live": "",
+      "type": "Integración IA & Productividad"
+    },
+    {
+      "title": "Discord Alerts — Notificaciones de Fallos Dagster",
+      "description": "Integración de notificaciones de fallos de pipelines a Discord webhook como segundo canal al lado del email corporativo. Extiende el sensor @run_failure_sensor existente con funciones de formateo de embeds Discord (assets fallidos, error, initiator, timestamps, link al run), degradación graceful (Discord funciona aunque SMTP falle), y truncación inteligente para respetar límites de Discord (4096 chars descripción, 1024 chars por campo). Desarrollado con metodología SDD (Spec-Driven Development) completa y TDD estricto (13 tests). Incluye configuración de dagster/max_runtime en 27+ jobs para detección de procesos pegados.",
+      "technologies": "Python, Dagster, Discord Webhooks, requests, pytest, TDD, SDD",
+      "github": "Privado (NDA - proyecto corporativo)",
+      "live": "",
+      "type": "Observabilidad & Alertas"
+    },
+    {
       "title": "Sistema Contable",
       "description": "Infraestructura en Azure para un sistema contable seguro y escalable. Incluye red virtual, base de datos SQL, almacenamiento y aplicación web, todo configurado con medidas de seguridad avanzadas.",
       "technologies": "Azure, Terraform, Azure Virtual Network, Azure SQL Database, Azure App Service, Azure Storage, Infrastructure as Code",
-      "github": "",
+      "github": "https://github.com/danielbanariba/sistema-contable",
       "live": "",
       "type": "Infraestructura Cloud"
     },
@@ -644,7 +1045,7 @@
       "title": "Analyzepy",
       "description": "Es una herramienta que traduce código de Python a JavaScript, utilizando técnicas avanzadas de parsing y generación de código.",
       "technologies": "Python, Reflex, Parsing, Generación de código, Traducción de código, AST (Abstract Syntax Tree), JavaScript",
-      "github": "",
+      "github": "https://github.com/danielbanariba/analizador-lexico",
       "live": "",
       "type": "Herramienta de Desarrollo"
     },
@@ -652,41 +1053,50 @@
       "title": "Resuelve Sistemas de Ecuaciones",
       "description": "Aplicación web para resolver sistemas de ecuaciones lineales, aplicando métodos algebraicos y ofreciendo una interfaz amigable para los usuarios.",
       "technologies": "Python, Reflex, Matemáticas, Álgebra Lineal, Web App, NumPy",
-      "github": "",
+      "github": "https://github.com/danielbanariba/sistemas-de-ecuaciones",
       "live": "",
       "type": "Aplicación Educativa"
     },
     {
-      "title": "Canal de YouTube Automatizado",
-      "description": "Es un programa que automatiza la edición de videos para mi canal de YouTube, aplicando efectos, transiciones y subiendo el video a la plataforma de forma automática.",
-      "technologies": "Python, Pyautogui, Moviepy, Automatización, Edición de video, YouTube API",
-      "github": "",
+      "title": "Canal de YouTube Automatizado (Pipeline completo)",
+      "description": "Pipeline completo de 2 repos que automatiza un canal de YouTube de música underground: (1) `scrapper-deathgrind` scrapea álbumes con música libre de derechos, (2) `click-auto-editor` renderiza videos 4K con efectos VHS usando FFmpeg + CUDA y los sube programados a YouTube con gestión de playlists y copyright vía Playwright + YouTube API.",
+      "technologies": "Python, C++, CUDA, FFmpeg, Playwright, YouTube API, Pyautogui, Moviepy, BeautifulSoup, Web Scraping, Automatización, Edición de video 4K, Pipeline",
+      "github": "https://github.com/danielbanariba/click-auto-editor",
+      "companion_repo": "https://github.com/danielbanariba/scrapper-deathgrind",
       "live": "",
       "type": "Automatización de Contenido"
     },
     {
-      "title": "Web Scraping",
-      "description": "Para que mi canal de YouTube tenga contenido constantemente, he creado un programa que se encarga de buscar música libre de derechos de autor en internet.",
-      "technologies": "Python, BeautifulSoup, Requests, Selenium, Playwright, Web Scraping, Extracción de datos",
-      "github": "",
-      "live": "",
-      "type": "Herramienta de Extracción de Datos"
-    },
-    {
       "title": "Arsenal de Odio Website",
       "description": "Arsenal De Odio es una banda de Thrash Metal de Honduras, quise plasmar su espíritu como banda en la página web. Aquí se puede encontrar todo relacionado con la banda, sus integrantes, discografía, mercadería, etc.",
-      "technologies": "Python, Reflex, Javascript, HTML, CSS, Diseño Web, Responsive Design",
-      "github": "",
-      "live": "",
+      "technologies": "Astro, JavaScript, HTML, CSS, Diseño Web, Responsive Design",
+      "github": "https://github.com/danielbanariba/arsenal-de-odio-web",
+      "live": "https://arsenal-de-odio.vercel.app",
       "type": "Sitio Web"
     },
     {
       "title": "SoundCloud Clone",
       "description": "Analizar y clonar la funcionalidad de SoundCloud, creación de la base de datos, backend y frontend.",
       "technologies": "OracleSQL, Python, FastAPI, HTML, CSS, API RESTful, Streaming de audio, Arquitectura web",
-      "github": "",
+      "github": "https://github.com/danielbanariba/soundclound",
       "live": "",
       "type": "Clon de Aplicación"
+    },
+    {
+      "title": "Portafolio Personal — danielbanariba.dev",
+      "description": "Mi portafolio web con CV, proyectos y links profesionales. Construido con Astro para máximo rendimiento y SEO. Incluye dark mode, diseño responsive y soporte para múltiples idiomas.",
+      "technologies": "Astro, JavaScript, HTML, CSS, Tailwind CSS, SEO, Responsive Design, Static Site Generation",
+      "github": "https://github.com/danielbanariba/portafolio-dev",
+      "live": "https://danielbanariba.dev",
+      "type": "Sitio Web"
+    },
+    {
+      "title": "Brainusage — Contribución Open Source (compatibilidad GNOME)",
+      "description": "GNOME Shell extension que trackea el uso y límites de Claude Code y Codex CLI desde el panel superior. Contribuí al proyecto open source haciéndolo compatible con GNOME Shell, agregando soporte para el panel system de GNOME.",
+      "technologies": "JavaScript, GNOME Shell Extensions, Open Source, AI Tools Tracking, Claude Code, Codex CLI",
+      "github": "https://github.com/AltairInglorious/brainusage",
+      "live": "",
+      "type": "Contribución Open Source"
     }
   ],
   "education": [
@@ -700,7 +1110,7 @@
     {
       "institution": "Universidad Nacional Autónoma de Honduras",
       "degree": "Ingeniería en Sistemas Computacionales",
-      "date_range": "2019 - 2025",
+      "date_range": "2019 - 2025 (Egresado, titulación junio 2026)",
       "location": "Tegucigalpa, Honduras",
       "certificate_link": ""
     }
@@ -764,21 +1174,7 @@
     },
     {
       "language": "Inglés",
-      "level": "Intermedio"
-    }
-  ],
-  "references": [
-    {
-      "name": "Lennin",
-      "position": "Jefe Inmediato",
-      "company": "Analiza Laboratorios Clínicos",
-      "phone": "+504 8732-5557"
-    },
-    {
-      "name": "Maria Jose",
-      "position": "Product Manager",
-      "company": "Analiza Laboratorios Clínicos",
-      "phone": "+43 677 61601741"
+      "level": "B2"
     }
   ],
   "section_titles": {
@@ -914,6 +1310,131 @@
       "Performance Testing",
       "Pruebas de Rendimiento"
     ],
+    "ai": [
+      "AI",
+      "Inteligencia Artificial",
+      "Artificial Intelligence",
+      "IA",
+      "GenAI",
+      "Generative AI",
+      "IA Generativa",
+      "AI Tools",
+      "Herramientas de IA",
+      "AI Coding",
+      "AI-Assisted Development",
+      "Desarrollo Asistido por IA",
+      "Vibe Coding",
+      "Pair Programming con IA",
+      "Claude Code",
+      "Claude AI",
+      "Anthropic Claude",
+      "Cursor",
+      "Cursor IDE",
+      "Codex",
+      "Codex CLI",
+      "OpenAI Codex",
+      "OpenCode",
+      "Aider",
+      "Cline",
+      "Continue",
+      "Continue.dev",
+      "Windsurf",
+      "Codeium",
+      "Gemini CLI",
+      "GitHub Copilot",
+      "Copilot",
+      "Copilot Workspace",
+      "Lovable",
+      "Replit",
+      "Replit Agent",
+      "v0",
+      "v0.dev",
+      "Bolt",
+      "Bolt.new",
+      "Devin",
+      "Antigravity IDE",
+      "MCP",
+      "Model Context Protocol",
+      "MCP Server",
+      "MCP Servers",
+      "Servidores MCP",
+      "MCP Tools",
+      "AI Agents",
+      "Agentes IA",
+      "Agentes de IA",
+      "Sub-agents",
+      "Sub-agentes",
+      "Multi-agent",
+      "Agent Orchestration",
+      "Orquestación de Agentes",
+      "Prompt Engineering",
+      "Ingeniería de Prompts",
+      "Prompting",
+      "LLM",
+      "LLMs",
+      "Large Language Models",
+      "Modelos de Lenguaje",
+      "ChatGPT",
+      "OpenAI",
+      "Anthropic",
+      "Anthropic API",
+      "Claude API",
+      "SDD",
+      "Spec-Driven Development",
+      "TDD",
+      "Test-Driven Development",
+      "RAG",
+      "Retrieval Augmented Generation",
+      "AI Engineering",
+      "Ingeniería de IA",
+      "AI Integration",
+      "Integración de IA",
+      "AI Workflow",
+      "Flujo de Trabajo con IA",
+      "Agentic AI",
+      "IA Agéntica",
+      "Agentic Workflows",
+      "Agent Teams",
+      "Autonomous Agents",
+      "Agentes Autónomos",
+      "Tool Use",
+      "Function Calling",
+      "Tool Calling",
+      "AI Tool Use",
+      "LLM Tool Use",
+      "AI Orchestration",
+      "Orquestación de IA",
+      "AI Integration",
+      "Integración de IA",
+      "LLM Integration",
+      "Integración de LLMs",
+      "AI-Augmented Development",
+      "Desarrollo Aumentado por IA",
+      "AI Pair Programming",
+      "AI-Assisted Coding",
+      "AI Coding Tools",
+      "AI Coding Assistant",
+      "AI Coding Agent",
+      "AI Coding CLI",
+      "AI Coding Harness",
+      "Agent Skills",
+      "Claude Skills",
+      "Anthropic Skills",
+      "SKILL.md",
+      "Custom Skills",
+      "Slash Commands",
+      "Custom Slash Commands",
+      "Claude Code Hooks",
+      "Agent Hooks",
+      "Managed Agents",
+      "Claude Managed Agents",
+      "AI Engineering",
+      "Foundation Models",
+      "Modelos Fundacionales",
+      "OpenAI API",
+      "Claude SDK",
+      "LLM API"
+    ],
     "roles": [
       "Software Engineer",
       "Ingeniero de Software",
@@ -943,7 +1464,22 @@
       "Ingeniero de Datos",
       "SRE",
       "Site Reliability Engineer",
-      "Ingeniero de Confiabilidad del Sitio"
+      "Ingeniero de Confiabilidad del Sitio",
+      "Data Pipeline Engineer",
+      "Ingeniero de Pipelines de Datos",
+      "Analytics Engineer",
+      "Ingeniero de Analítica",
+      "RPA Developer",
+      "Desarrollador RPA"
+    ],
+    "open_source": [
+      "Navidrome",
+      "react-admin",
+      "Open Source Contribution",
+      "Web Accessibility",
+      "WCAG",
+      "GitHub PR Workflow",
+      "DCO"
     ]
   }
 }
