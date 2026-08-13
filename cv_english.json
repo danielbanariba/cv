@@ -8,22 +8,24 @@
     "github": "https://github.com/danielbanariba",
     "linkedin": "https://www.linkedin.com/in/danielbanariba/"
   },
-  "profile": "Systems Engineer with experience in data engineering, backend and AI-assisted development (Claude Code, Cursor, MCP, AI Agents, SDD). Built 4 production MCP servers to operate Dagster, SQL Server and Microsoft Graph from Claude Code. I build ETL pipelines with Dagster and Python for a SQL Server DWH, with Discord/Telegram alerting. Previously developed REST APIs with FastAPI and NestJS, and integrated VITEK lab equipment via ASTM/HL7.",
+  "profile": "Systems Engineer and Data Engineer. I build tools that let AI operate production infrastructure: a self-built fleet of MCP servers operated from Claude Code, and ETL pipelines with Dagster/Python over a SQL Server DWH with autonomous monitoring and multi-channel alerting. Cut a monthly forecast from ~18h to ~61 min via multiprocessing.",
   "experience": [
     {
       "company": "Grupo Farinter",
       "position": "RPA Developer & Data Engineer",
       "date_range": "November 2025 - Present",
       "responsibilities": [
-        "Built competitor price scrapers for 4 retailers with daily extraction in Dagster and reverse engineering of obfuscated APIs.",
-        "Developed bank reconciliation pipelines (Credomatic/BAC, Ficohsa) and transactional pipelines (Netflix, Tengo, Rapibac) over SMB and SQL Server.",
-        "Integrated Discord webhook alerts as a second failure-notification channel, with strict TDD (13 tests) and graceful degradation independent from email.",
-        "Built an autonomous watchdog system that detects stuck pipelines, automatically re-launches them and notifies via Telegram, complemented with native timeouts (dagster/max_runtime) on 27+ jobs.",
-        "Automated cash-closing flows, migrated legacy Windows processes to Dagster and standardized DWH tables with metadata (country, source, versions) for Power BI consumption.",
-        "Developed 4 production MCP (Model Context Protocol) servers enabling Tool Use / Function Calling over Dagster, SQL Server, Microsoft Graph/Outlook and API health checks from Claude Code.",
-        "Applied Agentic AI with sub-agent orchestration, Anthropic Agent Skills (SKILL.md), slash commands and hooks across Claude Code, Codex CLI and OpenCode, under SDD methodology and strict TDD, applying Prompt Engineering to accelerate delivery."
+        "Cut a monthly demand forecast (~23,000 series) from ~18 hours to ~61 minutes in production, parallelizing with ProcessPoolExecutor (dead-series pruning, byte-identical and deterministic output) under strict TDD with no new dependencies.",
+        "Built and operate a self-built fleet of MCP (Model Context Protocol) servers —Dagster, SQL Server, SMB, Dokploy, Microsoft Graph/Outlook— with a read-only validator, token optimization (~10-20x) and a multi-agent adversarial audit, applying Agentic AI (sub-agents, Agent Skills, hooks) under SDD and strict TDD.",
+        "Developed bank reconciliation pipelines (Credomatic/BAC, Ficohsa) and transactional pipelines (Netflix, Tengo, Rapibac) over SMB and SQL Server, with file-sensor detection and incremental loading.",
+        "Built a full-stack Python (Reflex) competitive pricing dashboard comparing Kielsa's margins against ~7,700 competitor SKUs across 8 analytical views, with SCD2 margin-erosion detection and suggested-price simulation; 801 tests and CI/CD to Dokploy.",
+        "Built an autonomous watchdog that detects and re-launches stuck pipelines (baselines from 100+ runs, Telegram notifications, timeouts on 27+ jobs) and redesigned failure alerts to Discord/email with strict TDD and graceful degradation.",
+        "Closed a data-quality gap with a generic AssetCheckEvaluation sensor that alerts only on errors to Discord/Telegram/email (cursor-based dedup); it surfaced a silent 182,928-row duplicate that was passing with all runs green.",
+        "Built competitor price scrapers with daily extraction in Dagster, reverse engineering of obfuscated APIs and proxy/TOR rotation.",
+        "Built hvault, a pure-Rust service (CLI + daemon) syncing Traefik TLS certificates across nodes via HashiCorp Vault (KV-v2), with atomic writes for zero-downtime hot-reload, x509 validation and a Leptos/WASM admin UI with OIDC.",
+        "Automated cash-closing flows, migrated legacy Windows processes to Dagster and standardized DWH tables with metadata (country, source, versions) for Power BI consumption."
       ],
-      "technologies": "Python, Dagster, SQL Server, DWH, Docker, SMB, Discord Webhooks, dbt, MCP, Model Context Protocol, Claude Code, Codex CLI, OpenCode, Cursor, Aider, Cline, Continue.dev, Windsurf, Gemini CLI, GitHub Copilot, Agent Skills, SKILL.md, Slash Commands, Hooks, AI Agents, Agentic AI, Sub-agents, Agent Orchestration, Tool Use, Function Calling, AI Integration, LLMs, GenAI, Anthropic API, OpenAI API, SDD, Spec-Driven Development, TDD, Prompt Engineering, Git"
+      "technologies": "Python, Dagster, SQL Server, DWH, Docker, SMB, Discord Webhooks, dbt, MCP, Model Context Protocol, Claude Code, Codex CLI, OpenCode, Cursor, Aider, Cline, Continue.dev, Windsurf, Gemini CLI, GitHub Copilot, Agent Skills, SKILL.md, Slash Commands, Hooks, AI Agents, Agentic AI, Sub-agents, Agent Orchestration, Tool Use, Function Calling, AI Integration, LLMs, GenAI, Anthropic API, OpenAI API, SDD, Spec-Driven Development, TDD, Prompt Engineering, Git, statsforecast, multiprocessing, ProcessPoolExecutor, concurrent.futures, smbprotocol, Dokploy, Data Quality, SCD2, Reflex, Power BI, Rust, HashiCorp Vault"
     },
     {
       "company": "Analiza Clinical Laboratories",
@@ -32,8 +34,6 @@
       "responsibilities": [
         "Automated VITEK-CRM integration with FastAPI and ASTM/HL7 protocols in production for bidirectional processing of culture results.",
         "Modeled catalogs with SQLModel ORM (7,429 microorganisms, 278 antibiotics) with complex relationships between antibiogram headers and detail records.",
-        "Developed a commercial system with 10 REST modules (NestJS, PostgreSQL, TypeORM) and implemented an automatic commission system for referring physicians (10% over referred services).",
-        "Implemented ASTM/HL7 message traceability with automatic retries and logging for VITEK communication debugging.",
         "Built a corporate proxy with Docker, Squid and OpenVPN, reducing management of 30+ machines to a single point."
       ],
       "technologies": "Python, FastAPI, TypeScript, NestJS, PostgreSQL, SQLModel, TypeORM, Docker, WebSocket, PowerShell, ASTM, HL7, VITEK"
@@ -43,28 +43,25 @@
       "position": "QA & Backend Developer",
       "date_range": "October 2024 - March 2025",
       "responsibilities": [
-        "Designed full architectural technical documentation for a community payments system with RESTful services, NestJS, DynamoDB and AWS services (S3, SNS).",
-        "Developed the 'Announcement' feature for real-time notifications (endpoints, models and backend services), enabling instant alerts to the community.",
-        "Implemented E2E tests with Playwright for critical flows (login, forms, quotes, handshake) and automated API testing with Postman/Apidog.",
-        "Managed user stories in Jira with detailed acceptance criteria, contributing to successful incremental deliveries each sprint."
+        "Designed the architecture of a community payments system (NestJS, DynamoDB, AWS S3/SNS) and implemented E2E tests with Playwright for critical flows."
       ],
       "technologies": "TypeScript, NestJS, DynamoDB, AWS (S3, SNS), Playwright, Jest, Postman, Apidog, Jira, Swagger, Microservices, Serverless"
     }
   ],
   "skills": {
-    "languages": "Python, TypeScript, JavaScript, Java, C++, SQL, T-SQL",
-    "ai": "Claude Code, Codex CLI, OpenCode, Cursor, Aider, Cline, Continue.dev, Windsurf, Gemini CLI, GitHub Copilot, MCP (Model Context Protocol), Anthropic Agent Skills (SKILL.md), Slash Commands & Hooks, Agentic AI, AI Agents, Sub-agents, Agent Orchestration, Tool Use / Function Calling, AI Integration, Prompt Engineering, SDD (Spec-Driven Development), Vibe Coding (Lovable, Replit, v0, Bolt), Anthropic API, OpenAI API, LLMs / GenAI",
-    "frameworks": "Dagster, FastAPI, NestJS, Express, Flask, Reflex, Astro",
+    "languages": "Python, TypeScript, JavaScript, C++, Rust, SQL, T-SQL",
+    "ai": "Claude Code, Cursor, GitHub Copilot, MCP (Model Context Protocol), Anthropic Agent Skills, AI Agents, Sub-agents, Tool Use / Function Calling, Prompt Engineering, SDD (Spec-Driven Development), Anthropic API, LLMs / GenAI",
+    "frameworks": "Dagster, FastAPI, NestJS, Reflex, Astro",
     "databases": "SQL Server, PostgreSQL, MongoDB, DynamoDB, SQLite",
-    "cloud": "AWS (S3, SNS, DynamoDB), Azure, Docker, Terraform",
-    "testing": "Playwright, Jest, Selenium, Postman, Apidog, Jira",
-    "data": "dbt, Power BI, ETL, Web Scraping, DWH, Polars"
+    "cloud": "AWS (S3, SNS, DynamoDB), Azure, Docker, Terraform, Dokploy, HashiCorp Vault",
+    "testing": "Playwright, Jest, Postman, Apidog, Jira",
+    "data": "dbt, Power BI, ETL, Web Scraping, DWH, Polars, statsforecast, Data Quality"
   },
   "projects": [
     {
-      "title": "MCP Servers Suite — Dagster, SQL Server & Outlook/Todoist",
-      "description": "Suite of 4 production MCP (Model Context Protocol) servers that enable operating the full stack from Claude Code with Tool Use / Function Calling: mcp-dagster (assets/runs via GraphQL), mcp-db (Jinja-templated queries over SQL Server/PostgreSQL), mcp-api-check (health checks) and outlook-todoist-mcp (Outlook → Todoist via Microsoft Graph).",
-      "technologies": "Python, MCP, Dagster GraphQL, SQL Server, PostgreSQL, Microsoft Graph, Claude Code, Anthropic API"
+      "title": "MCP Servers Suite — Self-built production fleet",
+      "description": "Fleet of production MCP (Model Context Protocol) servers operated from Claude Code with Tool Use / Function Calling: mcp-dagster (assets/runs via GraphQL), mcp-db (Jinja-templated queries + read-only validator over SQL Server/PostgreSQL), mcp-api-check (health checks), smb-mcp (SMB file ops), mcp-dokploy (deployments) and outlook-todoist-mcp (Outlook → Todoist via Microsoft Graph). Modernized with token optimization (~10-20x), a multi-agent adversarial audit and monolith splitting.",
+      "technologies": "Python, MCP, Dagster GraphQL, SQL Server, PostgreSQL, Microsoft Graph, smbprotocol, Dokploy, Claude Code"
     },
     {
       "title": "Dagster Watchdog — Autonomous Pipeline Monitoring",
@@ -98,9 +95,7 @@
   ],
   "certifications": [
     "Oracle Next Education F2 T5 Back-end - Alura Latam, 2023",
-    "Database Foundations - Oracle Academy, 2023",
-    "Java Foundations - Oracle Academy, 2021-2022",
-    "Computational Thinking with Python - Platzi, 2021"
+    "Database Foundations - Oracle Academy, 2023"
   ],
   "languages": ["Spanish: Native", "English: B2 Level"],
   "section_titles": {
