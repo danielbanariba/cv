@@ -62,7 +62,7 @@
   "projects": [
     {
       "title": "Accounting System — Azure Infrastructure with Terraform",
-      "description": "Infrastructure as code for a secure, scalable accounting system on Azure: virtual network, SQL database, storage and web app, with advanced security configuration. Public repository at github.com/danielbanariba/sistema-contable.",
+      "description": "Academic infrastructure-as-code project on Azure: virtual network, SQL database, storage and web app, with advanced security configuration. Public repository at github.com/danielbanariba/sistema-contable.",
       "technologies": "Azure, Terraform, Azure Virtual Network, Azure SQL Database, Azure App Service, IaC"
     },
     {
@@ -72,7 +72,7 @@
     },
     {
       "title": "hvault — TLS Certificate Sync in Rust",
-      "description": "Pure Rust service (CLI + daemon) that syncs TLS certificates across nodes using HashiCorp Vault (KV-v2) as the source of truth, with atomic writes for hot-reload without downtime, x509 validation and a Leptos/WASM admin UI with OIDC.",
+      "description": "Corporate service in pure Rust (private repository). CLI + daemon that syncs TLS certificates across nodes using HashiCorp Vault (KV-v2) as the source of truth, with atomic writes for hot-reload without downtime, x509 validation and a Leptos/WASM admin UI with OIDC.",
       "technologies": "Rust, HashiCorp Vault, Traefik, Leptos, WASM, OIDC, x509, Docker, GitHub Actions"
     },
     {
@@ -90,9 +90,9 @@
     },
     {
       "institution": "National Autonomous University of Honduras",
-      "degree": "B.S. in Computer Systems Engineering",
+      "degree": "B.S. in Computer Systems Engineering — Cum Laude",
       "location": "Tegucigalpa, Honduras",
-      "date_range": "2019 - 2025"
+      "date_range": "2019 - 2026"
     }
   ],
   "certifications": [
@@ -115,11 +115,11 @@
   },
   "skill_labels": {
     "languages": "Languages",
-    "ai": "AI & AI-Assisted Development",
+    "data": "Data Engineering",
     "frameworks": "Frameworks & Orchestration",
     "databases": "Databases",
     "cloud": "Cloud & Infrastructure",
-    "testing": "Testing & QA",
-    "data": "Data Engineering"
+    "ai": "AI & AI-Assisted Development",
+    "testing": "Testing & QA"
   }
 }
