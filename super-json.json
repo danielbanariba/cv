@@ -1232,10 +1232,11 @@
     },
     {
       "institution": "Universidad Nacional Autónoma de Honduras",
-      "degree": "Ingeniería en Sistemas Computacionales",
-      "date_range": "2019 - 2025 (Egresado, titulación junio 2026)",
+      "degree": "Ingeniería en Sistemas Computacionales — Cum Laude",
+      "date_range": "2019 - 2026",
       "location": "Tegucigalpa, Honduras",
-      "certificate_link": ""
+      "certificate_link": "",
+      "notes": "Titulación: 11 de marzo de 2026. Distinción Cum Laude."
     }
   ],
   "certifications": [
