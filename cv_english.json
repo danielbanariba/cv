@@ -20,7 +20,8 @@
         "Cut false positives in the credit portfolio's compliance control by 94%, building the RPA that screens it against international restricted lists with fuzzy matching, without losing a single true positive. Validated and signed off by the Compliance team.",
         "Automated the daily reconciliation between the payments system and the bank, integrating its H2H REST API (OAuth2 with credentials in HashiCorp Vault) with an incremental dbt model and 4 data-quality asset checks; 9 chained PRs with 1,524 tests.",
         "Recovered a CRM ingestion that was silently dropping most records while every run stayed green; reloaded millions of rows with no duplicates and, by measuring dlt worker contention, raised load throughput from 91 to 368 rows/s (4x).",
-        "Brought security auditing into the delivery cycle for production applications: column-level access control over sensitive figures, credential-exposure review in logs, and input validation on file ingestion, with every finding remediated and covered by regression tests."
+        "Brought security auditing into the delivery cycle for production applications: column-level access control over sensitive figures, credential-exposure review in logs, and input validation on file ingestion, with every finding remediated and covered by regression tests.",
+        "Migrated the Power BI failure monitor from a standalone script to a production asset against its REST API with OAuth2 over Microsoft Entra ID, cutting the run from ~11 to ~3.4 minutes (3.2x) by reusing the HTTP session."
       ],
       "technologies": "Python, Dagster, SQL Server, PostgreSQL, dbt, Polars, Docker, HashiCorp Vault, MCP, GraphQL, OAuth2, pytest, TDD, SDD"
     },
@@ -54,9 +55,9 @@
     "ai": "Claude Code, Codex CLI, OpenCode, MCP (Model Context Protocol), Agent Skills, AI Agents, Sub-agents, Agent Orchestration, Prompt Engineering, SDD, Anthropic API, LLMs / GenAI",
     "frameworks": "Dagster, FastAPI, NestJS, Reflex, Astro",
     "databases": "SQL Server, PostgreSQL, MongoDB, DynamoDB, SQLite",
-    "cloud": "Microsoft Azure, AWS (S3, SNS, DynamoDB), Terraform, Docker, HashiCorp Vault, nginx, Dokploy",
+    "cloud": "Microsoft Azure, AWS (S3, SNS, DynamoDB), Terraform, Docker, CI/CD, GitHub Actions, HashiCorp Vault, nginx, Dokploy",
     "testing": "pytest, strict TDD, Playwright, Mutation Testing, Jest, Postman, Jira",
-    "data": "ETL, Data Warehousing, Data Modeling, Data Quality, dbt, Data Orchestration (Dagster), Polars, dlt, Power BI, statsforecast"
+    "data": "ETL/ELT, Data Warehousing, Data Modeling, Data Quality, dbt, Data Orchestration (Dagster), Polars, dlt, Power BI, statsforecast"
   },
   "projects": [
     {
@@ -75,9 +76,9 @@
       "technologies": "Rust, HashiCorp Vault, Traefik, Leptos, WASM, OIDC, x509, Docker, GitHub Actions"
     },
     {
-      "title": "Navidrome — Open Source Contributor",
-      "description": "Merged contributions to the Navidrome music streaming server (20.7K ★ on GitHub), in frontend (react-admin) and web accessibility.",
-      "technologies": "React, react-admin, JavaScript, Open Source"
+      "title": "vkd3d-proton — Open Source Contribution",
+      "description": "Merged PR in the D3D12→Vulkan translation layer Proton uses to run Windows games on Linux: the ray tracing pipeline failed when no explicit root signature was bound, and I fixed it by binding it implicitly from the pipeline state object itself.",
+      "technologies": "C, Vulkan, Direct3D 12, Graphics Pipeline, Open Source"
     }
   ],
   "education": [
