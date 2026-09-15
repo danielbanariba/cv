@@ -8,25 +8,21 @@
     "github": "https://github.com/danielbanariba",
     "linkedin": "https://www.linkedin.com/in/danielbanariba/"
   },
-  "profile": "Ingeniero en Sistemas y Data Engineer. Construyo herramientas para que la IA opere infraestructura de producción: un fleet propio de servidores MCP operado desde Claude Code, y pipelines ETL con Dagster/Python sobre un DWH en SQL Server con monitoreo autónomo y alertas multicanal. Optimicé un forecast mensual de ~18h a ~61 min paralelizando con multiprocessing.",
+  "profile": "Ingeniero en Sistemas y Data Engineer. Construyo pipelines de datos en producción con Dagster, Python y dbt sobre un DWH en SQL Server, y herramientas MCP para que la IA opere infraestructura real — todo con TDD estricto. Optimicé un forecast mensual de ~18h a ~61 min manteniendo el output byte-idéntico. Busco roles de Data Engineer o AI Engineer, remoto para LATAM.",
   "experience": [
     {
       "company": "Grupo Farinter",
       "position": "Desarrollador RPA & Data Engineer",
       "date_range": "Noviembre 2025 - Actualidad",
       "responsibilities": [
-        "Optimicé un forecast mensual de demanda (~23,000 series) de ~18 horas a ~61 minutos en producción, paralelizando con ProcessPoolExecutor (poda de series muertas, output byte-idéntico y determinista) con TDD estricto y sin dependencias nuevas.",
-        "Construí y opero un fleet propio de servidores MCP (Model Context Protocol) —Dagster, SQL Server, SMB, Dokploy, Microsoft Graph/Outlook— con validador read-only, optimización de tokens (~10-20x) y auditoría adversarial multiagente, operado desde Claude Code.",
-        "Desarrollé pipelines de conciliación bancaria (Credomatic/BAC, Ficohsa) y transaccional (Netflix, Tengo, Rapibac) vía SMB y SQL Server, con detección de archivos por file sensors y carga incremental.",
-        "Construí un dashboard full-stack en Python (Reflex) que compara los márgenes de Kielsa contra ~7,700 SKUs de competencia en 8 vistas analíticas, con detección de erosión de margen (SCD2) y simulación de precio sugerido; 801 tests y CI/CD a Dokploy.",
-        "Construí un sistema autónomo (watchdog) que detecta pipelines pegados, los re-lanza automáticamente y notifica vía Telegram, complementado con timeouts nativos (dagster/max_runtime) en 27+ jobs.",
-        "Cerré un hueco de calidad de datos con un sensor genérico de AssetCheckEvaluation que notifica solo errores a Discord/Telegram/email (dedup por cursor); destapó un duplicado silencioso de 182,928 filas que pasaba con los runs en verde.",
-        "Construí scrapers de precios de competencia con extracción diaria en Dagster, desencriptación de APIs y rotación de proxies/TOR.",
-        "Apliqué Agentic AI con orquestación de sub-agents, Anthropic Agent Skills (SKILL.md), slash commands y hooks sobre Claude Code, Codex CLI y OpenCode, bajo metodología SDD y TDD estricto.",
-        "Construí hvault, servicio en Rust puro (CLI + daemon) que sincroniza certificados TLS de Traefik entre nodos vía HashiCorp Vault (KV-v2), con escritura atómica para hot-reload sin downtime, validación x509 y UI de administración en Leptos/WASM con OIDC.",
-        "Automaticé cierre de cajas, migré procesos legacy de Windows a Dagster y estandaricé tablas DWH con metadatos (país, origen, versiones) para consumo en Power BI."
+        "Optimicé un forecast mensual de demanda (~23,000 series) de ~18 horas a ~61 minutos en producción, paralelizando con ProcessPoolExecutor y podando series muertas, con output byte-idéntico al baseline y determinista. Entregado con TDD estricto (30 tests) y sin dependencias nuevas.",
+        "Convertí la operación de la infraestructura de producción —orquestación, consultas a bases de datos y despliegues— en algo que se maneja desde un asistente de IA, construyendo un fleet de 6 servidores MCP (Model Context Protocol) propios con validador read-only y confirmación de dos pasos.",
+        "Reduje un 94% los falsos positivos del control de cumplimiento de la cartera de crédito, desarrollando el RPA que la evalúa contra listas restrictivas internacionales con matching difuso, sin perder un solo verdadero positivo. Validado y cerrado por el área de Cumplimiento.",
+        "Automaticé la conciliación diaria entre el sistema de pagos y el banco, integrando su API REST H2H (OAuth2 con credenciales en HashiCorp Vault) con modelo dbt incremental y 4 asset checks de calidad; 9 PRs encadenados con 1,524 tests.",
+        "Recuperé una ingesta de CRM que perdía silenciosamente la mayor parte de los registros con todos los runs en verde; recargué millones de filas sin duplicados y, midiendo la contención entre workers de dlt, subí el ritmo de carga de 91 a 368 filas/s (4x).",
+        "Incorporé auditoría de seguridad al ciclo de entrega: control de acceso por columnas sobre cifras sensibles, revisión de exposición de credenciales en logs y validación de entradas en ingesta de archivos, con los hallazgos remediados y cubiertos por tests de regresión."
       ],
-      "technologies": "Python, Dagster, SQL Server, DWH, Docker, SMB, Discord Webhooks, dbt, MCP, Model Context Protocol, Claude Code, Codex CLI, OpenCode, Cursor, Aider, Cline, Continue.dev, Windsurf, Gemini CLI, GitHub Copilot, Agent Skills, SKILL.md, Slash Commands, Hooks, AI Agents, Agentic AI, Sub-agents, Agent Orchestration, Tool Use, Function Calling, AI Integration, LLMs, GenAI, Anthropic API, OpenAI API, SDD, Spec-Driven Development, TDD, Prompt Engineering, Git"
+      "technologies": "Python, Dagster, SQL Server, PostgreSQL, dbt, Polars, Docker, HashiCorp Vault, MCP, GraphQL, OAuth2, pytest, TDD, SDD"
     },
     {
       "company": "Analiza Laboratorios Clínicos",
@@ -35,45 +31,52 @@
       "responsibilities": [
         "Automaticé integración VITEK-CRM con FastAPI y protocolos ASTM/HL7 en producción para procesamiento bidireccional de resultados de cultivos.",
         "Modelé catálogos con SQLModel ORM (7,429 microorganismos, 278 antibióticos) con relaciones complejas entre encabezados y detalles de antibiogramas.",
-        "Creé proxy corporativo con Docker, Squid y OpenVPN reduciendo gestión de 30+ equipos a 1."
+        "Creé proxy corporativo con Docker, Squid y OpenVPN reduciendo gestión de 30+ equipos a 1.",
+        "Implementé un sistema de comisiones para médicos referentes que automatiza el cálculo sobre servicios de laboratorio referidos, con validaciones para prevenir duplicados y garantizar la integridad de las transacciones financieras."
       ],
-      "technologies": "Python, FastAPI, TypeScript, NestJS, PostgreSQL, SQLModel, TypeORM, Docker, WebSocket, PowerShell, ASTM, HL7, VITEK"
+      "technologies": "Python, FastAPI, TypeScript, NestJS, PostgreSQL, SQLModel, Docker, WebSocket, ASTM, HL7, VITEK, OpenVPN"
     },
     {
       "company": "GuabaBIT",
       "position": "QA & Backend Developer",
       "date_range": "Octubre 2024 - Marzo 2025",
       "responsibilities": [
-        "Diseñé documentación técnica de arquitectura completa para sistema de pagos comunitarios con servicios RESTful, NestJS, DynamoDB y servicios AWS (S3, SNS).",
-        "Implementé pruebas E2E con Playwright para flujos críticos (login, formularios, cotizaciones, handshake) y automaticé testing de API con Postman/Apidog."
+        "Diseñé la documentación técnica de la arquitectura de un sistema de pagos comunitarios con servicios RESTful, bases NoSQL (DynamoDB) y servicios AWS (S3, SNS).",
+        "Desarrollé la funcionalidad de notificaciones en tiempo real —endpoints, modelos y servicios de backend— que permite a los usuarios recibir alertas instantáneas de actualizaciones.",
+        "Implementé pruebas E2E con Playwright para flujos críticos (login, formularios, cotizaciones, handshake) y automaticé testing de API con Postman/Apidog, documentando con Swagger."
       ],
-      "technologies": "TypeScript, NestJS, DynamoDB, AWS (S3, SNS), Playwright, Jest, Postman, Apidog, Jira, Swagger, Microservicios, Serverless"
+      "technologies": "TypeScript, NestJS, DynamoDB, AWS (S3, SNS), Playwright, Postman, Apidog, Swagger, Jira, Microservicios"
     }
   ],
   "skills": {
     "languages": "Python, TypeScript, JavaScript, C++, Rust, SQL, T-SQL",
-    "ai": "Claude Code, Cursor, GitHub Copilot, MCP (Model Context Protocol), Anthropic Agent Skills, AI Agents, Sub-agents, Tool Use / Function Calling, Prompt Engineering, SDD (Spec-Driven Development), Anthropic API, LLMs / GenAI",
+    "ai": "Claude Code, Codex CLI, OpenCode, MCP (Model Context Protocol), Agent Skills, AI Agents, Sub-agents, Agent Orchestration, Prompt Engineering, SDD, Anthropic API, LLMs / GenAI",
     "frameworks": "Dagster, FastAPI, NestJS, Reflex, Astro",
     "databases": "SQL Server, PostgreSQL, MongoDB, DynamoDB, SQLite",
-    "cloud": "AWS (S3, SNS, DynamoDB), Azure, Docker, Terraform, Dokploy, HashiCorp Vault",
-    "testing": "Playwright, Jest, Postman, Apidog, Jira",
-    "data": "dbt, Power BI, ETL, Web Scraping, DWH, Polars, statsforecast, Data Quality"
+    "cloud": "Microsoft Azure, AWS (S3, SNS, DynamoDB), Terraform, Docker, HashiCorp Vault, nginx, Dokploy",
+    "testing": "pytest, TDD estricto, Playwright, Mutation Testing, Jest, Postman, Jira",
+    "data": "ETL, Data Warehousing, Data Modeling, Data Quality, dbt, Orquestación de datos (Dagster), Polars, dlt, Power BI, statsforecast"
   },
   "projects": [
     {
+      "title": "Sistema Contable — Infraestructura en Azure con Terraform",
+      "description": "Infraestructura como código para un sistema contable seguro y escalable en Azure: red virtual, base de datos SQL, almacenamiento y aplicación web, con configuración de seguridad avanzada. Repositorio público en github.com/danielbanariba/sistema-contable.",
+      "technologies": "Azure, Terraform, Azure Virtual Network, Azure SQL Database, Azure App Service, IaC"
+    },
+    {
+      "title": "Inteligencia Competitiva de Precios — Dashboard Analítico",
+      "description": "Dashboard full-stack en Python (Reflex) con 10 vistas analíticas: detección de erosión de margen vía histórico SCD2, simulación de precio sugerido y control de acceso por columnas sobre cifras sensibles. Refactorizado a multi-país, con un segundo país en producción. 1,790 tests y CI/CD.",
+      "technologies": "Python, Reflex, SQL Server, dbt, SCD2, Playwright, Docker, nginx, CI/CD"
+    },
+    {
+      "title": "hvault — Sincronización de Certificados TLS en Rust",
+      "description": "Servicio en Rust puro (CLI + daemon) que sincroniza certificados TLS entre nodos usando HashiCorp Vault (KV-v2) como fuente de verdad, con escritura atómica para recarga en caliente sin downtime, validación x509 y UI de administración en Leptos/WASM con OIDC.",
+      "technologies": "Rust, HashiCorp Vault, Traefik, Leptos, WASM, OIDC, x509, Docker, GitHub Actions"
+    },
+    {
       "title": "Navidrome — Contribuidor Open Source",
-      "description": "Contribuidor open-source con contribuciones mergeadas al servidor de streaming musical Navidrome (20.7K ⭐ en GitHub), en frontend (react-admin) y accesibilidad web.",
+      "description": "Contribuciones mergeadas al servidor de streaming musical Navidrome (20.7K ★ en GitHub), en frontend (react-admin) y accesibilidad web.",
       "technologies": "React, react-admin, JavaScript, Open Source"
-    },
-    {
-      "title": "MCP Servers Suite — Fleet propio en producción",
-      "description": "Fleet de servidores MCP (Model Context Protocol) en producción operados desde Claude Code: mcp-dagster (assets/runs vía GraphQL), mcp-db (queries con Jinja + validador read-only sobre SQL Server/PostgreSQL), mcp-api-check (health checks), smb-mcp (archivos sobre SMB), mcp-dokploy (despliegues) y outlook-todoist-mcp (Microsoft Graph). Modernizado con optimización de tokens (~10-20x), auditoría adversarial multiagente y split de monolitos.",
-      "technologies": "Python, MCP, Dagster GraphQL, SQL Server, PostgreSQL, Microsoft Graph, smbprotocol, Dokploy, Claude Code"
-    },
-    {
-      "title": "Paralelización de Forecast Dagster — 18h → 61 min",
-      "description": "Optimización de un forecast mensual de demanda (~23,000 series con statsforecast) que corría ~18h en 1 core y se mataba contra el cap de runtime. Reimplementado con ProcessPoolExecutor, pin de threads BLAS, detección de CPUs cgroup-aware y poda de series muertas (~31.6%); resultado ~61 min con output byte-idéntico y determinista. SDD + TDD estricto (30 tests), solo stdlib.",
-      "technologies": "Python, statsforecast, concurrent.futures, ProcessPoolExecutor, Dagster, SQL Server, SDD, TDD, pytest"
     }
   ],
   "education": [
@@ -94,7 +97,10 @@
     "Oracle Next Education F2 T5 Back-end - Alura Latam, 2023",
     "Database Foundations - Oracle Academy, 2023"
   ],
-  "languages": ["Español: Nativo", "Inglés: Nivel B2"],
+  "languages": [
+    "Español: Nativo",
+    "Inglés: Nivel B2"
+  ],
   "section_titles": {
     "experience": "EXPERIENCIA LABORAL",
     "skills": "HABILIDADES",

@@ -1,0 +1,124 @@
+{
+  "personal_info": {
+    "name": "Daniel Alejandro Barrientos",
+    "email": "danielbanariba@protonmail.com",
+    "phone": "(+504) 3324-5827",
+    "location": "Tegucigalpa, Honduras",
+    "website": "www.danielbanariba.dev",
+    "github": "https://github.com/danielbanariba",
+    "linkedin": "https://www.linkedin.com/in/danielbanariba/"
+  },
+  "profile": "Ingeniero en Sistemas | Data & AI Engineer con 4 años construyendo herramientas para que la IA opere infraestructura de producción: 5 servidores MCP (Model Context Protocol) operados desde Claude Code, pipelines ETL con Dagster y Python sobre un DWH en SQL Server, y AI agents con LLMs (Anthropic/OpenAI). Foco en data engineering, IA generativa, automatización y observabilidad autónoma, con SDD y TDD estricto.",
+  "experience": [
+    {
+      "company": "Grupo Farinter",
+      "position": "Data & AI Engineer (RPA)",
+      "date_range": "Noviembre 2025 - Actualidad",
+      "responsibilities": [
+        "Desarrollé 5 servidores MCP (Model Context Protocol) en producción que habilitan a la IA (Claude Code) operar Dagster, SQL Server, OpenProject y health checks de APIs vía Tool Use / Function Calling; endurecidos con validador SQL read-only, políticas de blast-radius y OAuth2 (Zitadel).",
+        "Apliqué Agentic AI e IA generativa (LLMs) con orquestación de sub-agents, Anthropic Agent Skills (SKILL.md), slash commands y hooks sobre Claude Code, Codex CLI y OpenCode, bajo SDD y TDD estricto, con Prompt Engineering para acelerar entregas.",
+        "Construí pipelines ETL con Dagster y Python sobre un DWH en SQL Server: conciliaciones bancarias (Credomatic/BAC, Ficohsa) y transaccionales (Netflix, Rapibac) vía SMB, sensores de ingesta SFTP con particiones dinámicas, y scrapers de precios de 4 competidores con extracción diaria.",
+        "Construí un dashboard full-stack en Python (Reflex) de inteligencia competitiva de precios que compara márgenes contra más de 10,000 SKUs de competencia en 10 vistas, con detección de erosión de margen (histórico SCD2), homologación y checks de data quality; 1,790 tests y CI/CD a Dokploy.",
+        "Implementé Power BI as Code (PBIR/TMDL) con validador propio (bind-check PBIR-TMDL y CI en GitHub Actions) y verificación agéntica en RDP (validar, recargar y capturar screenshot) para que la IA verifique el render real del tablero.",
+        "Construí un sistema autónomo de monitoreo (watchdog) que detecta pipelines pegados contra baselines de 100+ ejecuciones, los re-lanza y notifica vía Telegram; rediseñé las alertas de fallos a arquitectura freshness-aware, eliminando el ruido de fallos transitorios auto-recuperados.",
+        "Construí hvault, servicio en Rust (CLI + daemon) que sincroniza certificados TLS vía HashiCorp Vault (KV-v2) con hot-reload atómico, validación x509 sin OpenSSL y UI de administración en Leptos/WASM con OIDC."
+      ],
+      "technologies": "Python, Dagster, SQL Server, DWH, ETL, dbt, Polars, MCP (Model Context Protocol), AI Agents, Agentic AI, LLMs, IA Generativa, Anthropic API, OpenAI API, Claude Code, Prompt Engineering, Tool Use, Function Calling, SDD, TDD, Power BI, PBIR/TMDL, Docker, Docker Compose, GitHub Actions, CI/CD, Rust, HashiCorp Vault, SMB, SFTP, Telegram Bot, Discord Webhooks, Git"
+    },
+    {
+      "company": "Analiza Laboratorios Clínicos",
+      "position": "Desarrollador de Software (Backend)",
+      "date_range": "Marzo 2025 - Octubre 2025",
+      "responsibilities": [
+        "Automaticé la integración VITEK-CRM con FastAPI y protocolos ASTM/HL7 en producción para procesamiento bidireccional de resultados de cultivos.",
+        "Modelé catálogos con SQLModel ORM (7,429 microorganismos, 278 antibióticos) con relaciones complejas entre encabezados y detalles de antibiogramas.",
+        "Desarrollé módulos REST en NestJS y un proxy corporativo con Docker, Squid y OpenVPN que redujo la gestión de 30+ equipos a 1."
+      ],
+      "technologies": "Python, FastAPI, TypeScript, NestJS, PostgreSQL, SQLModel, Docker, OpenVPN, WebSocket, ASTM, HL7, VITEK, REST API"
+    },
+    {
+      "company": "GuabaBIT",
+      "position": "QA & Backend Developer",
+      "date_range": "Octubre 2024 - Marzo 2025",
+      "responsibilities": [
+        "Diseñé la arquitectura de un sistema de pagos comunitarios con servicios RESTful, NestJS, DynamoDB y servicios AWS (S3, SNS) serverless.",
+        "Implementé pruebas E2E con Playwright para flujos críticos (login, formularios, cotizaciones, handshake) y automaticé testing de API con Postman/Apidog."
+      ],
+      "technologies": "TypeScript, NestJS, DynamoDB, AWS (S3, SNS), Playwright, Jest, Postman, Apidog, Jira, Swagger, Microservicios, Serverless"
+    }
+  ],
+  "skills": {
+    "languages": "Python, TypeScript, JavaScript, Java, C++, Rust, SQL, T-SQL",
+    "ai": "AI Agents, Agentic AI, MCP (Model Context Protocol), LLMs / GenAI, IA Generativa, Prompt Engineering, Anthropic API, OpenAI API, Tool Use / Function Calling, Claude Code, Agent Skills, SDD",
+    "frameworks": "Dagster, FastAPI, NestJS, Reflex, dbt, Astro",
+    "databases": "SQL Server, PostgreSQL, MongoDB, DynamoDB, SQLite",
+    "cloud": "Docker, AWS (S3, SNS, DynamoDB), Azure, Terraform, HashiCorp Vault, GitHub Actions",
+    "testing": "Playwright, Pytest, Jest, Postman, Apidog, Selenium",
+    "data": "ETL, Data Pipelines, DWH, Data Quality, SCD2, Power BI, Power BI as Code, Polars, Web Scraping, Observabilidad"
+  },
+  "projects": [
+    {
+      "title": "MCP Servers Suite - 5 servidores en producción",
+      "description": "Suite de 6 servidores MCP (Model Context Protocol) operados desde Claude Code: mcp-dagster (assets/runs vía GraphQL), mcp-db (queries con validador read-only y blast-radius sobre SQL Server/PostgreSQL), mcp-openproject (requerimientos corporativos, 9 tools read-only) y smb-mcp (archivos sobre SMB). Flujo end-to-end de CI/observabilidad operado desde IA.",
+      "technologies": "Python, MCP, Dagster GraphQL, SQL Server, PostgreSQL, OpenProject API, OAuth2, Playwright, Claude Code"
+    },
+    {
+      "title": "Precios Kielsa - Inteligencia Competitiva de Precios",
+      "description": "Dashboard full-stack en Python (Reflex) que compara márgenes contra más de 10,000 SKUs de competencia en 10 vistas: detección de erosión de margen (histórico SCD2), homologación de pares padre-hijo y checks de data quality; 1,790 tests y CI/CD a Dokploy.",
+      "technologies": "Python, Reflex, Polars, SQL Server, SCD2, MCP, Playwright, Docker, Dokploy"
+    },
+    {
+      "title": "Power BI as Code - Validador PBIR/TMDL + Verificación Agéntica",
+      "description": "Pipeline de autoría de tableros Power BI como código (PBIR/TMDL) con validador propio (bind-check PBIR-TMDL y CI en GitHub Actions) y verificación agéntica: un watcher en RDP que ante cada push valida, recarga y captura screenshot para que la IA verifique el render real.",
+      "technologies": "Power BI, PBIR, TMDL, DAX, Python, JSON Schema, GitHub Actions, CI/CD"
+    },
+    {
+      "title": "hvault - Sincronización de Certificados TLS sobre HashiCorp Vault",
+      "description": "Servicio en Rust puro (CLI + daemon) que sincroniza certificados TLS entre nodos vía HashiCorp Vault (KV-v2), con hot-reload atómico, validación x509 sin OpenSSL y UI de administración en Leptos/WASM con OIDC.",
+      "technologies": "Rust, Tokio, Axum, Leptos, WASM, HashiCorp Vault, OIDC, x509"
+    },
+    {
+      "title": "Navidrome - Contribuidor Open Source",
+      "description": "PRs mergeados al servidor de streaming musical Navidrome (20.7K estrellas en GitHub): filtros en react-admin y fixes de accesibilidad web (WCAG).",
+      "technologies": "React, react-admin, JavaScript, Accesibilidad, Open Source"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Nacional Autónoma de Honduras (UNAH)",
+      "degree": "Ingeniería en Sistemas Computacionales",
+      "location": "Tegucigalpa, Honduras",
+      "date_range": "2019 - 2025 (Egresado)"
+    },
+    {
+      "institution": "Universidad Nacional Autónoma de Honduras (UNAH)",
+      "degree": "Licenciatura en Matemáticas (en curso)",
+      "location": "Tegucigalpa, Honduras",
+      "date_range": "2024 - Actualidad"
+    }
+  ],
+  "certifications": [
+    "Ponente / Tallerista - COMPDES 2025, XVIII Congreso de Computación para el Desarrollo (Performance & Load Testing)",
+    "Oracle Next Education F2 T5 Back-end - Alura Latam, 2023",
+    "Database Foundations - Oracle Academy, 2023"
+  ],
+  "languages": ["Español: Nativo", "Inglés: B2"],
+  "section_titles": {
+    "experience": "EXPERIENCIA LABORAL",
+    "skills": "HABILIDADES TÉCNICAS",
+    "projects": "PROYECTOS DESTACADOS",
+    "education": "EDUCACIÓN",
+    "certifications": "PONENCIAS Y CERTIFICACIONES",
+    "languages": "IDIOMAS",
+    "references": "REFERENCIAS"
+  },
+  "skill_labels": {
+    "languages": "Lenguajes",
+    "ai": "IA & AI Engineering",
+    "frameworks": "Frameworks & Orquestación",
+    "databases": "Bases de Datos",
+    "cloud": "Cloud & Infraestructura",
+    "testing": "Testing & QA",
+    "data": "Data Engineering"
+  }
+}

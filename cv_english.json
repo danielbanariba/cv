@@ -8,75 +8,76 @@
     "github": "https://github.com/danielbanariba",
     "linkedin": "https://www.linkedin.com/in/danielbanariba/"
   },
-  "profile": "Systems Engineer and Data Engineer. I build tools that let AI operate production infrastructure: a self-built fleet of MCP servers operated from Claude Code, and ETL pipelines with Dagster/Python over a SQL Server DWH with autonomous monitoring and multi-channel alerting. Cut a monthly forecast from ~18h to ~61 min via multiprocessing.",
+  "profile": "Systems Engineer and Data Engineer. I build production data pipelines with Dagster, Python and dbt over a SQL Server DWH, and MCP tooling that lets AI operate real infrastructure — all under strict TDD. Cut a monthly forecast from ~18h to ~61 min with byte-identical output. Looking for Data Engineer or AI Engineer roles, remote across LATAM.",
   "experience": [
     {
       "company": "Grupo Farinter",
       "position": "RPA Developer & Data Engineer",
       "date_range": "November 2025 - Present",
       "responsibilities": [
-        "Cut a monthly demand forecast (~23,000 series) from ~18 hours to ~61 minutes in production, parallelizing with ProcessPoolExecutor (dead-series pruning, byte-identical and deterministic output) under strict TDD with no new dependencies.",
-        "Built and operate a self-built fleet of MCP (Model Context Protocol) servers —Dagster, SQL Server, SMB, Dokploy, Microsoft Graph/Outlook— with a read-only validator, token optimization (~10-20x) and a multi-agent adversarial audit, applying Agentic AI (sub-agents, Agent Skills, hooks) under SDD and strict TDD.",
-        "Developed bank reconciliation pipelines (Credomatic/BAC, Ficohsa) and transactional pipelines (Netflix, Tengo, Rapibac) over SMB and SQL Server, with file-sensor detection and incremental loading.",
-        "Built a full-stack Python (Reflex) competitive pricing dashboard comparing Kielsa's margins against ~7,700 competitor SKUs across 8 analytical views, with SCD2 margin-erosion detection and suggested-price simulation; 801 tests and CI/CD to Dokploy.",
-        "Built an autonomous watchdog that detects and re-launches stuck pipelines (baselines from 100+ runs, Telegram notifications, timeouts on 27+ jobs) and redesigned failure alerts to Discord/email with strict TDD and graceful degradation.",
-        "Closed a data-quality gap with a generic AssetCheckEvaluation sensor that alerts only on errors to Discord/Telegram/email (cursor-based dedup); it surfaced a silent 182,928-row duplicate that was passing with all runs green.",
-        "Built competitor price scrapers with daily extraction in Dagster, reverse engineering of obfuscated APIs and proxy/TOR rotation.",
-        "Built hvault, a pure-Rust service (CLI + daemon) syncing Traefik TLS certificates across nodes via HashiCorp Vault (KV-v2), with atomic writes for zero-downtime hot-reload, x509 validation and a Leptos/WASM admin UI with OIDC.",
-        "Automated cash-closing flows, migrated legacy Windows processes to Dagster and standardized DWH tables with metadata (country, source, versions) for Power BI consumption."
+        "Optimized a monthly demand forecast (~23,000 series) from ~18 hours to ~61 minutes in production, parallelizing with ProcessPoolExecutor and pruning dead series, with output byte-identical to the sequential baseline and deterministic. Delivered under strict TDD (30 tests) with no new dependencies.",
+        "Turned operating production infrastructure —orchestration, database queries and deployments— into something handled from an AI assistant, building a fleet of 6 self-built MCP (Model Context Protocol) servers with a read-only validator, two-step confirmation and ~10-20x payload reduction on wide reads.",
+        "Cut false positives in the credit portfolio's compliance control by 94%, building the RPA that screens it against international restricted lists with fuzzy matching, without losing a single true positive. Validated and signed off by the Compliance team.",
+        "Automated the daily reconciliation between the payments system and the bank, integrating its H2H REST API (OAuth2 with credentials in HashiCorp Vault) with an incremental dbt model and 4 data-quality asset checks; 9 chained PRs with 1,524 tests.",
+        "Recovered a CRM ingestion that was silently dropping most records while every run stayed green; reloaded millions of rows with no duplicates and, by measuring dlt worker contention, raised load throughput from 91 to 368 rows/s (4x).",
+        "Brought security auditing into the delivery cycle for production applications: column-level access control over sensitive figures, credential-exposure review in logs, and input validation on file ingestion, with every finding remediated and covered by regression tests."
       ],
-      "technologies": "Python, Dagster, SQL Server, DWH, Docker, SMB, Discord Webhooks, dbt, MCP, Model Context Protocol, Claude Code, Codex CLI, OpenCode, Cursor, Aider, Cline, Continue.dev, Windsurf, Gemini CLI, GitHub Copilot, Agent Skills, SKILL.md, Slash Commands, Hooks, AI Agents, Agentic AI, Sub-agents, Agent Orchestration, Tool Use, Function Calling, AI Integration, LLMs, GenAI, Anthropic API, OpenAI API, SDD, Spec-Driven Development, TDD, Prompt Engineering, Git, statsforecast, multiprocessing, ProcessPoolExecutor, concurrent.futures, smbprotocol, Dokploy, Data Quality, SCD2, Reflex, Power BI, Rust, HashiCorp Vault"
+      "technologies": "Python, Dagster, SQL Server, PostgreSQL, dbt, Polars, Docker, HashiCorp Vault, MCP, GraphQL, OAuth2, pytest, TDD, SDD"
     },
     {
       "company": "Analiza Clinical Laboratories",
       "position": "Software Developer",
       "date_range": "March 2025 - October 2025",
       "responsibilities": [
-        "Automated VITEK-CRM integration with FastAPI and ASTM/HL7 protocols in production for bidirectional processing of culture results.",
-        "Modeled catalogs with SQLModel ORM (7,429 microorganisms, 278 antibiotics) with complex relationships between antibiogram headers and detail records.",
-        "Built a corporate proxy with Docker, Squid and OpenVPN, reducing management of 30+ machines to a single point."
+        "Automated the VITEK-CRM integration with FastAPI and ASTM/HL7 protocols in production for bidirectional processing of culture results, with message traceability, automatic retries and logging.",
+        "Modeled clinical catalogs with SQLModel ORM (7,429 microorganisms, 278 antibiotics) with complex relationships between antibiogram headers and details.",
+        "Designed and deployed corporate proxy infrastructure with Docker, Squid and OpenVPN connecting operations across Honduras, Guatemala and El Salvador, reducing management of 30+ machines to a single point.",
+        "Implemented a referral commission system that automates the calculation on referred laboratory services, with validations preventing duplicates and safeguarding financial transaction integrity."
       ],
-      "technologies": "Python, FastAPI, TypeScript, NestJS, PostgreSQL, SQLModel, TypeORM, Docker, WebSocket, PowerShell, ASTM, HL7, VITEK"
+      "technologies": "Python, FastAPI, TypeScript, NestJS, PostgreSQL, SQLModel, Docker, WebSocket, ASTM, HL7, VITEK, OpenVPN"
     },
     {
       "company": "GuabaBIT",
       "position": "QA & Backend Developer",
       "date_range": "October 2024 - March 2025",
       "responsibilities": [
-        "Designed the architecture of a community payments system (NestJS, DynamoDB, AWS S3/SNS) and implemented E2E tests with Playwright for critical flows."
+        "Designed the technical architecture documentation for a community payments system with RESTful services, NoSQL databases (DynamoDB) and AWS services (S3, SNS).",
+        "Built the real-time notifications feature —endpoints, models and backend services— letting users receive instant alerts on relevant updates.",
+        "Implemented E2E tests with Playwright for critical flows (login, forms, quotes, handshake) and automated API testing with Postman/Apidog, building reusable collections and test scripts, and documenting the APIs with Swagger for maintainability.",
+        "Wrote and executed manual test cases in Jira to verify system integrity, reporting and documenting critical bugs with precise reproductions."
       ],
-      "technologies": "TypeScript, NestJS, DynamoDB, AWS (S3, SNS), Playwright, Jest, Postman, Apidog, Jira, Swagger, Microservices, Serverless"
+      "technologies": "TypeScript, NestJS, DynamoDB, AWS (S3, SNS), Playwright, Postman, Apidog, Swagger, Jira, Microservices"
     }
   ],
   "skills": {
     "languages": "Python, TypeScript, JavaScript, C++, Rust, SQL, T-SQL",
-    "ai": "Claude Code, Cursor, GitHub Copilot, MCP (Model Context Protocol), Anthropic Agent Skills, AI Agents, Sub-agents, Tool Use / Function Calling, Prompt Engineering, SDD (Spec-Driven Development), Anthropic API, LLMs / GenAI",
+    "ai": "Claude Code, Codex CLI, OpenCode, MCP (Model Context Protocol), Agent Skills, AI Agents, Sub-agents, Agent Orchestration, Prompt Engineering, SDD, Anthropic API, LLMs / GenAI",
     "frameworks": "Dagster, FastAPI, NestJS, Reflex, Astro",
     "databases": "SQL Server, PostgreSQL, MongoDB, DynamoDB, SQLite",
-    "cloud": "AWS (S3, SNS, DynamoDB), Azure, Docker, Terraform, Dokploy, HashiCorp Vault",
-    "testing": "Playwright, Jest, Postman, Apidog, Jira",
-    "data": "dbt, Power BI, ETL, Web Scraping, DWH, Polars, statsforecast, Data Quality"
+    "cloud": "Microsoft Azure, AWS (S3, SNS, DynamoDB), Terraform, Docker, HashiCorp Vault, nginx, Dokploy",
+    "testing": "pytest, strict TDD, Playwright, Mutation Testing, Jest, Postman, Jira",
+    "data": "ETL, Data Warehousing, Data Modeling, Data Quality, dbt, Data Orchestration (Dagster), Polars, dlt, Power BI, statsforecast"
   },
   "projects": [
     {
-      "title": "MCP Servers Suite — Self-built production fleet",
-      "description": "Fleet of production MCP (Model Context Protocol) servers operated from Claude Code with Tool Use / Function Calling: mcp-dagster (assets/runs via GraphQL), mcp-db (Jinja-templated queries + read-only validator over SQL Server/PostgreSQL), mcp-api-check (health checks), smb-mcp (SMB file ops), mcp-dokploy (deployments) and outlook-todoist-mcp (Outlook → Todoist via Microsoft Graph). Modernized with token optimization (~10-20x), a multi-agent adversarial audit and monolith splitting.",
-      "technologies": "Python, MCP, Dagster GraphQL, SQL Server, PostgreSQL, Microsoft Graph, smbprotocol, Dokploy, Claude Code"
-    },
-    {
-      "title": "Dagster Watchdog — Autonomous Pipeline Monitoring",
-      "description": "Autonomous system that polls Dagster via GraphQL every 5 minutes, detects stuck runs by comparing against learned baselines, cancels them, re-launches with retry tags and notifies via Telegram. Includes safety guards and runs as a 24/7 systemd service.",
-      "technologies": "Python, Dagster GraphQL, Telegram Bot, systemd, asyncio, Observability"
-    },
-    {
       "title": "Accounting System — Azure Infrastructure with Terraform",
-      "description": "Cloud infrastructure on Azure as Infrastructure as Code: Virtual Network, SQL Database, Storage and App Service with advanced security measures (private endpoints, NSGs, managed identities).",
-      "technologies": "Azure, Terraform, IaC, Azure SQL, Azure App Service, Cloud Architecture"
+      "description": "Infrastructure as code for a secure, scalable accounting system on Azure: virtual network, SQL database, storage and web app, with advanced security configuration. Public repository at github.com/danielbanariba/sistema-contable.",
+      "technologies": "Azure, Terraform, Azure Virtual Network, Azure SQL Database, Azure App Service, IaC"
     },
     {
-      "title": "Automated YouTube Channel — Multimedia Pipeline",
-      "description": "End-to-end pipeline: royalty-free music scraping, editing with VHS effects, GPU-accelerated 4K rendering (CUDA), playlist management and scheduled uploads via the YouTube API with copyright handling.",
-      "technologies": "Python, C++, CUDA, FFmpeg, Moviepy, Playwright, YouTube API, Web Scraping"
+      "title": "Competitive Pricing Intelligence — Analytics Dashboard",
+      "description": "Full-stack Python (Reflex) dashboard with 10 analytical views: margin erosion detection via SCD2 history, suggested-price simulation and column-level access control over sensitive figures. Refactored to multi-country, with a second country in production. 1,790 tests and CI/CD.",
+      "technologies": "Python, Reflex, SQL Server, dbt, SCD2, Playwright, Docker, nginx, CI/CD"
+    },
+    {
+      "title": "hvault — TLS Certificate Sync in Rust",
+      "description": "Pure Rust service (CLI + daemon) that syncs TLS certificates across nodes using HashiCorp Vault (KV-v2) as the source of truth, with atomic writes for hot-reload without downtime, x509 validation and a Leptos/WASM admin UI with OIDC.",
+      "technologies": "Rust, HashiCorp Vault, Traefik, Leptos, WASM, OIDC, x509, Docker, GitHub Actions"
+    },
+    {
+      "title": "Navidrome — Open Source Contributor",
+      "description": "Merged contributions to the Navidrome music streaming server (20.7K ★ on GitHub), in frontend (react-admin) and web accessibility.",
+      "technologies": "React, react-admin, JavaScript, Open Source"
     }
   ],
   "education": [
@@ -97,7 +98,10 @@
     "Oracle Next Education F2 T5 Back-end - Alura Latam, 2023",
     "Database Foundations - Oracle Academy, 2023"
   ],
-  "languages": ["Spanish: Native", "English: B2 Level"],
+  "languages": [
+    "Spanish: Native",
+    "English: B2 Level"
+  ],
   "section_titles": {
     "experience": "WORK EXPERIENCE",
     "skills": "SKILLS",
@@ -105,7 +109,8 @@
     "education": "EDUCATION",
     "certifications": "CERTIFICATIONS",
     "languages": "LANGUAGES",
-    "references": "REFERENCES"
+    "references": "REFERENCES",
+    "technologies": "Technologies"
   },
   "skill_labels": {
     "languages": "Languages",
