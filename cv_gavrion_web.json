@@ -1,0 +1,132 @@
+{
+  "personal_info": {
+    "name": "Daniel Alejandro Barrientos",
+    "email": "danielbanariba@protonmail.com",
+    "phone": "(+504) 3324-5827",
+    "location": "Tegucigalpa, Honduras",
+    "website": "www.danielbanariba.dev",
+    "github": "https://github.com/danielbanariba",
+    "linkedin": "https://www.linkedin.com/in/danielbanariba/"
+  },
+  "profile": "Ingeniero en Sistemas Computacionales con 2 años en desarrollo web y soluciones digitales. Diseño y desarrollo sitios web y landing pages con HTML, CSS, JavaScript/TypeScript, React y Astro, aplicando UX/UI y Responsive Design. Manejo APIs e integraciones, hosting, dominios y SEO técnico, con Git/GitHub y CI/CD. Contribuidor open source con PRs mergeados en Navidrome (20.7K estrellas) en frontend React y accesibilidad web.",
+  "experience": [
+    {
+      "company": "Grupo Farinter",
+      "position": "Desarrollador de Software & Data Engineer",
+      "date_range": "Noviembre 2025 - Actualidad",
+      "responsibilities": [
+        "Diseñé y desarrollé una aplicación web full-stack de 10 vistas analíticas para la cadena Kielsa, con interfaz responsive, gráficos interactivos (Plotly/Recharts) y despliegue sobre dominio propio con Docker, nginx y Traefik.",
+        "Optimicé el rendimiento y la velocidad del sitio rediseñando el manejo de estado con un caché invalidado por mtime: el estado serializado por sesión bajó de 22 MB a ~10 KB.",
+        "Desarrollé APIs e integraciones con servicios externos vía REST y GraphQL (OpenProject, Dagster, Dokploy, Discord, Telegram) con autenticación OAuth y manejo de errores.",
+        "Implementé pruebas automatizadas end-to-end con Playwright sobre Chromium headless para verificar el render real del sitio en cada despliegue (1,790 tests, CI/CD con GitHub Actions).",
+        "Analicé requerimientos con las áreas de negocio, estimé tiempos, documenté la arquitectura y entregué bajo metodología SDD (Spec-Driven Development) y TDD estricto."
+      ],
+      "technologies": "Python, JavaScript, HTML, CSS, Reflex, Plotly, Recharts, Docker, nginx, Traefik, GitHub Actions, Playwright, REST, GraphQL, OAuth, SQL Server, Git"
+    },
+    {
+      "company": "Analiza Laboratorios Clínicos",
+      "position": "Desarrollador de Software",
+      "date_range": "Marzo 2025 - Octubre 2025",
+      "responsibilities": [
+        "Desarrollé APIs REST en producción con FastAPI (Python) y NestJS (TypeScript), documentadas con Swagger/OpenAPI.",
+        "Implementé la integración bidireccional entre equipos de laboratorio y el CRM interno mediante protocolos ASTM/HL7, eliminando la carga manual de resultados.",
+        "Modelé catálogos con ORM sobre PostgreSQL (7,429 microorganismos, 278 antibióticos) con relaciones complejas entre encabezados y detalles.",
+        "Configuré hosting y proxy corporativo con Docker, Squid y OpenVPN, reduciendo la gestión de 30+ equipos a un solo punto de control."
+      ],
+      "technologies": "TypeScript, NestJS, Python, FastAPI, PostgreSQL, TypeORM, SQLModel, Docker, WebSocket, Swagger, REST, ASTM, HL7, Git"
+    },
+    {
+      "company": "GuabaBIT",
+      "position": "QA & Backend Developer",
+      "date_range": "Octubre 2024 - Marzo 2025",
+      "responsibilities": [
+        "Implementé pruebas E2E con Playwright sobre flujos web críticos (login, formularios, cotizaciones y handshake), detectando y reportando errores antes de producción.",
+        "Diseñé la documentación técnica de arquitectura de un sistema de pagos con servicios RESTful sobre NestJS, DynamoDB y AWS (S3, SNS).",
+        "Automaticé el testing de APIs e integraciones con Postman y Apidog, documentando contratos con Swagger y gestionando el trabajo en Jira bajo Scrum."
+      ],
+      "technologies": "TypeScript, NestJS, Node.js, DynamoDB, AWS (S3, SNS), Playwright, Jest, Postman, Apidog, Swagger, Jira, Scrum, Git / GitHub"
+    }
+  ],
+  "skills": {
+    "frontend": "HTML5, CSS3, JavaScript (ES6+), TypeScript, React, Next.js, Astro, Tailwind CSS",
+    "design": "UX/UI, Responsive Design, Mobile First, Accesibilidad Web (WCAG), Dark Mode, SEO técnico",
+    "backend": "Node.js, NestJS, Express.js, Python, FastAPI, APIs REST, GraphQL, Swagger/OpenAPI",
+    "databases": "PostgreSQL, MySQL, MongoDB, SQL Server, DynamoDB, SQLite",
+    "cloud": "Vercel, Docker, nginx, Traefik, Dokploy, AWS (S3, SNS), Azure, hosting y dominios",
+    "tools": "Git / GitHub, GitHub Actions (CI/CD), Playwright, Jest, Postman, Apidog, Jira, Scrum / Kanban",
+    "ai": "Claude Code, GitHub Copilot, Cursor, MCP (Model Context Protocol), Prompt Engineering"
+  },
+  "projects": [
+    {
+      "title": "Portafolio Personal — danielbanariba.dev",
+      "description": "Sitio web personal con CV, proyectos y links profesionales. Construido con Astro para máximo rendimiento y SEO técnico, con diseño responsive, dark mode y soporte multi-idioma. Dominio propio y despliegue continuo desde GitHub.",
+      "technologies": "Astro, JavaScript, HTML5, CSS3, Tailwind CSS, SEO, Responsive Design, Vercel, Git"
+    },
+    {
+      "title": "Arsenal de Odio — Sitio Web de Banda",
+      "description": "Sitio web para una banda de thrash metal hondureña: diseño de la identidad visual en web, secciones de integrantes, discografía y mercadería. Interfaz responsive pensada para reflejar el espíritu de la banda y funcionar en cualquier dispositivo.",
+      "technologies": "Astro, JavaScript, HTML5, CSS3, Diseño Web, Responsive Design, Vercel"
+    },
+    {
+      "title": "Navidrome — Contribuidor Open Source (Frontend & Accesibilidad)",
+      "description": "Contribuciones mergeadas al servidor de streaming Navidrome (20.7K estrellas en GitHub): filtro \"Not Starred\" para vistas de álbum/canción/artista con el patrón NullableBooleanInput de react-admin (PR #5362), y fix de accesibilidad por teclado en la grilla de álbumes con :focus-within y manejo de pointerEvents (PR #5434). Trabajo con flujo completo de PR, code review del maintainer y DCO sign-off.",
+      "technologies": "React, react-admin, JavaScript, CSS, Accesibilidad Web (WCAG), Git / GitHub, Playwright"
+    },
+    {
+      "title": "SoundCloud Clone — Frontend y Backend",
+      "description": "Clon funcional de SoundCloud: diseño de la interfaz web, modelado de la base de datos y API RESTful para streaming de audio, cubriendo el ciclo completo desde la maqueta hasta el backend.",
+      "technologies": "Python, FastAPI, HTML5, CSS3, JavaScript, Oracle SQL, API RESTful"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Nacional Autónoma de Honduras",
+      "degree": "Ingeniería en Sistemas Computacionales",
+      "location": "Tegucigalpa, Honduras",
+      "date_range": "2019 - 2025"
+    },
+    {
+      "institution": "Universidad Nacional Autónoma de Honduras",
+      "degree": "Licenciatura en Matemáticas (en curso)",
+      "location": "Tegucigalpa, Honduras",
+      "date_range": "2024 - Actualidad"
+    }
+  ],
+  "certifications": [
+    "Oracle Next Education F2 T5 Back-end - Alura Latam, 2023",
+    "Database Foundations - Oracle Academy, 2023"
+  ],
+  "languages": ["Español: Nativo", "Inglés: Nivel B2"],
+  "references": [
+    {
+      "name": "Lennin",
+      "position": "Jefe Inmediato",
+      "company": "Analiza Laboratorios Clínicos",
+      "phone": "+504 8732-5557"
+    },
+    {
+      "name": "Maria Jose",
+      "position": "Product Manager",
+      "company": "Analiza Laboratorios Clínicos",
+      "phone": "+43 677 61601741"
+    }
+  ],
+  "section_titles": {
+    "experience": "EXPERIENCIA LABORAL",
+    "skills": "HABILIDADES",
+    "projects": "PORTAFOLIO DE PROYECTOS",
+    "education": "EDUCACIÓN",
+    "certifications": "CERTIFICACIONES",
+    "languages": "IDIOMAS",
+    "references": "REFERENCIAS"
+  },
+  "skill_labels": {
+    "frontend": "Frontend",
+    "design": "Diseño Web & UX/UI",
+    "backend": "Backend & APIs",
+    "databases": "Bases de Datos",
+    "cloud": "Hosting & Infraestructura",
+    "tools": "Herramientas & Control de Versiones",
+    "ai": "Desarrollo Asistido por IA"
+  }
+}
