@@ -154,14 +154,31 @@ def build_cv_content(data, styles):
     website = get_value(personal_info, 'website')
     github = get_value(personal_info, 'github')
     linkedin = get_value(personal_info, 'linkedin')
-    
+
+    def format_url_display(url):
+        """Strip protocol, www. and trailing slash so the visible text is
+        ATS-parseable (e.g. 'github.com/handle'). The href keeps the full URL."""
+        clean = url.strip()
+        for prefix in ('https://', 'http://'):
+            if clean.lower().startswith(prefix):
+                clean = clean[len(prefix):]
+        if clean.lower().startswith('www.'):
+            clean = clean[4:]
+        return clean.rstrip('/')
+
+    def link_href(url):
+        """Ensure href has a protocol so it stays clickable in the PDF."""
+        if url.lower().startswith(('http://', 'https://')):
+            return url
+        return f"https://{url}"
+
     links_parts = []
     if website:
-        links_parts.append(f"<a href='{website}' color='blue'>{website}</a>")
+        links_parts.append(f"<a href='{link_href(website)}' color='blue'>{format_url_display(website)}</a>")
     if github:
-        links_parts.append(f"<a href='{github}' color='blue'>GitHub</a>")
+        links_parts.append(f"<a href='{link_href(github)}' color='blue'>{format_url_display(github)}</a>")
     if linkedin:
-        links_parts.append(f"<a href='{linkedin}' color='blue'>LinkedIn</a>")
+        links_parts.append(f"<a href='{link_href(linkedin)}' color='blue'>{format_url_display(linkedin)}</a>")
     
     if links_parts:
         links = " • ".join(links_parts)
@@ -179,6 +196,7 @@ def build_cv_content(data, styles):
     
     # 3. SECCIONES DEL CV
     section_titles = get_value(data, 'section_titles', {})
+    tech_label = get_value(section_titles, 'technologies', "Tecnologías")
     
     # 3.1 EXPERIENCIA LABORAL
     experience = get_value(data, 'experience', [])
@@ -209,7 +227,7 @@ def build_cv_content(data, styles):
             
             technologies = get_value(job, 'technologies', "")
             if technologies:
-                story.append(Paragraph(f"<i>Tecnologías:</i> {technologies}", styles['Technologies']))
+                story.append(Paragraph(f"<i>{tech_label}:</i> {technologies}", styles['Technologies']))
             
             story.append(Spacer(1, 0.05*inch))
     
@@ -261,7 +279,7 @@ def build_cv_content(data, styles):
             
             technologies = get_value(project, 'technologies', "")
             if technologies:
-                story.append(Paragraph(f"<i>Tecnologías:</i> {technologies}", styles['Technologies']))
+                story.append(Paragraph(f"<i>{tech_label}:</i> {technologies}", styles['Technologies']))
         
         story.append(Spacer(1, 0.05*inch))
     
