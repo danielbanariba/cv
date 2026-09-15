@@ -402,9 +402,26 @@ def generate_cv_pdf(data, output_filename):
         print("└─────────────────────────────────────────────────────────────────────")
         print("\nSe generará el CV de todos modos, pero puede que no quepa en una página.\n")
     
+    # Metadatos del PDF. Sin esto ReportLab escribe "(anonymous)" en Title y Author,
+    # que es lo que los buscadores muestran del CV publicado en la web.
+    personal_info = get_value(data, 'personal_info', {})
+    pdf_author = get_value(personal_info, 'name', '')
+    headline = get_value(data, 'headline', '')
+    if not headline:
+        # Sin headline explícito, usa la primera oración del perfil.
+        headline = get_value(data, 'profile', '').split('.')[0].strip()
+    pdf_title = f"{pdf_author} — {headline}" if pdf_author and headline else (pdf_author or headline)
+    pdf_keywords = ", ".join(
+        v for v in get_value(data, 'skills', {}).values() if isinstance(v, str)
+    )
+
     # Configuración del documento — letter size estándar (ATS-friendly)
     doc = SimpleDocTemplate(
         output_filename,
+        title=pdf_title,
+        author=pdf_author,
+        subject=headline,
+        keywords=pdf_keywords,
         pagesize=letter,
         rightMargin=0.5*inch,
         leftMargin=0.5*inch,
