@@ -8,7 +8,7 @@
     "github": "https://github.com/danielbanariba",
     "linkedin": "https://www.linkedin.com/in/danielbanariba/"
   },
-  "profile": "Ingeniero en Sistemas y Data Engineer. Construyo pipelines de datos en producción con Dagster, Python y dbt sobre un DWH en SQL Server, y herramientas MCP para que la IA opere infraestructura real — todo con TDD estricto. Optimicé un forecast mensual de ~18h a ~61 min manteniendo el output byte-idéntico. Busco roles de Data Engineer o AI Engineer, remoto para LATAM.",
+  "profile": "Ingeniero en Sistemas y Data Engineer. Construyo pipelines de datos en producción con Dagster, Python y dbt sobre un DWH en SQL Server, y herramientas MCP para que la IA opere infraestructura real — todo con TDD estricto. Optimicé un forecast mensual de ~18h a ~61 min manteniendo el output byte-idéntico.",
   "experience": [
     {
       "company": "Grupo Farinter",
