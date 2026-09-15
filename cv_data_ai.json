@@ -1,6 +1,6 @@
 {
   "personal_info": {
-    "name": "Daniel Alejandro Barrientos",
+    "name": "Daniel Banariba",
     "email": "danielbanariba@protonmail.com",
     "phone": "(+504) 3324-5827",
     "location": "Tegucigalpa, Honduras",
@@ -102,7 +102,10 @@
     "Oracle Next Education F2 T5 Back-end - Alura Latam, 2023",
     "Database Foundations - Oracle Academy, 2023"
   ],
-  "languages": ["Español: Nativo", "Inglés: B2"],
+  "languages": [
+    "Español: Nativo",
+    "Inglés: Lectura técnica y comprensión; entrevistas y trabajo en español"
+  ],
   "section_titles": {
     "experience": "EXPERIENCIA LABORAL",
     "skills": "HABILIDADES TÉCNICAS",
